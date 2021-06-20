@@ -7,9 +7,83 @@ output: pdf_document
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+``` {r packages}
+library(tidyverse)
+```
 
+This section is the data wrangling that I did with the raw data as each column was contained in a different file.
 
-```{r import}
+I haven't uploaded all the raw files to GitHub, just the final version, so running this code won't work, but let me know if you'd like to see all the raw files.
+
+``` {r wrangling}
+
+#  Pull each file and select the data for the year 2015
+GDP <- data.frame(country = alternative_gdp_per_capita_ppp_wb$country,
+                   gdp = alternative_gdp_per_capita_ppp_wb$"2015")
+men15_24 <- mean_years_in_school_men_15_to_24_years %>%
+  select("country", "2015")
+men25_34 <- mean_years_in_school_men_25_to_34_years %>%
+  select("country", "2015")
+men35_44 <- mean_years_in_school_men_35_to_44_years %>%
+  select("country", "2015")
+men45_54 <- mean_years_in_school_men_45_to_54_years %>%
+  select("country", "2015")
+men55_64 <- mean_years_in_school_men_55_to_64_years %>%
+  select("country", "2015")
+men65_plus <- mean_years_in_school_men_65_plus_years %>%
+  select("country", "2015")
+women15_24 <- mean_years_in_school_women_15_to_24_years %>%
+  select("country", "2015")
+women25_34 <- mean_years_in_school_women_25_to_34_years %>%
+  select("country", "2015")
+women35_44 <- mean_years_in_school_women_35_to_44_years %>%
+  select("country", "2015")
+women45_54 <- mean_years_in_school_women_45_to_54_years %>%
+  select("country", "2015")
+women55_64 <- mean_years_in_school_women_55_to_64_years %>%
+  select("country", "2015")
+women65_plus <- mean_years_in_school_women_65_plus_years %>%
+  select("country", "2015")
+
+# Combine all the files and convert the GDP figure into a consistent numerical form
+
+data <- GDP %>%
+  mutate(k = str_detect(gdp, "k")) %>%
+  mutate(gdp = as.numeric(str_remove(gdp, "k"))) %>%
+  mutate(gdp = ifelse(k, gdp, gdp/1000)) %>%
+  select(-k) %>%
+  inner_join(women15_24, by = "country") %>%
+  rename(women15_24 = "2015") %>%
+  inner_join(women25_34, by = "country") %>%
+  rename(women25_34 = "2015") %>%
+  inner_join(women35_44, by = "country") %>%
+  rename(women35_44 = "2015") %>%
+  inner_join(women45_54, by = "country") %>%
+  rename(women45_54 = "2015") %>%
+  inner_join(women55_64, by = "country") %>%
+  rename(women55_64 = "2015") %>%
+  inner_join(women65_plus, by = "country") %>%
+  rename(women65_plus = "2015") %>%
+  inner_join(men15_24, by = "country") %>%
+  rename(men15_24 = "2015") %>%
+  inner_join(men25_34, by = "country") %>%
+  rename(men25_34 = "2015") %>%
+  inner_join(men35_44, by = "country") %>%
+  rename(men35_44 = "2015") %>%
+  inner_join(men45_54, by = "country") %>%
+  rename(men45_54 = "2015") %>%
+  inner_join(men55_64, by = "country") %>%
+  rename(men55_64 = "2015") %>%
+  inner_join(men65_plus, by = "country") %>%
+  rename(men65_plus = "2015")
+
+# Write data to csv file
+
+write.csv(data, "GDP_school_hours_2015.csv", row.names = FALSE)
+
+```
+
+```{r importData}
 data <- read.csv("GDP_school_hours_2015.csv")
 ```
 
