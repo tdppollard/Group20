@@ -1,0 +1,15 @@
+---
+title: "GDP School Hours Comparison"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+
+```{r import}
+data <- read.csv("GDP_school_hours_2015.csv")
+```
+
