@@ -7,8 +7,10 @@ output: pdf_document
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-``` {r packages}
+``` {r packages, message = FALSE, warning = FALSE}
 library(tidyverse)
+library(GGally)
+library(skimr)
 ```
 
 This section is the data wrangling that I did with the raw data as each column was contained in a different file.
@@ -45,7 +47,7 @@ women55_64 <- mean_years_in_school_women_55_to_64_years %>%
 women65_plus <- mean_years_in_school_women_65_plus_years %>%
   select("country", "2015")
 
-# Combine all the files and convert the GDP figure into a consistent numerical form
+# Combine all the files and convert the GDP figure into a consistent numerical format
 
 data <- GDP %>%
   mutate(k = str_detect(gdp, "k")) %>%
@@ -79,11 +81,23 @@ data <- GDP %>%
 
 # Write data to csv file
 
-write.csv(data, "GDP_school_hours_2015.csv", row.names = FALSE)
+write.csv(data, "GDP_school_years_2015.csv", row.names = FALSE)
 
 ```
 
 ```{r importData}
-data <- read.csv("GDP_school_hours_2015.csv")
+data <- read.csv("GDP_school_years_2015.csv")
 ```
 
+``` {r exploration, message = FALSE}
+
+ggpairs(data[,-1])
+
+# The GDP data is very right skewed, so applying a log transformation
+
+data <- data %>%
+  mutate(logGDP = log(gdp))
+ggpairs(data[,-c(1:2)])
+skim(data)
+
+```
