@@ -11,13 +11,14 @@ knitr::opts_chunk$set(echo = FALSE)
 library(tidyverse)
 library(GGally)
 library(skimr)
+library(moderndive)
 ```
 
 This section is the data wrangling that I did with the raw data as each column was contained in a different file.
 
 I haven't uploaded all the raw files to GitHub, just the final version, so running this code won't work, but let me know if you'd like to see all the raw files.
 
-``` {r wrangling}
+``` {r wrangling1}
 
 #  Pull each file and select the data for the year 2015
 GDP <- data.frame(country = alternative_gdp_per_capita_ppp_wb$country,
@@ -85,19 +86,150 @@ write.csv(data, "GDP_school_years_2015.csv", row.names = FALSE)
 
 ```
 
-```{r importData}
-data <- read.csv("GDP_school_years_2015.csv")
+``` {r wrangling2}
+
+#  Pull each file and select the data for the year 1990
+GDP <- data.frame(country = alternative_gdp_per_capita_ppp_wb$country,
+                   gdp = alternative_gdp_per_capita_ppp_wb$"1990")
+men15_24 <- mean_years_in_school_men_15_to_24_years %>%
+  select("country", "1990")
+men25_34 <- mean_years_in_school_men_25_to_34_years %>%
+  select("country", "1990")
+men35_44 <- mean_years_in_school_men_35_to_44_years %>%
+  select("country", "1990")
+men45_54 <- mean_years_in_school_men_45_to_54_years %>%
+  select("country", "1990")
+men55_64 <- mean_years_in_school_men_55_to_64_years %>%
+  select("country", "1990")
+men65_plus <- mean_years_in_school_men_65_plus_years %>%
+  select("country", "1990")
+women15_24 <- mean_years_in_school_women_15_to_24_years %>%
+  select("country", "1990")
+women25_34 <- mean_years_in_school_women_25_to_34_years %>%
+  select("country", "1990")
+women35_44 <- mean_years_in_school_women_35_to_44_years %>%
+  select("country", "1990")
+women45_54 <- mean_years_in_school_women_45_to_54_years %>%
+  select("country", "1990")
+women55_64 <- mean_years_in_school_women_55_to_64_years %>%
+  select("country", "1990")
+women65_plus <- mean_years_in_school_women_65_plus_years %>%
+  select("country", "1990")
+
+# Combine all the files and convert the GDP figure into a consistent numerical format
+
+data <- GDP %>%
+  mutate(k = str_detect(gdp, "k")) %>%
+  mutate(gdp = as.numeric(str_remove(gdp, "k"))) %>%
+  mutate(gdp = ifelse(k, gdp, gdp/1000)) %>%
+  select(-k) %>%
+  inner_join(women15_24, by = "country") %>%
+  rename(women15_24 = "1990") %>%
+  inner_join(women25_34, by = "country") %>%
+  rename(women25_34 = "1990") %>%
+  inner_join(women35_44, by = "country") %>%
+  rename(women35_44 = "1990") %>%
+  inner_join(women45_54, by = "country") %>%
+  rename(women45_54 = "1990") %>%
+  inner_join(women55_64, by = "country") %>%
+  rename(women55_64 = "1990") %>%
+  inner_join(women65_plus, by = "country") %>%
+  rename(women65_plus = "1990") %>%
+  inner_join(men15_24, by = "country") %>%
+  rename(men15_24 = "1990") %>%
+  inner_join(men25_34, by = "country") %>%
+  rename(men25_34 = "1990") %>%
+  inner_join(men35_44, by = "country") %>%
+  rename(men35_44 = "1990") %>%
+  inner_join(men45_54, by = "country") %>%
+  rename(men45_54 = "1990") %>%
+  inner_join(men55_64, by = "country") %>%
+  rename(men55_64 = "1990") %>%
+  inner_join(men65_plus, by = "country") %>%
+  rename(men65_plus = "1990")
+
+# Write data to csv file
+
+write.csv(data, "GDP_school_years_1990.csv", row.names = FALSE)
+
 ```
 
-``` {r exploration, message = FALSE}
+```{r importData}
+school2015 <- read.csv("GDP_school_years_2015.csv")
+school1990 <- read.csv("GDP_school_years_1990.csv")
+```
 
-ggpairs(data[,-1])
+``` {r exploration, message = FALSE, warning = FALSE}
+
+ggpairs(school2015[,-1])
+ggpairs(school1990[,-1])
 
 # The GDP data is very right skewed, so applying a log transformation
 
-data <- data %>%
+school2015 <- school2015 %>%
   mutate(logGDP = log(gdp))
-ggpairs(data[,-c(1:2)])
-skim(data)
+school1990 <- school1990 %>%
+  mutate(logGDP = log(gdp))
+ggpairs(school2015[,-c(1:2)])
+skim(school2015)
+ggpairs(school1990[,-c(1:2)])
+skim(school1990)
 
+# Calculate correlations with logGDP
+
+cor2015 <- data.frame(cor(school2015[,3:14],school2015$logGDP))
+names(cor2015) <- "Correlation"
+school1990 <- na.omit(school1990)
+cor1990 <- data.frame(cor(school1990[,3:14],school1990$logGDP))
+names(cor1990) <- "Correlation"
+
+```
+
+Bar chart showing correlations from 1990 data set of each age group with log GDP and scatterplot of highest correlating group
+
+``` {r plot1990}
+school1990 %>%
+  na.omit() %>%
+  ggplot(aes(women25_34, logGDP)) + geom_point() + geom_smooth(method = "lm", se = FALSE) +
+  labs(x = "Years in school - women aged 25-34")
+cor1990 %>%
+  rownames_to_column("Group") %>%
+  ggplot(aes(Group, Correlation)) + geom_col() + theme(axis.text.x = element_text(angle = -45)) +
+  labs(y = "Correlation with log GDP")
+```
+
+And repeated for 2015
+
+``` {r plot2015}
+school2015 %>%
+  na.omit() %>%
+  ggplot(aes(women25_34, logGDP)) + geom_point() + geom_smooth(method = "lm", se = FALSE) +
+  labs(x = "Years in school - women aged 25-34")
+cor2015 %>%
+  rownames_to_column("Group") %>%
+  ggplot(aes(Group, Correlation)) + geom_col() + theme(axis.text.x = element_text(angle = -45)) +
+  labs(y = "Correlation with log GDP")
+```
+
+Linear model fitted for highest correlating group and coefficient back transformed into per capita GDP increase per year of extra schooling for both 2015 and 1990
+
+``` {r lm}
+mod2015 <- lm(logGDP ~ women25_34, data = school2015)
+summary(mod2015)
+exp(get_regression_table(mod2015)$estimate[2])
+
+summary(mod1990)
+mod1990 <- lm(logGDP ~ women25_34, data = school1990)
+exp(get_regression_table(mod1990)$estimate[2])
+```
+
+Check model assumptions
+
+``` {r assumptions}
+get_regression_points(mod2015) %>%
+  ggplot(aes(logGDP_hat, residual)) + geom_point() + geom_hline(yintercept = 0)
+get_regression_points(mod2015) %>%
+  ggplot(aes(women25_34, residual)) + geom_point() + geom_hline(yintercept = 0)
+get_regression_points(mod2015) %>%
+  ggplot(aes(sample = residual)) + stat_qq()
 ```
