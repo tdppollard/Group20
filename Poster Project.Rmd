@@ -12,6 +12,7 @@ library(tidyverse)
 library(GGally)
 library(skimr)
 library(moderndive)
+library(olsrr)
 ```
 
 This section is the data wrangling that I did with the raw data as each column was contained in a different file.
@@ -214,22 +215,187 @@ cor2015 %>%
 Linear model fitted for highest correlating group and coefficient back transformed into per capita GDP increase per year of extra schooling for both 2015 and 1990
 
 ``` {r lm}
-mod2015 <- lm(logGDP ~ women25_34, data = school2015)
-summary(mod2015)
-exp(get_regression_table(mod2015)$estimate[2])
+mod2015f <- lm(logGDP ~ women25_34, data = school2015)
+summary(mod2015f)
+get_regression_table(mod2015f)
+get_regression_summaries(mod2015f)
+exp(get_regression_table(mod2015f)$estimate[2])
 
-summary(mod1990)
-mod1990 <- lm(logGDP ~ women25_34, data = school1990)
-exp(get_regression_table(mod1990)$estimate[2])
+mod1990f <- lm(logGDP ~ women25_34, data = school1990)
+summary(mod1990f)
+get_regression_table(mod1990f)
+get_regression_summaries(mod1990f)
+exp(get_regression_table(mod1990f)$estimate[2])
 ```
 
 Check model assumptions
 
 ``` {r assumptions}
-get_regression_points(mod2015) %>%
+get_regression_points(mod2015f) %>%
   ggplot(aes(logGDP_hat, residual)) + geom_point() + geom_hline(yintercept = 0)
-get_regression_points(mod2015) %>%
+get_regression_points(mod2015f) %>%
   ggplot(aes(women25_34, residual)) + geom_point() + geom_hline(yintercept = 0)
-get_regression_points(mod2015) %>%
+get_regression_points(mod2015f) %>%
+  ggplot(aes(sample = residual)) + stat_qq()
+```
+
+Recreate the models but for men
+
+``` {r lm1}
+mod2015m <- lm(logGDP ~ men25_34, data = school2015)
+summary(mod2015m)
+get_regression_table(mod2015m)
+get_regression_summaries(mod2015m)
+exp(get_regression_table(mod2015m)$estimate[2])
+
+mod1990m <- lm(logGDP ~ men25_34, data = school1990)
+summary(mod1990m)
+get_regression_table(mod1990m)
+get_regression_summaries(mod1990m)
+exp(get_regression_table(mod1990m)$estimate[2])
+```
+
+Check model assumptions
+
+``` {r assumptions}
+get_regression_points(mod2015m) %>%
+  ggplot(aes(logGDP_hat, residual)) + geom_point() + geom_hline(yintercept = 0)
+get_regression_points(mod2015m) %>%
+  ggplot(aes(men25_34, residual)) + geom_point() + geom_hline(yintercept = 0)
+get_regression_points(mod2015m) %>%
+  ggplot(aes(sample = residual)) + stat_qq()
+```
+
+Prepare data on child mortality, fertility rate and female participation in the workforce for 1990 and 2015
+
+``` {r otherData}
+# import child mortality data
+
+child_mort <- child_mortality_0_5_year_olds_dying_per_1000_born %>%
+  select("country", "1990", "2015") %>%
+  rename(child_mort_1990 = "1990", child_mort_2015 = "2015")
+
+# import fertility data
+
+fert <- children_per_woman_total_fertility %>%
+  select("country","1990", "2015") %>%
+  rename(fert_1990 = "1990", fert_2015 ="2015")
+
+# import data on female participation in the workforce
+
+fem_part <- females_aged_15plus_labour_force_participation_rate_percent %>%
+  select("country", "1990", "2015") %>%
+  rename(fem_part_1990 = "1990", fem_part_2015 = "2015")
+
+# import data on murders
+
+murders <- murder_per_100000_people %>%
+  select("country", "1990", "2015") %>%
+  rename(murders_1990 = "1990", murders_2015 = "2015")
+
+# import data on suicides
+
+suicides <- suicide_per_100000_people %>%
+  select("country", "1990", "2015") %>%
+  rename(suicides_1990 = "1990", suicides_2015 = "2015")
+
+# take most highly correlated column from the school years 2015 data set
+
+school_fem_2015 <- school2015 %>%
+  select("country", "gdp" ,"women25_34") %>%
+  rename(gdp_2015 = gdp, sch_yrs_2015 = women25_34)
+
+# combine into one file with the same column from the school years 1990 data set
+
+gdp <- school1990 %>%
+  select("country", "gdp", "women25_34") %>%
+  rename(gdp_1990 = gdp, sch_yrs_1990 = women25_34) %>%
+  inner_join(school_fem_2015, by = "country") %>%
+  mutate(log_gdp_1990 = log(gdp_1990), log_gdp_2015 = log(gdp_2015)) %>%
+  inner_join(child_mort, by ="country") %>%
+  inner_join(fert, by = "country") %>%
+  inner_join(fem_part, by = "country") %>%
+  inner_join(murders, by = "country") %>%
+  inner_join(suicides, by = "country") %>%
+  select(country, gdp_1990, gdp_2015, log_gdp_1990, log_gdp_2015, everything())
+
+# save to data file
+
+write.csv(gdp, "GDP_1990_2015.csv", row.names = FALSE)
+
+```
+
+``` {r importGDPfemData}
+gdp <- read.csv("GDP_1990_2015.csv")
+```
+
+Explore new data sets
+
+``` {r exploration, message = FALSE, warning = FALSE}
+
+gdp %>%
+  skim()
+# just look at countries without missing values
+gdp %>%
+  na.omit() %>%
+  skim()
+  
+gdp %>%
+  select(-country, -gdp_1990, -gdp_2015) %>%
+  ggpairs()
+
+```
+
+Fit new linear models
+
+``` {r lm2}
+
+mod_1990_2 <- lm(log_gdp_1990 ~ sch_yrs_1990 + child_mort_1990 + fert_1990 + fem_part_1990 + murders_1990 + suicides_1990, data = gdp)
+summary(mod_1990_2)
+
+mod_2015_2 <- lm(log_gdp_2015 ~ sch_yrs_2015 + child_mort_2015 + fert_2015 + fem_part_2015 + murders_2015 + suicides_2015, data = gdp)
+summary(mod_2015_2)
+
+# implement forward stepwise regression based on significance level and AIC
+
+ols_step_forward_p(mod_1990_2, penter = 0.05)
+ols_step_forward_p(mod_2015_2, penter = 0.05)
+ols_step_forward_aic(mod_1990_2)
+ols_step_forward_aic(mod_2015_2)
+
+
+# rebuild models based on significant indicators
+
+mod_1990_3 <- lm(log_gdp_1990 ~ child_mort_1990 + sch_yrs_1990, data = gdp)
+summary(mod_1990_3)
+
+mod_2015_3 <- lm(log_gdp_2015 ~ child_mort_2015 + sch_yrs_2015, data = gdp)
+summary(mod_2015_3)
+
+```
+
+Check model assumptions for 2015
+
+``` {r assumptions2015}
+get_regression_points(mod_2015_3) %>%
+  ggplot(aes(log_gdp_2015_hat, residual)) + geom_point() + geom_hline(yintercept = 0)
+get_regression_points(mod_2015_3) %>%
+  ggplot(aes(sch_yrs_2015, residual)) + geom_point() + geom_hline(yintercept = 0)
+get_regression_points(mod_2015_3) %>%
+  ggplot(aes(child_mort_2015, residual)) + geom_point() + geom_hline(yintercept = 0)
+get_regression_points(mod_2015_3) %>%
+  ggplot(aes(sample = residual)) + stat_qq()
+```
+
+Check model assumptions for 1990
+
+``` {r assumptions1990}
+get_regression_points(mod_1990_3) %>%
+  ggplot(aes(log_gdp_1990_hat, residual)) + geom_point() + geom_hline(yintercept = 0)
+get_regression_points(mod_1990_3) %>%
+  ggplot(aes(sch_yrs_1990, residual)) + geom_point() + geom_hline(yintercept = 0)
+get_regression_points(mod_1990_3) %>%
+  ggplot(aes(child_mort_1990, residual)) + geom_point() + geom_hline(yintercept = 0)
+get_regression_points(mod_1990_3) %>%
   ggplot(aes(sample = residual)) + stat_qq()
 ```
