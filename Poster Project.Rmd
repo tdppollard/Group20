@@ -7,6 +7,10 @@ output: pdf_document
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+Questions of interest:
+
+Firstly, is the number of years children spend in school associated with a country's wealth and if so to what extent?  How does this relationship vary according to gender and generation of worker?  Secondly, what social factors are associated with a nation's wealth, particularly with regard to the involvement of women in the workforce?
+
 ``` {r packages, message = FALSE, warning = FALSE}
 library(tidyverse)
 library(GGally)
@@ -212,20 +216,19 @@ cor2015 %>%
   labs(y = "Correlation with log GDP")
 ```
 
-Linear model fitted for highest correlating group and coefficient back transformed into per capita GDP increase per year of extra schooling for both 2015 and 1990
+Linear model fitted for highest correlating group 
 
 ``` {r lm}
 mod2015f <- lm(logGDP ~ women25_34, data = school2015)
 summary(mod2015f)
 get_regression_table(mod2015f)
 get_regression_summaries(mod2015f)
-exp(get_regression_table(mod2015f)$estimate[2])
 
 mod1990f <- lm(logGDP ~ women25_34, data = school1990)
 summary(mod1990f)
 get_regression_table(mod1990f)
 get_regression_summaries(mod1990f)
-exp(get_regression_table(mod1990f)$estimate[2])
+
 ```
 
 Check model assumptions
@@ -266,7 +269,7 @@ get_regression_points(mod2015m) %>%
   ggplot(aes(sample = residual)) + stat_qq()
 ```
 
-Prepare data on child mortality, fertility rate and female participation in the workforce for 1990 and 2015
+Prepare data on child mortality, fertility rate, murders, suicides and female participation in the workforce for 1990 and 2015.  More data wrangling. Skip to the next code chunk to run without the orginal files.
 
 ``` {r otherData}
 # import child mortality data
@@ -310,13 +313,13 @@ school_fem_2015 <- school2015 %>%
 gdp <- school1990 %>%
   select("country", "gdp", "women25_34") %>%
   rename(gdp_1990 = gdp, sch_yrs_1990 = women25_34) %>%
-  inner_join(school_fem_2015, by = "country") %>%
+  right_join(school_fem_2015, by = "country") %>%
   mutate(log_gdp_1990 = log(gdp_1990), log_gdp_2015 = log(gdp_2015)) %>%
-  inner_join(child_mort, by ="country") %>%
-  inner_join(fert, by = "country") %>%
-  inner_join(fem_part, by = "country") %>%
-  inner_join(murders, by = "country") %>%
-  inner_join(suicides, by = "country") %>%
+  left_join(child_mort, by ="country") %>%
+  left_join(fert, by = "country") %>%
+  left_join(fem_part, by = "country") %>%
+  left_join(murders, by = "country") %>%
+  left_join(suicides, by = "country") %>%
   select(country, gdp_1990, gdp_2015, log_gdp_1990, log_gdp_2015, everything())
 
 # save to data file
@@ -356,25 +359,32 @@ summary(mod_1990_2)
 mod_2015_2 <- lm(log_gdp_2015 ~ sch_yrs_2015 + child_mort_2015 + fert_2015 + fem_part_2015 + murders_2015 + suicides_2015, data = gdp)
 summary(mod_2015_2)
 
-# implement forward stepwise regression based on significance level and AIC
+# implement forward stepwise regression based on significance level
 
-ols_step_forward_p(mod_1990_2, penter = 0.05)
-ols_step_forward_p(mod_2015_2, penter = 0.05)
-ols_step_forward_aic(mod_1990_2)
-ols_step_forward_aic(mod_2015_2)
+ols_step_forward_p(mod_1990_2)
+ols_step_forward_p(mod_2015_2)
 
+# rebuild models based on most significant indicators (excluding murders due to high number of missing values)
 
-# rebuild models based on significant indicators
-
-mod_1990_3 <- lm(log_gdp_1990 ~ child_mort_1990 + sch_yrs_1990, data = gdp)
+mod_1990_3 <- lm(log_gdp_1990 ~ child_mort_1990 + sch_yrs_1990 + fem_part_1990, data = gdp)
 summary(mod_1990_3)
 
-mod_2015_3 <- lm(log_gdp_2015 ~ child_mort_2015 + sch_yrs_2015, data = gdp)
+mod_2015_3 <- lm(log_gdp_2015 ~ child_mort_2015 + sch_yrs_2015 + fert_2015, data = gdp)
 summary(mod_2015_3)
+
+# try swapping fem_part and fert
+
+mod_1990_4 <- lm(log_gdp_1990 ~ child_mort_1990 + sch_yrs_1990 + fert_1990, data = gdp)
+summary(mod_1990_4)
+
+mod_2015_4 <- lm(log_gdp_2015 ~ child_mort_2015 + sch_yrs_2015 + fem_part_2015, data = gdp)
+summary(mod_2015_4)
 
 ```
 
-Check model assumptions for 2015
+Noticeable that fertility rates have taken the place of female participation in the workforce between 1990 and 2015. Also noticeable that femal participation in the workplace is negatively correlated. 
+
+Check model assumptions for model 3: 2015
 
 ``` {r assumptions2015}
 get_regression_points(mod_2015_3) %>%
@@ -384,10 +394,12 @@ get_regression_points(mod_2015_3) %>%
 get_regression_points(mod_2015_3) %>%
   ggplot(aes(child_mort_2015, residual)) + geom_point() + geom_hline(yintercept = 0)
 get_regression_points(mod_2015_3) %>%
+  ggplot(aes(fert_2015, residual)) + geom_point() + geom_hline(yintercept = 0)
+get_regression_points(mod_2015_3) %>%
   ggplot(aes(sample = residual)) + stat_qq()
 ```
 
-Check model assumptions for 1990
+Check model assumptions for model 3: 1990
 
 ``` {r assumptions1990}
 get_regression_points(mod_1990_3) %>%
@@ -397,5 +409,17 @@ get_regression_points(mod_1990_3) %>%
 get_regression_points(mod_1990_3) %>%
   ggplot(aes(child_mort_1990, residual)) + geom_point() + geom_hline(yintercept = 0)
 get_regression_points(mod_1990_3) %>%
+  ggplot(aes(fem_part_1990, residual)) + geom_point() + geom_hline(yintercept = 0)
+get_regression_points(mod_1990_3) %>%
   ggplot(aes(sample = residual)) + stat_qq()
+```
+
+print coefficient summaries
+
+``` {r coefficients}
+
+get_regression_table(mod_1990_3)
+get_regression_table(mod_2015_3)
+
+
 ```
