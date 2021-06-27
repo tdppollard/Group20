@@ -1,179 +1,2315 @@
-"country","gdp","women15_24","women25_34","women35_44","women45_54","women55_64","women65_plus","men15_24","men25_34","men35_44","men45_54","men55_64","men65_plus"
-"Afghanistan",2.21,2.13,0.98,0.74,0.53,0.26,0.22,5.27,4.13,3.59,3.39,2.53,1.74
-"Angola",8.04,6,5.31,4.49,2.09,0.9,0.57,6.14,7.24,7.13,5.63,3.61,2.07
-"Albania",12.1,11.7,12.3,12,11.3,9.31,6.85,11.2,12,12,11.9,10.8,8.92
-"United Arab Emirates",65.2,13,13.2,10.2,6.3,3.68,1.18,12,12.5,12.7,10.6,7.44,3.67
-"Argentina",23.9,12.8,13,12.2,11.3,10.1,8.51,11.7,12,11.4,10.7,9.74,8.59
-"Armenia",11.3,12.3,13.1,12.9,12.4,11.7,9.51,11.6,12.5,12.5,12.3,11.8,10.2
-"Antigua and Barbuda",18.6,15,14.5,14.1,13.7,13.3,12.8,13.5,13.2,12.9,12.5,12.3,11.9
-"Australia",48,15.1,14.5,14.2,13.8,13.2,12.1,14.7,14.2,14,13.7,13.2,12.2
-"Austria",53.2,12.4,13.3,12.9,12.3,11.5,10.6,11.9,13.1,13.1,12.7,12.3,11.7
-"Azerbaijan",14.9,12.6,13.2,13.1,12.7,11.3,8.7,12.3,13,13.1,13.3,12.8,11
-"Burundi",0.825,4.91,4.23,2.88,1.98,1.05,0.54,5.56,5.43,4.66,3.92,3.34,2.03
-"Belgium",49.5,14,14.5,13.8,13.2,12.3,11,13.2,13.9,13.7,13.2,12.3,11.4
-"Benin",2.95,4.32,2.73,2.06,1.45,0.91,0.42,6.55,5.59,4.94,3.94,2.64,1.43
-"Burkina Faso",1.93,2.74,1.86,1.11,0.6,0.22,0.09,3.76,3.07,2.18,1.42,0.67,0.32
-"Bangladesh",3.7,7.02,5.09,3.49,2.47,1.57,0.97,7.13,6.53,5.7,5.33,4.76,3.72
-"Bulgaria",19.6,11.8,13.6,13.6,12.9,11.6,9.37,11.4,12.8,12.7,12.5,11.7,10.4
-"Bahrain",48.3,11.2,10.5,9.38,6.55,3.6,0.94,10.3,9.79,9.54,8.6,6.84,3.35
-"Bahamas",35.8,13.8,13.6,13,12.1,11.2,10.1,12.7,12.7,12.3,11.5,10.9,9.98
-"Bosnia and Herzegovina",12.8,11.2,11.3,10.8,9.71,8.08,6.47,11,11.3,11.3,10.9,9.91,8.35
-"Belarus",18.3,13.1,14.9,14.8,14.2,13,9.87,12.6,14.1,14.1,13.7,12.8,10.8
-"Belize",7.26,10.4,9.78,9.08,8.4,7.85,6.51,9.84,9.79,9.33,8.69,8.01,6.74
-"Bolivia",7.98,10.7,9.86,8.22,6.56,4.79,3.5,10.8,10.8,9.83,8.73,7.21,5.58
-"Brazil",15.1,9.61,9.6,8.44,7,5.36,3.97,8.21,8.49,7.68,6.73,5.48,4.2
-"Barbados",15.4,12.6,11.2,9.58,8,6.51,5.16,11.2,10.3,9.32,8.34,7.37,6.41
-"Brunei",63.1,15.6,14.5,13.2,11.7,10,8.25,15.2,14.6,13.8,12.9,11.9,10.9
-"Bhutan",10.1,4.25,3.23,2.41,1.78,1.29,0.93,7.51,6.63,5.78,4.99,4.25,3.58
-"Botswana",16.7,10.5,8.71,6.91,4.51,3.21,1.91,8.4,7.67,6.52,4.79,3.34,2.02
-"Central African Republic",0.853,4.94,4.27,3.04,1.51,0.62,0.22,6.79,7.17,6.7,5.38,3.42,1.93
-"Canada",47.8,14.6,15.7,15.6,15.2,14.3,13.8,14.3,15.3,15.3,14.9,14.2,13.6
-"Switzerland",66.2,11.9,14.4,14.2,13.9,13.3,12.6,11.5,14.6,14.6,14.4,14.3,13.8
-"Chile",23.6,13.5,13.3,12.3,11.1,9.66,8.6,12.7,12.8,11.9,10.9,9.74,8.52
-"China",12.7,11.3,9.82,8.45,6.83,4.75,2.38,11.2,11,10.4,9.02,7.74,6.02
-"Cote d'Ivoire",4.42,4.75,3.87,2.85,1.57,0.54,0.2,6.59,6.4,5.67,4.48,2.47,1.13
-"Cameroon",3.46,7.96,7.17,5.96,4.45,2.31,1.23,8.67,8.93,8.23,6.96,4.97,3.06
-"Congo, Dem. Rep.",1.07,6.58,6.26,5.56,4.03,2.48,1.12,7.81,8.94,9,8.46,6.93,5.12
-"Congo, Rep.",3.8,8.7,8.85,7.83,5.7,2.55,0.79,8.97,10.3,10.5,9.87,7.34,4.08
-"Colombia",14.2,11.2,10.8,9.62,8.16,6.69,5.19,10.1,10.1,9.23,8.11,6.77,5.34
-"Comoros",2.96,7.19,6.03,3.1,1.06,0.36,0.15,7.38,7.51,5.86,3.89,1.97,1.06
-"Cape Verde",6.27,8.45,6.14,3.98,2.05,0.89,0.57,8.14,6.96,6.12,5.05,2.93,2.18
-"Costa Rica",18,11.1,10.9,10.2,9.4,8.28,6.76,9.93,10,9.55,9.16,8.24,6.72
-"Cyprus",34.4,14.2,14.6,13.8,12.4,10.3,7.16,13.3,14.1,13.8,12.9,11.6,9.52
-"Czech Republic",36.2,13,14.5,14.3,13.6,13.2,12.1,12.6,14.1,14.2,13.9,13.9,13.1
-"Germany",51.2,13.4,14.2,13.9,13.4,12.2,11,12.7,14,13.8,13.6,13,12.3
-"Djibouti",4.49,5.98,4.05,2.38,1.35,0.66,0.18,9.18,8.4,7.09,5.34,3.42,1.66
-"Dominica",11.9,13.7,12.5,11.5,10.9,9.96,9.18,12.3,11.2,10.6,10.4,9.9,9.3
-"Denmark",53,13.6,15.1,15,14.5,13.7,12.6,12.9,14.5,14.6,14.3,13.8,13
-"Dominican Republic",15.3,11.2,11.1,9.92,7.95,6.13,4.27,9.73,10,9.43,8.15,6.6,4.73
-"Algeria",11.5,10.3,7.74,4.33,1.56,0.58,0.2,9.42,8.52,6.16,3.63,1.98,1.03
-"Ecuador",11.9,11.1,11.2,10.2,8.79,7.4,5.73,10.3,10.7,10.1,9.09,7.84,6.22
-"Egypt",10.6,9.96,9.06,6.83,4.94,3.15,1.56,10.6,11,9.78,8.27,6.47,4.09
-"Spain",37.5,13.4,13.5,12,10.3,8.45,6.76,12.6,12.8,11.9,10.5,9.05,7.4
-"Estonia",31.2,11.6,14.5,14.6,14.2,13.2,10.9,10.6,13.4,13.7,13.2,12.3,11.1
-"Ethiopia",1.78,5.79,3.75,1.96,0.83,0.33,0.12,6.54,6.12,4.95,3.43,1.82,0.87
-"Finland",45.1,13.3,15.1,14.8,13.9,12.8,11.6,12.5,14.2,14.1,13.4,12.6,11.9
-"Fiji",12.6,12.5,12.1,11.2,10,8.79,7.36,11.8,11.6,10.9,10.2,9,7.99
-"France",43.6,13.3,14,13,12.1,11.1,9.48,12.5,13.2,12.5,11.8,11.1,9.99
-"Micronesia, Fed. Sts.",3.46,13.9,12.6,12,11,10,9.08,13.5,12.7,13,12.9,11.8,9.99
-"Gabon",15.5,10,10.2,9.08,6.82,3.81,1.21,9.58,10.2,9.55,7.62,5.01,2.56
-"United Kingdom",44.9,14.5,14.9,14.4,14.1,13.7,13.3,13.9,14.6,14.1,14.1,13.7,13.3
-"Georgia",12.6,13.5,14.6,14.3,13.8,13.1,11.2,12.9,13.9,13.9,13.7,13.1,11.7
-"Ghana",4.67,8.08,7.12,6.26,5.44,4.22,1.87,8.56,9.11,8.68,8.43,7.31,4.81
-"Guinea",2.09,3.33,2.07,1.39,0.77,0.37,0.16,5.7,5.03,4.14,3.25,1.83,0.77
-"Gambia",2.06,5.24,3.48,2.19,1.31,0.83,0.59,6.87,6.5,5.06,3.34,2.04,1.26
-"Guinea-Bissau",1.8,3.31,2.36,1.44,0.7,0.31,0.2,4.96,5,4.32,3.04,1.53,0.77
-"Equatorial Guinea",28.3,7.82,7.28,6.08,4.08,2.2,1.05,8.33,9.77,9.59,8.77,6.51,4.54
-"Greece",28.5,13.7,13.9,12.8,11,9.01,6.85,12.9,13.4,12.8,11.8,10.3,8.68
-"Grenada",15.1,12.6,11.2,9.58,8,6.51,5.16,11.2,10.3,9.32,8.34,7.37,6.41
-"Guatemala",8.13,7.6,6.65,5.56,4.43,3.41,2.94,7.9,7.55,6.56,5.51,4.15,3.33
-"Guyana",8.6,11.5,10.8,10.1,9.48,8.65,7.67,10.6,10.3,9.94,9.75,9.14,8.43
-"Honduras",5.28,9.27,8.58,7.36,6.23,4.86,3.28,8.29,7.91,7.21,6.49,5.07,3.49
-"Croatia",24.4,11.1,12.6,11.8,10.6,9.12,6.87,10.5,11.8,11.8,11.2,10.8,9.18
-"Haiti",1.76,7.77,6.9,4.6,3.08,2.1,1.45,7.72,8.2,6.19,4.44,3.3,2.55
-"Hungary",27.5,13.3,13.9,13.7,13.2,12,10.1,12.7,13.4,13.3,13.1,12.3,10.9
-"Indonesia",10.1,10.4,9.56,8.34,6.37,4.48,3.3,9.83,10.1,9.16,8.08,6.62,4.3
-"India",5.45,7.3,5.79,4.38,3.24,2.04,1.34,8.99,8.53,7.42,6.72,5.36,4.11
-"Ireland",71.2,14.6,14.5,13.7,12.8,11.8,10.9,13.7,13.8,13.1,12.3,11.4,10.6
-"Iran",12.7,11.9,9.89,7.29,4.04,2.01,1.17,12,11.2,9.79,7.36,4.77,3.18
-"Iraq",10.3,7.73,7.88,6.76,4.4,2.36,0.84,8.57,9.73,9.98,8.65,6.49,3.38
-"Iceland",51.7,12,14.9,14.9,14.2,13.3,11.9,11.5,13.9,14.5,14.3,14.1,13.4
-"Israel",37.6,15.1,15.7,15.2,14.5,13.4,12.7,14.3,15.1,14.9,14.3,13.8,13.1
-"Italy",40.4,14,14.3,13.2,11.9,10.2,9.27,13.2,13.8,13.1,12.4,11.1,10.4
-"Jamaica",9.47,13.3,12.8,11.8,10.7,9.43,8.35,12.3,11.9,11.1,10,9.04,7.9
-"Jordan",9.97,12.8,12.4,11.1,8.78,5.55,2.31,12.3,12.4,12,11.4,9.87,6.76
-"Japan",39.7,15.4,15.5,14.9,14,12.7,11.1,14.7,15.1,14.7,13.9,13,11.9
-"Kazakhstan",24.3,13.1,13.9,13.8,13.3,12,9.42,12.4,13.4,13.2,13,12.3,10.7
-"Kenya",3.82,9.26,9.14,7.25,4.82,2.41,1.11,9.06,10.1,9.35,7.99,5.83,3.35
-"Kyrgyz Republic",4.81,13,13.8,13.6,13.1,11.6,8.81,12.4,13.2,13.1,13,12.2,9.91
-"Cambodia",3.54,6.98,5.69,4.54,3.61,2.44,1.01,7.52,7.29,6.55,5.97,5.63,4.24
-"Kiribati",2.17,10.9,10,8.67,6.67,5.11,3.39,9.71,9.61,8.79,7.54,6.77,4.95
-"South Korea",38.9,14.5,14.6,13.7,11.7,8.92,4.84,13.9,14.8,14.4,13.2,11.7,9.24
-"Kuwait",54.8,12.5,12.5,11.1,8.9,5.7,1.93,11.8,12,11.9,10.9,8.65,4.25
-"Lao",6.54,6.98,6.11,4.96,3.26,1.86,1.05,7.43,7.31,6.96,6.11,4.75,3.29
-"Lebanon",16.3,11.7,11.4,10.2,8.69,6.4,4.5,10.6,10.8,10.3,9.96,7.87,5.52
-"Liberia",1.58,5.12,4.37,3.41,2.22,1.23,0.56,6.46,7.18,7.16,6.79,5.16,2.88
-"Libya",11,7.7,6.27,4.93,3.77,2.79,2.01,9.61,8.71,7.77,6.82,5.85,4.9
-"St. Lucia",14,12.4,11.9,11.2,10.2,9.34,8.39,11.3,10.9,10.7,9.99,8.97,8.47
-"Sri Lanka",11.9,12.2,11.6,10.7,9.53,8.49,6.75,11.4,11.1,10.3,10,9.5,8.07
-"Lesotho",2.73,10.5,10.2,9.11,7.96,6.68,5.18,8.39,8.12,7.04,6.22,5.18,4.27
-"Lithuania",30.8,12.2,14.2,14,13.3,11.4,8.32,11.6,13.6,13.4,12.8,11.5,9.1
-"Luxembourg",111,12.7,14.1,13.3,12.5,11.7,10.2,12,13.7,13.3,12.9,12.6,11.7
-"Latvia",26.5,12.7,14.4,14.5,14.1,13.3,11.6,11.8,13.5,13.6,13.4,12.9,11.6
-"Morocco",7.13,6.1,4.84,3.1,1.69,0.64,0.25,7.26,6.83,5.66,4.34,2.19,0.84
-"Moldova",10.4,13.3,13.8,13.6,12.8,10.8,7.31,12.2,12.8,12.8,12.6,11,8.6
-"Madagascar",1.55,6.29,6.46,5.65,4.07,2.59,1.77,5.88,6.96,6.71,5.66,4.2,3.09
-"Maldives",17.3,9.05,7.6,5.68,4.07,3.31,2.43,8.61,7.92,6.53,5.15,3.89,2.92
-"Mexico",19.3,11.3,10.8,9.46,7.89,6.13,4.6,10.8,10.8,10,8.75,6.94,5.19
-"Marshall Islands",3.63,10.4,10.8,10.3,10,8.47,7.21,9.34,10.4,10.9,10.9,10.9,9.92
-"North Macedonia",15,12.3,12.7,11.8,10.9,8.8,5.84,11.8,12.3,12.2,12.1,11.1,8.8
-"Mali",2.14,2.42,1.56,1.2,0.74,0.32,0.16,3.76,3,2.63,2.12,1.2,0.65
-"Malta",38.8,11.3,11.6,11.2,10.2,9.3,7.94,10.7,11.3,11.1,10.3,9.6,8.72
-"Myanmar",4.27,8.33,7.74,6.42,5.03,3.42,2.07,7.79,7.47,6.89,6.05,4.76,3.15
-"Montenegro",18.2,12.5,13.1,12.8,12.1,10.5,7.51,12.3,12.9,12.9,13,12.5,10.9
-"Mongolia",11,11.1,12.1,12.1,11.5,9.73,6.22,9.86,10.8,11.2,11.1,10.6,8.56
-"Mozambique",1.26,4.94,2.99,3.01,2.66,2.46,1.05,4.79,5.26,5.05,4.18,2.99,2.59
-"Mauritania",5.13,5.65,4.44,2.59,1.25,0.46,0.31,6.36,6.53,5.01,3.15,1.79,0.78
-"Mauritius",19.9,11.3,10.4,9.3,7.73,5.82,3.89,10.8,10.4,9.88,9.09,7.87,6.19
-"Malawi",1.03,6.24,4.98,3.71,2.72,1.97,1.65,6.85,7.08,6.35,5.61,4.47,3.28
-"Malaysia",24.8,12.7,11.9,10.2,7.75,4.9,2.41,12.1,11.7,10.9,9.47,7.58,5.35
-"Namibia",10.5,9.97,9.79,8.43,6.64,4.78,2.97,8.77,9.18,8.51,6.98,5.33,3.54
-"Niger",1.13,2.07,1.41,0.86,0.37,0.14,0.04,3.6,2.89,2.02,1.15,0.5,0.2
-"Nigeria",5.51,8.23,6.77,5.66,4.26,2.82,1.68,9.3,9.14,7.97,6.66,4.97,3.52
-"Nicaragua",5.63,9.4,9.04,7.92,6.14,4.36,3.15,8.07,8.04,7.66,6.57,4.9,3.42
-"Netherlands",53.2,14.1,14.7,14.1,13.5,12.8,12,13.4,14.6,14.1,13.9,13.3,12.6
-"Norway",61.9,14.5,15.4,15,14.5,13.6,12.3,14.1,14.9,14.8,14.4,13.4,12.3
-"Nepal",2.91,5.95,3.6,1.69,0.8,0.35,0.12,7.98,7.19,5.75,4.18,2.58,1.43
-"New Zealand",40.5,15,15,14.7,14.2,13.5,12.6,14.3,14.4,14.3,13.8,13.3,12.8
-"Oman",30.2,9.85,8.19,5.57,2.49,0.99,0.34,10.3,9.67,8.75,6.22,3.02,1.03
-"Pakistan",4.28,5.65,4.26,2.8,1.78,0.97,0.5,7.73,7.55,6.57,5.54,4.34,2.91
-"Panama",28.4,12.3,12.5,11.7,10.4,8.88,7.13,11.1,11.4,10.9,9.9,8.49,6.81
-"Peru",12.1,11.7,11.6,10.3,8.82,7.09,5.51,11.5,12,11.3,10.4,8.97,7.44
-"Philippines",7.3,11.5,11.8,11,9.93,8.82,7.05,10.4,10.9,10.4,9.65,8.74,7.5
-"Papua New Guinea",4.2,7.52,6.04,4.35,2.52,1.6,1,8.36,8.28,6.97,4.72,3.26,1.42
-"Poland",27.9,13.7,14.8,14.4,13.4,12.2,10.7,12.9,14.1,13.8,13.3,12.4,11.4
-"Portugal",31.2,11.3,11.5,9.87,8.25,6.17,4.24,10.4,10.5,9.53,8.33,7.07,5.69
-"Paraguay",11.8,10.5,10.2,9.17,7.74,6.7,5.41,9.16,9.26,8.67,7.75,6.88,5.85
-"Palestine",5.56,11.6,11.1,9.98,7.8,4.43,1.32,11.1,11.4,11.2,10.6,8.72,5.06
-"Qatar",97.3,11.4,10.8,10.1,8.96,6.44,2.29,8.81,8.84,8.89,8.46,8.14,5.74
-"Romania",23.9,12.9,13.8,13.3,12,10.2,8.37,12.4,13.6,13.5,12.9,11.5,9.98
-"Russia",25.6,13.6,14.7,14.5,14.1,12.9,10.2,12.9,13.9,13.9,13.6,12.8,10.9
-"Rwanda",1.89,5.86,5.48,3.98,2.29,1.25,0.6,5.82,6.2,5.42,4.35,3.44,2.16
-"Saudi Arabia",48.9,11,9.61,6.06,3.07,1.49,0.68,11.9,12.5,11,8.62,5.73,3.12
-"Sudan",4.19,6.97,5.67,3.49,1.89,0.87,0.45,7.79,7.56,6.24,4.75,3.16,1.81
-"Senegal",2.97,4.2,3.11,2.25,1.5,0.76,0.29,5.26,4.9,4.4,3.63,2.55,1.27
-"Singapore",89.4,14.1,13.8,12.8,9.47,6.43,3.28,13.2,14,13.6,10.9,8.93,6.37
-"Solomon Islands",2.3,9.2,7.85,6.5,5.26,4.19,2.63,9.4,8.92,8.28,7.54,6.14,4.84
-"Sierra Leone",1.55,4.57,2.58,2.04,1.38,0.84,0.61,5.97,4.85,4.25,3.66,2.64,1.57
-"El Salvador",8.14,9.81,9.21,7.77,6.81,5.61,4.38,9.34,9.34,8.68,7.62,6.3,4.82
-"Serbia",15.5,11.7,13,12.7,11.7,10.4,7.27,11.3,12.5,12.5,12.1,11.5,10.1
-"Sao Tome and Principe",3.76,7.22,6.35,4.48,2.54,1.27,0.8,7.45,7.64,6.88,5.56,3.98,2.87
-"Suriname",17.3,10.1,10.1,9.51,8.64,7.3,6.45,9.4,10,9.93,9.6,8.63,6.44
-"Slovak Republic",29.5,11.9,14,13.5,12.7,11.6,9.01,11.6,13.5,13.2,13.1,12.5,11.3
-"Slovenia",33.9,12.8,14.2,13.3,12.5,11.1,9.42,11.9,13.4,13,12.7,12.2,11.1
-"Sweden",51.7,15,15.1,14.7,14.1,12.9,11.4,14.2,14.5,14.1,13.5,12.5,11.4
-"Eswatini",8.38,9.97,10,8.75,6.82,4.96,2.8,9.17,9.7,9,7.8,5.85,3.94
-"Seychelles",25.6,11.3,11.6,10.8,9.44,7.78,6.49,10.9,11.5,10.6,9.3,7.63,6.63
-"Chad",1.86,2.66,1.63,1.09,0.56,0.19,0.15,5.08,4.79,3.63,2.8,1.58,0.59
-"Togo",1.45,6.06,4.19,3.28,2.06,0.98,0.45,7.71,7.52,6.7,5.67,3.89,2.06
-"Thailand",16.3,11.5,10.1,8.87,7.71,6.56,5.02,10.8,9.83,9.01,8.32,7.45,6.42
-"Tajikistan",2.82,11.2,11.8,11.7,11,9.38,6.34,11.8,12.5,12.3,12.4,11.4,8.91
-"Turkmenistan",13,13.6,14,13.4,11.8,9.65,6.82,13.1,13.8,13.7,12.6,10.6,8.39
-"Timor-Leste",3.3,8.69,6.92,3.92,1.45,0.48,0.33,8.66,8.2,6.51,3.54,1.4,0.67
-"Tonga",6.03,11.7,12.2,11.5,10.4,9.61,8.66,10.9,11.7,11.4,10.6,9.9,9.12
-"Trinidad and Tobago",29.2,14,13.3,12.2,10.8,9.49,8.26,13.1,12.5,11.6,10.8,9.83,8.61
-"Tunisia",10.5,10.3,9.1,6.64,4.68,2.35,0.77,11.3,11.1,10,8.19,5.92,3.1
-"Turkey",26,9.73,8.76,7.37,5.87,4.2,2.61,10.5,10.3,9.51,8.52,7.06,5.26
-"Tanzania",2.35,7.55,7.06,5.68,3.32,1.75,1.04,7.67,7.96,7.57,6.41,4.46,2.94
-"Uganda",2.05,7.29,6.16,4.81,3.48,2.16,1.27,7.75,8.17,7.56,6.91,5.74,3.77
-"Ukraine",11.2,13.7,14.7,14.7,14.2,13.1,10.7,13.2,14.1,14.2,13.8,13.2,11.4
-"Uruguay",20.6,11.6,12.1,11.4,10.7,9.69,8.13,10.4,11,10.6,10,9.12,7.71
-"United States",58.5,13.8,15.1,15.1,15.1,14.7,13.9,13.4,14.6,14.8,15,14.9,14.3
-"Uzbekistan",6.09,12.4,13,13,12.5,11,8.87,12.1,12.7,12.9,13,12.1,10.1
-"St. Vincent and the Grenadines",12,12.6,11.2,9.58,8,6.51,5.16,11.2,10.3,9.32,8.34,7.37,6.41
-"Vietnam",6.44,10.2,9.65,9.2,8.18,6.2,3.37,9.9,9.69,9.75,9.6,8.7,6.71
-"Vanuatu",3.04,9.57,8.94,8.21,7.01,6.01,4.1,9.29,9.37,8.98,8.33,7.04,5.49
-"Samoa",6.01,14.4,13.2,12.1,11.3,10.6,9.67,12.9,12.3,11.5,11,10.6,9.82
-"South Africa",12.8,11.7,11.5,10.2,8.73,7.53,6.08,10.8,11,10.2,8.98,7.7,6.3
-"Zambia",3.44,7.96,7.75,7.02,5.36,3.09,1.58,8.29,9.11,9.13,8.38,6.59,4.57
-"Zimbabwe",2.96,10.8,10.2,8.46,6.37,4.84,3.12,10.5,11.1,10.2,8.41,6.85,5.08
+"country","variable","value"
+"Afghanistan","gdp",2.21
+"Afghanistan","women15_24",2.13
+"Afghanistan","women25_34",0.98
+"Afghanistan","women35_44",0.74
+"Afghanistan","women45_54",0.53
+"Afghanistan","women55_64",0.26
+"Afghanistan","women65_plus",0.22
+"Afghanistan","men15_24",5.27
+"Afghanistan","men25_34",4.13
+"Afghanistan","men35_44",3.59
+"Afghanistan","men45_54",3.39
+"Afghanistan","men55_64",2.53
+"Afghanistan","men65_plus",1.74
+"Angola","gdp",8.04
+"Angola","women15_24",6
+"Angola","women25_34",5.31
+"Angola","women35_44",4.49
+"Angola","women45_54",2.09
+"Angola","women55_64",0.9
+"Angola","women65_plus",0.57
+"Angola","men15_24",6.14
+"Angola","men25_34",7.24
+"Angola","men35_44",7.13
+"Angola","men45_54",5.63
+"Angola","men55_64",3.61
+"Angola","men65_plus",2.07
+"Albania","gdp",12.1
+"Albania","women15_24",11.7
+"Albania","women25_34",12.3
+"Albania","women35_44",12
+"Albania","women45_54",11.3
+"Albania","women55_64",9.31
+"Albania","women65_plus",6.85
+"Albania","men15_24",11.2
+"Albania","men25_34",12
+"Albania","men35_44",12
+"Albania","men45_54",11.9
+"Albania","men55_64",10.8
+"Albania","men65_plus",8.92
+"United Arab Emirates","gdp",65.2
+"United Arab Emirates","women15_24",13
+"United Arab Emirates","women25_34",13.2
+"United Arab Emirates","women35_44",10.2
+"United Arab Emirates","women45_54",6.3
+"United Arab Emirates","women55_64",3.68
+"United Arab Emirates","women65_plus",1.18
+"United Arab Emirates","men15_24",12
+"United Arab Emirates","men25_34",12.5
+"United Arab Emirates","men35_44",12.7
+"United Arab Emirates","men45_54",10.6
+"United Arab Emirates","men55_64",7.44
+"United Arab Emirates","men65_plus",3.67
+"Argentina","gdp",23.9
+"Argentina","women15_24",12.8
+"Argentina","women25_34",13
+"Argentina","women35_44",12.2
+"Argentina","women45_54",11.3
+"Argentina","women55_64",10.1
+"Argentina","women65_plus",8.51
+"Argentina","men15_24",11.7
+"Argentina","men25_34",12
+"Argentina","men35_44",11.4
+"Argentina","men45_54",10.7
+"Argentina","men55_64",9.74
+"Argentina","men65_plus",8.59
+"Armenia","gdp",11.3
+"Armenia","women15_24",12.3
+"Armenia","women25_34",13.1
+"Armenia","women35_44",12.9
+"Armenia","women45_54",12.4
+"Armenia","women55_64",11.7
+"Armenia","women65_plus",9.51
+"Armenia","men15_24",11.6
+"Armenia","men25_34",12.5
+"Armenia","men35_44",12.5
+"Armenia","men45_54",12.3
+"Armenia","men55_64",11.8
+"Armenia","men65_plus",10.2
+"Antigua and Barbuda","gdp",18.6
+"Antigua and Barbuda","women15_24",15
+"Antigua and Barbuda","women25_34",14.5
+"Antigua and Barbuda","women35_44",14.1
+"Antigua and Barbuda","women45_54",13.7
+"Antigua and Barbuda","women55_64",13.3
+"Antigua and Barbuda","women65_plus",12.8
+"Antigua and Barbuda","men15_24",13.5
+"Antigua and Barbuda","men25_34",13.2
+"Antigua and Barbuda","men35_44",12.9
+"Antigua and Barbuda","men45_54",12.5
+"Antigua and Barbuda","men55_64",12.3
+"Antigua and Barbuda","men65_plus",11.9
+"Australia","gdp",48
+"Australia","women15_24",15.1
+"Australia","women25_34",14.5
+"Australia","women35_44",14.2
+"Australia","women45_54",13.8
+"Australia","women55_64",13.2
+"Australia","women65_plus",12.1
+"Australia","men15_24",14.7
+"Australia","men25_34",14.2
+"Australia","men35_44",14
+"Australia","men45_54",13.7
+"Australia","men55_64",13.2
+"Australia","men65_plus",12.2
+"Austria","gdp",53.2
+"Austria","women15_24",12.4
+"Austria","women25_34",13.3
+"Austria","women35_44",12.9
+"Austria","women45_54",12.3
+"Austria","women55_64",11.5
+"Austria","women65_plus",10.6
+"Austria","men15_24",11.9
+"Austria","men25_34",13.1
+"Austria","men35_44",13.1
+"Austria","men45_54",12.7
+"Austria","men55_64",12.3
+"Austria","men65_plus",11.7
+"Azerbaijan","gdp",14.9
+"Azerbaijan","women15_24",12.6
+"Azerbaijan","women25_34",13.2
+"Azerbaijan","women35_44",13.1
+"Azerbaijan","women45_54",12.7
+"Azerbaijan","women55_64",11.3
+"Azerbaijan","women65_plus",8.7
+"Azerbaijan","men15_24",12.3
+"Azerbaijan","men25_34",13
+"Azerbaijan","men35_44",13.1
+"Azerbaijan","men45_54",13.3
+"Azerbaijan","men55_64",12.8
+"Azerbaijan","men65_plus",11
+"Burundi","gdp",0.825
+"Burundi","women15_24",4.91
+"Burundi","women25_34",4.23
+"Burundi","women35_44",2.88
+"Burundi","women45_54",1.98
+"Burundi","women55_64",1.05
+"Burundi","women65_plus",0.54
+"Burundi","men15_24",5.56
+"Burundi","men25_34",5.43
+"Burundi","men35_44",4.66
+"Burundi","men45_54",3.92
+"Burundi","men55_64",3.34
+"Burundi","men65_plus",2.03
+"Belgium","gdp",49.5
+"Belgium","women15_24",14
+"Belgium","women25_34",14.5
+"Belgium","women35_44",13.8
+"Belgium","women45_54",13.2
+"Belgium","women55_64",12.3
+"Belgium","women65_plus",11
+"Belgium","men15_24",13.2
+"Belgium","men25_34",13.9
+"Belgium","men35_44",13.7
+"Belgium","men45_54",13.2
+"Belgium","men55_64",12.3
+"Belgium","men65_plus",11.4
+"Benin","gdp",2.95
+"Benin","women15_24",4.32
+"Benin","women25_34",2.73
+"Benin","women35_44",2.06
+"Benin","women45_54",1.45
+"Benin","women55_64",0.91
+"Benin","women65_plus",0.42
+"Benin","men15_24",6.55
+"Benin","men25_34",5.59
+"Benin","men35_44",4.94
+"Benin","men45_54",3.94
+"Benin","men55_64",2.64
+"Benin","men65_plus",1.43
+"Burkina Faso","gdp",1.93
+"Burkina Faso","women15_24",2.74
+"Burkina Faso","women25_34",1.86
+"Burkina Faso","women35_44",1.11
+"Burkina Faso","women45_54",0.6
+"Burkina Faso","women55_64",0.22
+"Burkina Faso","women65_plus",0.09
+"Burkina Faso","men15_24",3.76
+"Burkina Faso","men25_34",3.07
+"Burkina Faso","men35_44",2.18
+"Burkina Faso","men45_54",1.42
+"Burkina Faso","men55_64",0.67
+"Burkina Faso","men65_plus",0.32
+"Bangladesh","gdp",3.7
+"Bangladesh","women15_24",7.02
+"Bangladesh","women25_34",5.09
+"Bangladesh","women35_44",3.49
+"Bangladesh","women45_54",2.47
+"Bangladesh","women55_64",1.57
+"Bangladesh","women65_plus",0.97
+"Bangladesh","men15_24",7.13
+"Bangladesh","men25_34",6.53
+"Bangladesh","men35_44",5.7
+"Bangladesh","men45_54",5.33
+"Bangladesh","men55_64",4.76
+"Bangladesh","men65_plus",3.72
+"Bulgaria","gdp",19.6
+"Bulgaria","women15_24",11.8
+"Bulgaria","women25_34",13.6
+"Bulgaria","women35_44",13.6
+"Bulgaria","women45_54",12.9
+"Bulgaria","women55_64",11.6
+"Bulgaria","women65_plus",9.37
+"Bulgaria","men15_24",11.4
+"Bulgaria","men25_34",12.8
+"Bulgaria","men35_44",12.7
+"Bulgaria","men45_54",12.5
+"Bulgaria","men55_64",11.7
+"Bulgaria","men65_plus",10.4
+"Bahrain","gdp",48.3
+"Bahrain","women15_24",11.2
+"Bahrain","women25_34",10.5
+"Bahrain","women35_44",9.38
+"Bahrain","women45_54",6.55
+"Bahrain","women55_64",3.6
+"Bahrain","women65_plus",0.94
+"Bahrain","men15_24",10.3
+"Bahrain","men25_34",9.79
+"Bahrain","men35_44",9.54
+"Bahrain","men45_54",8.6
+"Bahrain","men55_64",6.84
+"Bahrain","men65_plus",3.35
+"Bahamas","gdp",35.8
+"Bahamas","women15_24",13.8
+"Bahamas","women25_34",13.6
+"Bahamas","women35_44",13
+"Bahamas","women45_54",12.1
+"Bahamas","women55_64",11.2
+"Bahamas","women65_plus",10.1
+"Bahamas","men15_24",12.7
+"Bahamas","men25_34",12.7
+"Bahamas","men35_44",12.3
+"Bahamas","men45_54",11.5
+"Bahamas","men55_64",10.9
+"Bahamas","men65_plus",9.98
+"Bosnia and Herzegovina","gdp",12.8
+"Bosnia and Herzegovina","women15_24",11.2
+"Bosnia and Herzegovina","women25_34",11.3
+"Bosnia and Herzegovina","women35_44",10.8
+"Bosnia and Herzegovina","women45_54",9.71
+"Bosnia and Herzegovina","women55_64",8.08
+"Bosnia and Herzegovina","women65_plus",6.47
+"Bosnia and Herzegovina","men15_24",11
+"Bosnia and Herzegovina","men25_34",11.3
+"Bosnia and Herzegovina","men35_44",11.3
+"Bosnia and Herzegovina","men45_54",10.9
+"Bosnia and Herzegovina","men55_64",9.91
+"Bosnia and Herzegovina","men65_plus",8.35
+"Belarus","gdp",18.3
+"Belarus","women15_24",13.1
+"Belarus","women25_34",14.9
+"Belarus","women35_44",14.8
+"Belarus","women45_54",14.2
+"Belarus","women55_64",13
+"Belarus","women65_plus",9.87
+"Belarus","men15_24",12.6
+"Belarus","men25_34",14.1
+"Belarus","men35_44",14.1
+"Belarus","men45_54",13.7
+"Belarus","men55_64",12.8
+"Belarus","men65_plus",10.8
+"Belize","gdp",7.26
+"Belize","women15_24",10.4
+"Belize","women25_34",9.78
+"Belize","women35_44",9.08
+"Belize","women45_54",8.4
+"Belize","women55_64",7.85
+"Belize","women65_plus",6.51
+"Belize","men15_24",9.84
+"Belize","men25_34",9.79
+"Belize","men35_44",9.33
+"Belize","men45_54",8.69
+"Belize","men55_64",8.01
+"Belize","men65_plus",6.74
+"Bolivia","gdp",7.98
+"Bolivia","women15_24",10.7
+"Bolivia","women25_34",9.86
+"Bolivia","women35_44",8.22
+"Bolivia","women45_54",6.56
+"Bolivia","women55_64",4.79
+"Bolivia","women65_plus",3.5
+"Bolivia","men15_24",10.8
+"Bolivia","men25_34",10.8
+"Bolivia","men35_44",9.83
+"Bolivia","men45_54",8.73
+"Bolivia","men55_64",7.21
+"Bolivia","men65_plus",5.58
+"Brazil","gdp",15.1
+"Brazil","women15_24",9.61
+"Brazil","women25_34",9.6
+"Brazil","women35_44",8.44
+"Brazil","women45_54",7
+"Brazil","women55_64",5.36
+"Brazil","women65_plus",3.97
+"Brazil","men15_24",8.21
+"Brazil","men25_34",8.49
+"Brazil","men35_44",7.68
+"Brazil","men45_54",6.73
+"Brazil","men55_64",5.48
+"Brazil","men65_plus",4.2
+"Barbados","gdp",15.4
+"Barbados","women15_24",12.6
+"Barbados","women25_34",11.2
+"Barbados","women35_44",9.58
+"Barbados","women45_54",8
+"Barbados","women55_64",6.51
+"Barbados","women65_plus",5.16
+"Barbados","men15_24",11.2
+"Barbados","men25_34",10.3
+"Barbados","men35_44",9.32
+"Barbados","men45_54",8.34
+"Barbados","men55_64",7.37
+"Barbados","men65_plus",6.41
+"Brunei","gdp",63.1
+"Brunei","women15_24",15.6
+"Brunei","women25_34",14.5
+"Brunei","women35_44",13.2
+"Brunei","women45_54",11.7
+"Brunei","women55_64",10
+"Brunei","women65_plus",8.25
+"Brunei","men15_24",15.2
+"Brunei","men25_34",14.6
+"Brunei","men35_44",13.8
+"Brunei","men45_54",12.9
+"Brunei","men55_64",11.9
+"Brunei","men65_plus",10.9
+"Bhutan","gdp",10.1
+"Bhutan","women15_24",4.25
+"Bhutan","women25_34",3.23
+"Bhutan","women35_44",2.41
+"Bhutan","women45_54",1.78
+"Bhutan","women55_64",1.29
+"Bhutan","women65_plus",0.93
+"Bhutan","men15_24",7.51
+"Bhutan","men25_34",6.63
+"Bhutan","men35_44",5.78
+"Bhutan","men45_54",4.99
+"Bhutan","men55_64",4.25
+"Bhutan","men65_plus",3.58
+"Botswana","gdp",16.7
+"Botswana","women15_24",10.5
+"Botswana","women25_34",8.71
+"Botswana","women35_44",6.91
+"Botswana","women45_54",4.51
+"Botswana","women55_64",3.21
+"Botswana","women65_plus",1.91
+"Botswana","men15_24",8.4
+"Botswana","men25_34",7.67
+"Botswana","men35_44",6.52
+"Botswana","men45_54",4.79
+"Botswana","men55_64",3.34
+"Botswana","men65_plus",2.02
+"Central African Republic","gdp",0.853
+"Central African Republic","women15_24",4.94
+"Central African Republic","women25_34",4.27
+"Central African Republic","women35_44",3.04
+"Central African Republic","women45_54",1.51
+"Central African Republic","women55_64",0.62
+"Central African Republic","women65_plus",0.22
+"Central African Republic","men15_24",6.79
+"Central African Republic","men25_34",7.17
+"Central African Republic","men35_44",6.7
+"Central African Republic","men45_54",5.38
+"Central African Republic","men55_64",3.42
+"Central African Republic","men65_plus",1.93
+"Canada","gdp",47.8
+"Canada","women15_24",14.6
+"Canada","women25_34",15.7
+"Canada","women35_44",15.6
+"Canada","women45_54",15.2
+"Canada","women55_64",14.3
+"Canada","women65_plus",13.8
+"Canada","men15_24",14.3
+"Canada","men25_34",15.3
+"Canada","men35_44",15.3
+"Canada","men45_54",14.9
+"Canada","men55_64",14.2
+"Canada","men65_plus",13.6
+"Switzerland","gdp",66.2
+"Switzerland","women15_24",11.9
+"Switzerland","women25_34",14.4
+"Switzerland","women35_44",14.2
+"Switzerland","women45_54",13.9
+"Switzerland","women55_64",13.3
+"Switzerland","women65_plus",12.6
+"Switzerland","men15_24",11.5
+"Switzerland","men25_34",14.6
+"Switzerland","men35_44",14.6
+"Switzerland","men45_54",14.4
+"Switzerland","men55_64",14.3
+"Switzerland","men65_plus",13.8
+"Chile","gdp",23.6
+"Chile","women15_24",13.5
+"Chile","women25_34",13.3
+"Chile","women35_44",12.3
+"Chile","women45_54",11.1
+"Chile","women55_64",9.66
+"Chile","women65_plus",8.6
+"Chile","men15_24",12.7
+"Chile","men25_34",12.8
+"Chile","men35_44",11.9
+"Chile","men45_54",10.9
+"Chile","men55_64",9.74
+"Chile","men65_plus",8.52
+"China","gdp",12.7
+"China","women15_24",11.3
+"China","women25_34",9.82
+"China","women35_44",8.45
+"China","women45_54",6.83
+"China","women55_64",4.75
+"China","women65_plus",2.38
+"China","men15_24",11.2
+"China","men25_34",11
+"China","men35_44",10.4
+"China","men45_54",9.02
+"China","men55_64",7.74
+"China","men65_plus",6.02
+"Cote d'Ivoire","gdp",4.42
+"Cote d'Ivoire","women15_24",4.75
+"Cote d'Ivoire","women25_34",3.87
+"Cote d'Ivoire","women35_44",2.85
+"Cote d'Ivoire","women45_54",1.57
+"Cote d'Ivoire","women55_64",0.54
+"Cote d'Ivoire","women65_plus",0.2
+"Cote d'Ivoire","men15_24",6.59
+"Cote d'Ivoire","men25_34",6.4
+"Cote d'Ivoire","men35_44",5.67
+"Cote d'Ivoire","men45_54",4.48
+"Cote d'Ivoire","men55_64",2.47
+"Cote d'Ivoire","men65_plus",1.13
+"Cameroon","gdp",3.46
+"Cameroon","women15_24",7.96
+"Cameroon","women25_34",7.17
+"Cameroon","women35_44",5.96
+"Cameroon","women45_54",4.45
+"Cameroon","women55_64",2.31
+"Cameroon","women65_plus",1.23
+"Cameroon","men15_24",8.67
+"Cameroon","men25_34",8.93
+"Cameroon","men35_44",8.23
+"Cameroon","men45_54",6.96
+"Cameroon","men55_64",4.97
+"Cameroon","men65_plus",3.06
+"Congo, Dem. Rep.","gdp",1.07
+"Congo, Dem. Rep.","women15_24",6.58
+"Congo, Dem. Rep.","women25_34",6.26
+"Congo, Dem. Rep.","women35_44",5.56
+"Congo, Dem. Rep.","women45_54",4.03
+"Congo, Dem. Rep.","women55_64",2.48
+"Congo, Dem. Rep.","women65_plus",1.12
+"Congo, Dem. Rep.","men15_24",7.81
+"Congo, Dem. Rep.","men25_34",8.94
+"Congo, Dem. Rep.","men35_44",9
+"Congo, Dem. Rep.","men45_54",8.46
+"Congo, Dem. Rep.","men55_64",6.93
+"Congo, Dem. Rep.","men65_plus",5.12
+"Congo, Rep.","gdp",3.8
+"Congo, Rep.","women15_24",8.7
+"Congo, Rep.","women25_34",8.85
+"Congo, Rep.","women35_44",7.83
+"Congo, Rep.","women45_54",5.7
+"Congo, Rep.","women55_64",2.55
+"Congo, Rep.","women65_plus",0.79
+"Congo, Rep.","men15_24",8.97
+"Congo, Rep.","men25_34",10.3
+"Congo, Rep.","men35_44",10.5
+"Congo, Rep.","men45_54",9.87
+"Congo, Rep.","men55_64",7.34
+"Congo, Rep.","men65_plus",4.08
+"Colombia","gdp",14.2
+"Colombia","women15_24",11.2
+"Colombia","women25_34",10.8
+"Colombia","women35_44",9.62
+"Colombia","women45_54",8.16
+"Colombia","women55_64",6.69
+"Colombia","women65_plus",5.19
+"Colombia","men15_24",10.1
+"Colombia","men25_34",10.1
+"Colombia","men35_44",9.23
+"Colombia","men45_54",8.11
+"Colombia","men55_64",6.77
+"Colombia","men65_plus",5.34
+"Comoros","gdp",2.96
+"Comoros","women15_24",7.19
+"Comoros","women25_34",6.03
+"Comoros","women35_44",3.1
+"Comoros","women45_54",1.06
+"Comoros","women55_64",0.36
+"Comoros","women65_plus",0.15
+"Comoros","men15_24",7.38
+"Comoros","men25_34",7.51
+"Comoros","men35_44",5.86
+"Comoros","men45_54",3.89
+"Comoros","men55_64",1.97
+"Comoros","men65_plus",1.06
+"Cape Verde","gdp",6.27
+"Cape Verde","women15_24",8.45
+"Cape Verde","women25_34",6.14
+"Cape Verde","women35_44",3.98
+"Cape Verde","women45_54",2.05
+"Cape Verde","women55_64",0.89
+"Cape Verde","women65_plus",0.57
+"Cape Verde","men15_24",8.14
+"Cape Verde","men25_34",6.96
+"Cape Verde","men35_44",6.12
+"Cape Verde","men45_54",5.05
+"Cape Verde","men55_64",2.93
+"Cape Verde","men65_plus",2.18
+"Costa Rica","gdp",18
+"Costa Rica","women15_24",11.1
+"Costa Rica","women25_34",10.9
+"Costa Rica","women35_44",10.2
+"Costa Rica","women45_54",9.4
+"Costa Rica","women55_64",8.28
+"Costa Rica","women65_plus",6.76
+"Costa Rica","men15_24",9.93
+"Costa Rica","men25_34",10
+"Costa Rica","men35_44",9.55
+"Costa Rica","men45_54",9.16
+"Costa Rica","men55_64",8.24
+"Costa Rica","men65_plus",6.72
+"Cyprus","gdp",34.4
+"Cyprus","women15_24",14.2
+"Cyprus","women25_34",14.6
+"Cyprus","women35_44",13.8
+"Cyprus","women45_54",12.4
+"Cyprus","women55_64",10.3
+"Cyprus","women65_plus",7.16
+"Cyprus","men15_24",13.3
+"Cyprus","men25_34",14.1
+"Cyprus","men35_44",13.8
+"Cyprus","men45_54",12.9
+"Cyprus","men55_64",11.6
+"Cyprus","men65_plus",9.52
+"Czech Republic","gdp",36.2
+"Czech Republic","women15_24",13
+"Czech Republic","women25_34",14.5
+"Czech Republic","women35_44",14.3
+"Czech Republic","women45_54",13.6
+"Czech Republic","women55_64",13.2
+"Czech Republic","women65_plus",12.1
+"Czech Republic","men15_24",12.6
+"Czech Republic","men25_34",14.1
+"Czech Republic","men35_44",14.2
+"Czech Republic","men45_54",13.9
+"Czech Republic","men55_64",13.9
+"Czech Republic","men65_plus",13.1
+"Germany","gdp",51.2
+"Germany","women15_24",13.4
+"Germany","women25_34",14.2
+"Germany","women35_44",13.9
+"Germany","women45_54",13.4
+"Germany","women55_64",12.2
+"Germany","women65_plus",11
+"Germany","men15_24",12.7
+"Germany","men25_34",14
+"Germany","men35_44",13.8
+"Germany","men45_54",13.6
+"Germany","men55_64",13
+"Germany","men65_plus",12.3
+"Djibouti","gdp",4.49
+"Djibouti","women15_24",5.98
+"Djibouti","women25_34",4.05
+"Djibouti","women35_44",2.38
+"Djibouti","women45_54",1.35
+"Djibouti","women55_64",0.66
+"Djibouti","women65_plus",0.18
+"Djibouti","men15_24",9.18
+"Djibouti","men25_34",8.4
+"Djibouti","men35_44",7.09
+"Djibouti","men45_54",5.34
+"Djibouti","men55_64",3.42
+"Djibouti","men65_plus",1.66
+"Dominica","gdp",11.9
+"Dominica","women15_24",13.7
+"Dominica","women25_34",12.5
+"Dominica","women35_44",11.5
+"Dominica","women45_54",10.9
+"Dominica","women55_64",9.96
+"Dominica","women65_plus",9.18
+"Dominica","men15_24",12.3
+"Dominica","men25_34",11.2
+"Dominica","men35_44",10.6
+"Dominica","men45_54",10.4
+"Dominica","men55_64",9.9
+"Dominica","men65_plus",9.3
+"Denmark","gdp",53
+"Denmark","women15_24",13.6
+"Denmark","women25_34",15.1
+"Denmark","women35_44",15
+"Denmark","women45_54",14.5
+"Denmark","women55_64",13.7
+"Denmark","women65_plus",12.6
+"Denmark","men15_24",12.9
+"Denmark","men25_34",14.5
+"Denmark","men35_44",14.6
+"Denmark","men45_54",14.3
+"Denmark","men55_64",13.8
+"Denmark","men65_plus",13
+"Dominican Republic","gdp",15.3
+"Dominican Republic","women15_24",11.2
+"Dominican Republic","women25_34",11.1
+"Dominican Republic","women35_44",9.92
+"Dominican Republic","women45_54",7.95
+"Dominican Republic","women55_64",6.13
+"Dominican Republic","women65_plus",4.27
+"Dominican Republic","men15_24",9.73
+"Dominican Republic","men25_34",10
+"Dominican Republic","men35_44",9.43
+"Dominican Republic","men45_54",8.15
+"Dominican Republic","men55_64",6.6
+"Dominican Republic","men65_plus",4.73
+"Algeria","gdp",11.5
+"Algeria","women15_24",10.3
+"Algeria","women25_34",7.74
+"Algeria","women35_44",4.33
+"Algeria","women45_54",1.56
+"Algeria","women55_64",0.58
+"Algeria","women65_plus",0.2
+"Algeria","men15_24",9.42
+"Algeria","men25_34",8.52
+"Algeria","men35_44",6.16
+"Algeria","men45_54",3.63
+"Algeria","men55_64",1.98
+"Algeria","men65_plus",1.03
+"Ecuador","gdp",11.9
+"Ecuador","women15_24",11.1
+"Ecuador","women25_34",11.2
+"Ecuador","women35_44",10.2
+"Ecuador","women45_54",8.79
+"Ecuador","women55_64",7.4
+"Ecuador","women65_plus",5.73
+"Ecuador","men15_24",10.3
+"Ecuador","men25_34",10.7
+"Ecuador","men35_44",10.1
+"Ecuador","men45_54",9.09
+"Ecuador","men55_64",7.84
+"Ecuador","men65_plus",6.22
+"Egypt","gdp",10.6
+"Egypt","women15_24",9.96
+"Egypt","women25_34",9.06
+"Egypt","women35_44",6.83
+"Egypt","women45_54",4.94
+"Egypt","women55_64",3.15
+"Egypt","women65_plus",1.56
+"Egypt","men15_24",10.6
+"Egypt","men25_34",11
+"Egypt","men35_44",9.78
+"Egypt","men45_54",8.27
+"Egypt","men55_64",6.47
+"Egypt","men65_plus",4.09
+"Spain","gdp",37.5
+"Spain","women15_24",13.4
+"Spain","women25_34",13.5
+"Spain","women35_44",12
+"Spain","women45_54",10.3
+"Spain","women55_64",8.45
+"Spain","women65_plus",6.76
+"Spain","men15_24",12.6
+"Spain","men25_34",12.8
+"Spain","men35_44",11.9
+"Spain","men45_54",10.5
+"Spain","men55_64",9.05
+"Spain","men65_plus",7.4
+"Estonia","gdp",31.2
+"Estonia","women15_24",11.6
+"Estonia","women25_34",14.5
+"Estonia","women35_44",14.6
+"Estonia","women45_54",14.2
+"Estonia","women55_64",13.2
+"Estonia","women65_plus",10.9
+"Estonia","men15_24",10.6
+"Estonia","men25_34",13.4
+"Estonia","men35_44",13.7
+"Estonia","men45_54",13.2
+"Estonia","men55_64",12.3
+"Estonia","men65_plus",11.1
+"Ethiopia","gdp",1.78
+"Ethiopia","women15_24",5.79
+"Ethiopia","women25_34",3.75
+"Ethiopia","women35_44",1.96
+"Ethiopia","women45_54",0.83
+"Ethiopia","women55_64",0.33
+"Ethiopia","women65_plus",0.12
+"Ethiopia","men15_24",6.54
+"Ethiopia","men25_34",6.12
+"Ethiopia","men35_44",4.95
+"Ethiopia","men45_54",3.43
+"Ethiopia","men55_64",1.82
+"Ethiopia","men65_plus",0.87
+"Finland","gdp",45.1
+"Finland","women15_24",13.3
+"Finland","women25_34",15.1
+"Finland","women35_44",14.8
+"Finland","women45_54",13.9
+"Finland","women55_64",12.8
+"Finland","women65_plus",11.6
+"Finland","men15_24",12.5
+"Finland","men25_34",14.2
+"Finland","men35_44",14.1
+"Finland","men45_54",13.4
+"Finland","men55_64",12.6
+"Finland","men65_plus",11.9
+"Fiji","gdp",12.6
+"Fiji","women15_24",12.5
+"Fiji","women25_34",12.1
+"Fiji","women35_44",11.2
+"Fiji","women45_54",10
+"Fiji","women55_64",8.79
+"Fiji","women65_plus",7.36
+"Fiji","men15_24",11.8
+"Fiji","men25_34",11.6
+"Fiji","men35_44",10.9
+"Fiji","men45_54",10.2
+"Fiji","men55_64",9
+"Fiji","men65_plus",7.99
+"France","gdp",43.6
+"France","women15_24",13.3
+"France","women25_34",14
+"France","women35_44",13
+"France","women45_54",12.1
+"France","women55_64",11.1
+"France","women65_plus",9.48
+"France","men15_24",12.5
+"France","men25_34",13.2
+"France","men35_44",12.5
+"France","men45_54",11.8
+"France","men55_64",11.1
+"France","men65_plus",9.99
+"Micronesia, Fed. Sts.","gdp",3.46
+"Micronesia, Fed. Sts.","women15_24",13.9
+"Micronesia, Fed. Sts.","women25_34",12.6
+"Micronesia, Fed. Sts.","women35_44",12
+"Micronesia, Fed. Sts.","women45_54",11
+"Micronesia, Fed. Sts.","women55_64",10
+"Micronesia, Fed. Sts.","women65_plus",9.08
+"Micronesia, Fed. Sts.","men15_24",13.5
+"Micronesia, Fed. Sts.","men25_34",12.7
+"Micronesia, Fed. Sts.","men35_44",13
+"Micronesia, Fed. Sts.","men45_54",12.9
+"Micronesia, Fed. Sts.","men55_64",11.8
+"Micronesia, Fed. Sts.","men65_plus",9.99
+"Gabon","gdp",15.5
+"Gabon","women15_24",10
+"Gabon","women25_34",10.2
+"Gabon","women35_44",9.08
+"Gabon","women45_54",6.82
+"Gabon","women55_64",3.81
+"Gabon","women65_plus",1.21
+"Gabon","men15_24",9.58
+"Gabon","men25_34",10.2
+"Gabon","men35_44",9.55
+"Gabon","men45_54",7.62
+"Gabon","men55_64",5.01
+"Gabon","men65_plus",2.56
+"United Kingdom","gdp",44.9
+"United Kingdom","women15_24",14.5
+"United Kingdom","women25_34",14.9
+"United Kingdom","women35_44",14.4
+"United Kingdom","women45_54",14.1
+"United Kingdom","women55_64",13.7
+"United Kingdom","women65_plus",13.3
+"United Kingdom","men15_24",13.9
+"United Kingdom","men25_34",14.6
+"United Kingdom","men35_44",14.1
+"United Kingdom","men45_54",14.1
+"United Kingdom","men55_64",13.7
+"United Kingdom","men65_plus",13.3
+"Georgia","gdp",12.6
+"Georgia","women15_24",13.5
+"Georgia","women25_34",14.6
+"Georgia","women35_44",14.3
+"Georgia","women45_54",13.8
+"Georgia","women55_64",13.1
+"Georgia","women65_plus",11.2
+"Georgia","men15_24",12.9
+"Georgia","men25_34",13.9
+"Georgia","men35_44",13.9
+"Georgia","men45_54",13.7
+"Georgia","men55_64",13.1
+"Georgia","men65_plus",11.7
+"Ghana","gdp",4.67
+"Ghana","women15_24",8.08
+"Ghana","women25_34",7.12
+"Ghana","women35_44",6.26
+"Ghana","women45_54",5.44
+"Ghana","women55_64",4.22
+"Ghana","women65_plus",1.87
+"Ghana","men15_24",8.56
+"Ghana","men25_34",9.11
+"Ghana","men35_44",8.68
+"Ghana","men45_54",8.43
+"Ghana","men55_64",7.31
+"Ghana","men65_plus",4.81
+"Guinea","gdp",2.09
+"Guinea","women15_24",3.33
+"Guinea","women25_34",2.07
+"Guinea","women35_44",1.39
+"Guinea","women45_54",0.77
+"Guinea","women55_64",0.37
+"Guinea","women65_plus",0.16
+"Guinea","men15_24",5.7
+"Guinea","men25_34",5.03
+"Guinea","men35_44",4.14
+"Guinea","men45_54",3.25
+"Guinea","men55_64",1.83
+"Guinea","men65_plus",0.77
+"Gambia","gdp",2.06
+"Gambia","women15_24",5.24
+"Gambia","women25_34",3.48
+"Gambia","women35_44",2.19
+"Gambia","women45_54",1.31
+"Gambia","women55_64",0.83
+"Gambia","women65_plus",0.59
+"Gambia","men15_24",6.87
+"Gambia","men25_34",6.5
+"Gambia","men35_44",5.06
+"Gambia","men45_54",3.34
+"Gambia","men55_64",2.04
+"Gambia","men65_plus",1.26
+"Guinea-Bissau","gdp",1.8
+"Guinea-Bissau","women15_24",3.31
+"Guinea-Bissau","women25_34",2.36
+"Guinea-Bissau","women35_44",1.44
+"Guinea-Bissau","women45_54",0.7
+"Guinea-Bissau","women55_64",0.31
+"Guinea-Bissau","women65_plus",0.2
+"Guinea-Bissau","men15_24",4.96
+"Guinea-Bissau","men25_34",5
+"Guinea-Bissau","men35_44",4.32
+"Guinea-Bissau","men45_54",3.04
+"Guinea-Bissau","men55_64",1.53
+"Guinea-Bissau","men65_plus",0.77
+"Equatorial Guinea","gdp",28.3
+"Equatorial Guinea","women15_24",7.82
+"Equatorial Guinea","women25_34",7.28
+"Equatorial Guinea","women35_44",6.08
+"Equatorial Guinea","women45_54",4.08
+"Equatorial Guinea","women55_64",2.2
+"Equatorial Guinea","women65_plus",1.05
+"Equatorial Guinea","men15_24",8.33
+"Equatorial Guinea","men25_34",9.77
+"Equatorial Guinea","men35_44",9.59
+"Equatorial Guinea","men45_54",8.77
+"Equatorial Guinea","men55_64",6.51
+"Equatorial Guinea","men65_plus",4.54
+"Greece","gdp",28.5
+"Greece","women15_24",13.7
+"Greece","women25_34",13.9
+"Greece","women35_44",12.8
+"Greece","women45_54",11
+"Greece","women55_64",9.01
+"Greece","women65_plus",6.85
+"Greece","men15_24",12.9
+"Greece","men25_34",13.4
+"Greece","men35_44",12.8
+"Greece","men45_54",11.8
+"Greece","men55_64",10.3
+"Greece","men65_plus",8.68
+"Grenada","gdp",15.1
+"Grenada","women15_24",12.6
+"Grenada","women25_34",11.2
+"Grenada","women35_44",9.58
+"Grenada","women45_54",8
+"Grenada","women55_64",6.51
+"Grenada","women65_plus",5.16
+"Grenada","men15_24",11.2
+"Grenada","men25_34",10.3
+"Grenada","men35_44",9.32
+"Grenada","men45_54",8.34
+"Grenada","men55_64",7.37
+"Grenada","men65_plus",6.41
+"Guatemala","gdp",8.13
+"Guatemala","women15_24",7.6
+"Guatemala","women25_34",6.65
+"Guatemala","women35_44",5.56
+"Guatemala","women45_54",4.43
+"Guatemala","women55_64",3.41
+"Guatemala","women65_plus",2.94
+"Guatemala","men15_24",7.9
+"Guatemala","men25_34",7.55
+"Guatemala","men35_44",6.56
+"Guatemala","men45_54",5.51
+"Guatemala","men55_64",4.15
+"Guatemala","men65_plus",3.33
+"Guyana","gdp",8.6
+"Guyana","women15_24",11.5
+"Guyana","women25_34",10.8
+"Guyana","women35_44",10.1
+"Guyana","women45_54",9.48
+"Guyana","women55_64",8.65
+"Guyana","women65_plus",7.67
+"Guyana","men15_24",10.6
+"Guyana","men25_34",10.3
+"Guyana","men35_44",9.94
+"Guyana","men45_54",9.75
+"Guyana","men55_64",9.14
+"Guyana","men65_plus",8.43
+"Honduras","gdp",5.28
+"Honduras","women15_24",9.27
+"Honduras","women25_34",8.58
+"Honduras","women35_44",7.36
+"Honduras","women45_54",6.23
+"Honduras","women55_64",4.86
+"Honduras","women65_plus",3.28
+"Honduras","men15_24",8.29
+"Honduras","men25_34",7.91
+"Honduras","men35_44",7.21
+"Honduras","men45_54",6.49
+"Honduras","men55_64",5.07
+"Honduras","men65_plus",3.49
+"Croatia","gdp",24.4
+"Croatia","women15_24",11.1
+"Croatia","women25_34",12.6
+"Croatia","women35_44",11.8
+"Croatia","women45_54",10.6
+"Croatia","women55_64",9.12
+"Croatia","women65_plus",6.87
+"Croatia","men15_24",10.5
+"Croatia","men25_34",11.8
+"Croatia","men35_44",11.8
+"Croatia","men45_54",11.2
+"Croatia","men55_64",10.8
+"Croatia","men65_plus",9.18
+"Haiti","gdp",1.76
+"Haiti","women15_24",7.77
+"Haiti","women25_34",6.9
+"Haiti","women35_44",4.6
+"Haiti","women45_54",3.08
+"Haiti","women55_64",2.1
+"Haiti","women65_plus",1.45
+"Haiti","men15_24",7.72
+"Haiti","men25_34",8.2
+"Haiti","men35_44",6.19
+"Haiti","men45_54",4.44
+"Haiti","men55_64",3.3
+"Haiti","men65_plus",2.55
+"Hungary","gdp",27.5
+"Hungary","women15_24",13.3
+"Hungary","women25_34",13.9
+"Hungary","women35_44",13.7
+"Hungary","women45_54",13.2
+"Hungary","women55_64",12
+"Hungary","women65_plus",10.1
+"Hungary","men15_24",12.7
+"Hungary","men25_34",13.4
+"Hungary","men35_44",13.3
+"Hungary","men45_54",13.1
+"Hungary","men55_64",12.3
+"Hungary","men65_plus",10.9
+"Indonesia","gdp",10.1
+"Indonesia","women15_24",10.4
+"Indonesia","women25_34",9.56
+"Indonesia","women35_44",8.34
+"Indonesia","women45_54",6.37
+"Indonesia","women55_64",4.48
+"Indonesia","women65_plus",3.3
+"Indonesia","men15_24",9.83
+"Indonesia","men25_34",10.1
+"Indonesia","men35_44",9.16
+"Indonesia","men45_54",8.08
+"Indonesia","men55_64",6.62
+"Indonesia","men65_plus",4.3
+"India","gdp",5.45
+"India","women15_24",7.3
+"India","women25_34",5.79
+"India","women35_44",4.38
+"India","women45_54",3.24
+"India","women55_64",2.04
+"India","women65_plus",1.34
+"India","men15_24",8.99
+"India","men25_34",8.53
+"India","men35_44",7.42
+"India","men45_54",6.72
+"India","men55_64",5.36
+"India","men65_plus",4.11
+"Ireland","gdp",71.2
+"Ireland","women15_24",14.6
+"Ireland","women25_34",14.5
+"Ireland","women35_44",13.7
+"Ireland","women45_54",12.8
+"Ireland","women55_64",11.8
+"Ireland","women65_plus",10.9
+"Ireland","men15_24",13.7
+"Ireland","men25_34",13.8
+"Ireland","men35_44",13.1
+"Ireland","men45_54",12.3
+"Ireland","men55_64",11.4
+"Ireland","men65_plus",10.6
+"Iran","gdp",12.7
+"Iran","women15_24",11.9
+"Iran","women25_34",9.89
+"Iran","women35_44",7.29
+"Iran","women45_54",4.04
+"Iran","women55_64",2.01
+"Iran","women65_plus",1.17
+"Iran","men15_24",12
+"Iran","men25_34",11.2
+"Iran","men35_44",9.79
+"Iran","men45_54",7.36
+"Iran","men55_64",4.77
+"Iran","men65_plus",3.18
+"Iraq","gdp",10.3
+"Iraq","women15_24",7.73
+"Iraq","women25_34",7.88
+"Iraq","women35_44",6.76
+"Iraq","women45_54",4.4
+"Iraq","women55_64",2.36
+"Iraq","women65_plus",0.84
+"Iraq","men15_24",8.57
+"Iraq","men25_34",9.73
+"Iraq","men35_44",9.98
+"Iraq","men45_54",8.65
+"Iraq","men55_64",6.49
+"Iraq","men65_plus",3.38
+"Iceland","gdp",51.7
+"Iceland","women15_24",12
+"Iceland","women25_34",14.9
+"Iceland","women35_44",14.9
+"Iceland","women45_54",14.2
+"Iceland","women55_64",13.3
+"Iceland","women65_plus",11.9
+"Iceland","men15_24",11.5
+"Iceland","men25_34",13.9
+"Iceland","men35_44",14.5
+"Iceland","men45_54",14.3
+"Iceland","men55_64",14.1
+"Iceland","men65_plus",13.4
+"Israel","gdp",37.6
+"Israel","women15_24",15.1
+"Israel","women25_34",15.7
+"Israel","women35_44",15.2
+"Israel","women45_54",14.5
+"Israel","women55_64",13.4
+"Israel","women65_plus",12.7
+"Israel","men15_24",14.3
+"Israel","men25_34",15.1
+"Israel","men35_44",14.9
+"Israel","men45_54",14.3
+"Israel","men55_64",13.8
+"Israel","men65_plus",13.1
+"Italy","gdp",40.4
+"Italy","women15_24",14
+"Italy","women25_34",14.3
+"Italy","women35_44",13.2
+"Italy","women45_54",11.9
+"Italy","women55_64",10.2
+"Italy","women65_plus",9.27
+"Italy","men15_24",13.2
+"Italy","men25_34",13.8
+"Italy","men35_44",13.1
+"Italy","men45_54",12.4
+"Italy","men55_64",11.1
+"Italy","men65_plus",10.4
+"Jamaica","gdp",9.47
+"Jamaica","women15_24",13.3
+"Jamaica","women25_34",12.8
+"Jamaica","women35_44",11.8
+"Jamaica","women45_54",10.7
+"Jamaica","women55_64",9.43
+"Jamaica","women65_plus",8.35
+"Jamaica","men15_24",12.3
+"Jamaica","men25_34",11.9
+"Jamaica","men35_44",11.1
+"Jamaica","men45_54",10
+"Jamaica","men55_64",9.04
+"Jamaica","men65_plus",7.9
+"Jordan","gdp",9.97
+"Jordan","women15_24",12.8
+"Jordan","women25_34",12.4
+"Jordan","women35_44",11.1
+"Jordan","women45_54",8.78
+"Jordan","women55_64",5.55
+"Jordan","women65_plus",2.31
+"Jordan","men15_24",12.3
+"Jordan","men25_34",12.4
+"Jordan","men35_44",12
+"Jordan","men45_54",11.4
+"Jordan","men55_64",9.87
+"Jordan","men65_plus",6.76
+"Japan","gdp",39.7
+"Japan","women15_24",15.4
+"Japan","women25_34",15.5
+"Japan","women35_44",14.9
+"Japan","women45_54",14
+"Japan","women55_64",12.7
+"Japan","women65_plus",11.1
+"Japan","men15_24",14.7
+"Japan","men25_34",15.1
+"Japan","men35_44",14.7
+"Japan","men45_54",13.9
+"Japan","men55_64",13
+"Japan","men65_plus",11.9
+"Kazakhstan","gdp",24.3
+"Kazakhstan","women15_24",13.1
+"Kazakhstan","women25_34",13.9
+"Kazakhstan","women35_44",13.8
+"Kazakhstan","women45_54",13.3
+"Kazakhstan","women55_64",12
+"Kazakhstan","women65_plus",9.42
+"Kazakhstan","men15_24",12.4
+"Kazakhstan","men25_34",13.4
+"Kazakhstan","men35_44",13.2
+"Kazakhstan","men45_54",13
+"Kazakhstan","men55_64",12.3
+"Kazakhstan","men65_plus",10.7
+"Kenya","gdp",3.82
+"Kenya","women15_24",9.26
+"Kenya","women25_34",9.14
+"Kenya","women35_44",7.25
+"Kenya","women45_54",4.82
+"Kenya","women55_64",2.41
+"Kenya","women65_plus",1.11
+"Kenya","men15_24",9.06
+"Kenya","men25_34",10.1
+"Kenya","men35_44",9.35
+"Kenya","men45_54",7.99
+"Kenya","men55_64",5.83
+"Kenya","men65_plus",3.35
+"Kyrgyz Republic","gdp",4.81
+"Kyrgyz Republic","women15_24",13
+"Kyrgyz Republic","women25_34",13.8
+"Kyrgyz Republic","women35_44",13.6
+"Kyrgyz Republic","women45_54",13.1
+"Kyrgyz Republic","women55_64",11.6
+"Kyrgyz Republic","women65_plus",8.81
+"Kyrgyz Republic","men15_24",12.4
+"Kyrgyz Republic","men25_34",13.2
+"Kyrgyz Republic","men35_44",13.1
+"Kyrgyz Republic","men45_54",13
+"Kyrgyz Republic","men55_64",12.2
+"Kyrgyz Republic","men65_plus",9.91
+"Cambodia","gdp",3.54
+"Cambodia","women15_24",6.98
+"Cambodia","women25_34",5.69
+"Cambodia","women35_44",4.54
+"Cambodia","women45_54",3.61
+"Cambodia","women55_64",2.44
+"Cambodia","women65_plus",1.01
+"Cambodia","men15_24",7.52
+"Cambodia","men25_34",7.29
+"Cambodia","men35_44",6.55
+"Cambodia","men45_54",5.97
+"Cambodia","men55_64",5.63
+"Cambodia","men65_plus",4.24
+"Kiribati","gdp",2.17
+"Kiribati","women15_24",10.9
+"Kiribati","women25_34",10
+"Kiribati","women35_44",8.67
+"Kiribati","women45_54",6.67
+"Kiribati","women55_64",5.11
+"Kiribati","women65_plus",3.39
+"Kiribati","men15_24",9.71
+"Kiribati","men25_34",9.61
+"Kiribati","men35_44",8.79
+"Kiribati","men45_54",7.54
+"Kiribati","men55_64",6.77
+"Kiribati","men65_plus",4.95
+"South Korea","gdp",38.9
+"South Korea","women15_24",14.5
+"South Korea","women25_34",14.6
+"South Korea","women35_44",13.7
+"South Korea","women45_54",11.7
+"South Korea","women55_64",8.92
+"South Korea","women65_plus",4.84
+"South Korea","men15_24",13.9
+"South Korea","men25_34",14.8
+"South Korea","men35_44",14.4
+"South Korea","men45_54",13.2
+"South Korea","men55_64",11.7
+"South Korea","men65_plus",9.24
+"Kuwait","gdp",54.8
+"Kuwait","women15_24",12.5
+"Kuwait","women25_34",12.5
+"Kuwait","women35_44",11.1
+"Kuwait","women45_54",8.9
+"Kuwait","women55_64",5.7
+"Kuwait","women65_plus",1.93
+"Kuwait","men15_24",11.8
+"Kuwait","men25_34",12
+"Kuwait","men35_44",11.9
+"Kuwait","men45_54",10.9
+"Kuwait","men55_64",8.65
+"Kuwait","men65_plus",4.25
+"Lao","gdp",6.54
+"Lao","women15_24",6.98
+"Lao","women25_34",6.11
+"Lao","women35_44",4.96
+"Lao","women45_54",3.26
+"Lao","women55_64",1.86
+"Lao","women65_plus",1.05
+"Lao","men15_24",7.43
+"Lao","men25_34",7.31
+"Lao","men35_44",6.96
+"Lao","men45_54",6.11
+"Lao","men55_64",4.75
+"Lao","men65_plus",3.29
+"Lebanon","gdp",16.3
+"Lebanon","women15_24",11.7
+"Lebanon","women25_34",11.4
+"Lebanon","women35_44",10.2
+"Lebanon","women45_54",8.69
+"Lebanon","women55_64",6.4
+"Lebanon","women65_plus",4.5
+"Lebanon","men15_24",10.6
+"Lebanon","men25_34",10.8
+"Lebanon","men35_44",10.3
+"Lebanon","men45_54",9.96
+"Lebanon","men55_64",7.87
+"Lebanon","men65_plus",5.52
+"Liberia","gdp",1.58
+"Liberia","women15_24",5.12
+"Liberia","women25_34",4.37
+"Liberia","women35_44",3.41
+"Liberia","women45_54",2.22
+"Liberia","women55_64",1.23
+"Liberia","women65_plus",0.56
+"Liberia","men15_24",6.46
+"Liberia","men25_34",7.18
+"Liberia","men35_44",7.16
+"Liberia","men45_54",6.79
+"Liberia","men55_64",5.16
+"Liberia","men65_plus",2.88
+"Libya","gdp",11
+"Libya","women15_24",7.7
+"Libya","women25_34",6.27
+"Libya","women35_44",4.93
+"Libya","women45_54",3.77
+"Libya","women55_64",2.79
+"Libya","women65_plus",2.01
+"Libya","men15_24",9.61
+"Libya","men25_34",8.71
+"Libya","men35_44",7.77
+"Libya","men45_54",6.82
+"Libya","men55_64",5.85
+"Libya","men65_plus",4.9
+"St. Lucia","gdp",14
+"St. Lucia","women15_24",12.4
+"St. Lucia","women25_34",11.9
+"St. Lucia","women35_44",11.2
+"St. Lucia","women45_54",10.2
+"St. Lucia","women55_64",9.34
+"St. Lucia","women65_plus",8.39
+"St. Lucia","men15_24",11.3
+"St. Lucia","men25_34",10.9
+"St. Lucia","men35_44",10.7
+"St. Lucia","men45_54",9.99
+"St. Lucia","men55_64",8.97
+"St. Lucia","men65_plus",8.47
+"Sri Lanka","gdp",11.9
+"Sri Lanka","women15_24",12.2
+"Sri Lanka","women25_34",11.6
+"Sri Lanka","women35_44",10.7
+"Sri Lanka","women45_54",9.53
+"Sri Lanka","women55_64",8.49
+"Sri Lanka","women65_plus",6.75
+"Sri Lanka","men15_24",11.4
+"Sri Lanka","men25_34",11.1
+"Sri Lanka","men35_44",10.3
+"Sri Lanka","men45_54",10
+"Sri Lanka","men55_64",9.5
+"Sri Lanka","men65_plus",8.07
+"Lesotho","gdp",2.73
+"Lesotho","women15_24",10.5
+"Lesotho","women25_34",10.2
+"Lesotho","women35_44",9.11
+"Lesotho","women45_54",7.96
+"Lesotho","women55_64",6.68
+"Lesotho","women65_plus",5.18
+"Lesotho","men15_24",8.39
+"Lesotho","men25_34",8.12
+"Lesotho","men35_44",7.04
+"Lesotho","men45_54",6.22
+"Lesotho","men55_64",5.18
+"Lesotho","men65_plus",4.27
+"Lithuania","gdp",30.8
+"Lithuania","women15_24",12.2
+"Lithuania","women25_34",14.2
+"Lithuania","women35_44",14
+"Lithuania","women45_54",13.3
+"Lithuania","women55_64",11.4
+"Lithuania","women65_plus",8.32
+"Lithuania","men15_24",11.6
+"Lithuania","men25_34",13.6
+"Lithuania","men35_44",13.4
+"Lithuania","men45_54",12.8
+"Lithuania","men55_64",11.5
+"Lithuania","men65_plus",9.1
+"Luxembourg","gdp",111
+"Luxembourg","women15_24",12.7
+"Luxembourg","women25_34",14.1
+"Luxembourg","women35_44",13.3
+"Luxembourg","women45_54",12.5
+"Luxembourg","women55_64",11.7
+"Luxembourg","women65_plus",10.2
+"Luxembourg","men15_24",12
+"Luxembourg","men25_34",13.7
+"Luxembourg","men35_44",13.3
+"Luxembourg","men45_54",12.9
+"Luxembourg","men55_64",12.6
+"Luxembourg","men65_plus",11.7
+"Latvia","gdp",26.5
+"Latvia","women15_24",12.7
+"Latvia","women25_34",14.4
+"Latvia","women35_44",14.5
+"Latvia","women45_54",14.1
+"Latvia","women55_64",13.3
+"Latvia","women65_plus",11.6
+"Latvia","men15_24",11.8
+"Latvia","men25_34",13.5
+"Latvia","men35_44",13.6
+"Latvia","men45_54",13.4
+"Latvia","men55_64",12.9
+"Latvia","men65_plus",11.6
+"Morocco","gdp",7.13
+"Morocco","women15_24",6.1
+"Morocco","women25_34",4.84
+"Morocco","women35_44",3.1
+"Morocco","women45_54",1.69
+"Morocco","women55_64",0.64
+"Morocco","women65_plus",0.25
+"Morocco","men15_24",7.26
+"Morocco","men25_34",6.83
+"Morocco","men35_44",5.66
+"Morocco","men45_54",4.34
+"Morocco","men55_64",2.19
+"Morocco","men65_plus",0.84
+"Moldova","gdp",10.4
+"Moldova","women15_24",13.3
+"Moldova","women25_34",13.8
+"Moldova","women35_44",13.6
+"Moldova","women45_54",12.8
+"Moldova","women55_64",10.8
+"Moldova","women65_plus",7.31
+"Moldova","men15_24",12.2
+"Moldova","men25_34",12.8
+"Moldova","men35_44",12.8
+"Moldova","men45_54",12.6
+"Moldova","men55_64",11
+"Moldova","men65_plus",8.6
+"Madagascar","gdp",1.55
+"Madagascar","women15_24",6.29
+"Madagascar","women25_34",6.46
+"Madagascar","women35_44",5.65
+"Madagascar","women45_54",4.07
+"Madagascar","women55_64",2.59
+"Madagascar","women65_plus",1.77
+"Madagascar","men15_24",5.88
+"Madagascar","men25_34",6.96
+"Madagascar","men35_44",6.71
+"Madagascar","men45_54",5.66
+"Madagascar","men55_64",4.2
+"Madagascar","men65_plus",3.09
+"Maldives","gdp",17.3
+"Maldives","women15_24",9.05
+"Maldives","women25_34",7.6
+"Maldives","women35_44",5.68
+"Maldives","women45_54",4.07
+"Maldives","women55_64",3.31
+"Maldives","women65_plus",2.43
+"Maldives","men15_24",8.61
+"Maldives","men25_34",7.92
+"Maldives","men35_44",6.53
+"Maldives","men45_54",5.15
+"Maldives","men55_64",3.89
+"Maldives","men65_plus",2.92
+"Mexico","gdp",19.3
+"Mexico","women15_24",11.3
+"Mexico","women25_34",10.8
+"Mexico","women35_44",9.46
+"Mexico","women45_54",7.89
+"Mexico","women55_64",6.13
+"Mexico","women65_plus",4.6
+"Mexico","men15_24",10.8
+"Mexico","men25_34",10.8
+"Mexico","men35_44",10
+"Mexico","men45_54",8.75
+"Mexico","men55_64",6.94
+"Mexico","men65_plus",5.19
+"Marshall Islands","gdp",3.63
+"Marshall Islands","women15_24",10.4
+"Marshall Islands","women25_34",10.8
+"Marshall Islands","women35_44",10.3
+"Marshall Islands","women45_54",10
+"Marshall Islands","women55_64",8.47
+"Marshall Islands","women65_plus",7.21
+"Marshall Islands","men15_24",9.34
+"Marshall Islands","men25_34",10.4
+"Marshall Islands","men35_44",10.9
+"Marshall Islands","men45_54",10.9
+"Marshall Islands","men55_64",10.9
+"Marshall Islands","men65_plus",9.92
+"North Macedonia","gdp",15
+"North Macedonia","women15_24",12.3
+"North Macedonia","women25_34",12.7
+"North Macedonia","women35_44",11.8
+"North Macedonia","women45_54",10.9
+"North Macedonia","women55_64",8.8
+"North Macedonia","women65_plus",5.84
+"North Macedonia","men15_24",11.8
+"North Macedonia","men25_34",12.3
+"North Macedonia","men35_44",12.2
+"North Macedonia","men45_54",12.1
+"North Macedonia","men55_64",11.1
+"North Macedonia","men65_plus",8.8
+"Mali","gdp",2.14
+"Mali","women15_24",2.42
+"Mali","women25_34",1.56
+"Mali","women35_44",1.2
+"Mali","women45_54",0.74
+"Mali","women55_64",0.32
+"Mali","women65_plus",0.16
+"Mali","men15_24",3.76
+"Mali","men25_34",3
+"Mali","men35_44",2.63
+"Mali","men45_54",2.12
+"Mali","men55_64",1.2
+"Mali","men65_plus",0.65
+"Malta","gdp",38.8
+"Malta","women15_24",11.3
+"Malta","women25_34",11.6
+"Malta","women35_44",11.2
+"Malta","women45_54",10.2
+"Malta","women55_64",9.3
+"Malta","women65_plus",7.94
+"Malta","men15_24",10.7
+"Malta","men25_34",11.3
+"Malta","men35_44",11.1
+"Malta","men45_54",10.3
+"Malta","men55_64",9.6
+"Malta","men65_plus",8.72
+"Myanmar","gdp",4.27
+"Myanmar","women15_24",8.33
+"Myanmar","women25_34",7.74
+"Myanmar","women35_44",6.42
+"Myanmar","women45_54",5.03
+"Myanmar","women55_64",3.42
+"Myanmar","women65_plus",2.07
+"Myanmar","men15_24",7.79
+"Myanmar","men25_34",7.47
+"Myanmar","men35_44",6.89
+"Myanmar","men45_54",6.05
+"Myanmar","men55_64",4.76
+"Myanmar","men65_plus",3.15
+"Montenegro","gdp",18.2
+"Montenegro","women15_24",12.5
+"Montenegro","women25_34",13.1
+"Montenegro","women35_44",12.8
+"Montenegro","women45_54",12.1
+"Montenegro","women55_64",10.5
+"Montenegro","women65_plus",7.51
+"Montenegro","men15_24",12.3
+"Montenegro","men25_34",12.9
+"Montenegro","men35_44",12.9
+"Montenegro","men45_54",13
+"Montenegro","men55_64",12.5
+"Montenegro","men65_plus",10.9
+"Mongolia","gdp",11
+"Mongolia","women15_24",11.1
+"Mongolia","women25_34",12.1
+"Mongolia","women35_44",12.1
+"Mongolia","women45_54",11.5
+"Mongolia","women55_64",9.73
+"Mongolia","women65_plus",6.22
+"Mongolia","men15_24",9.86
+"Mongolia","men25_34",10.8
+"Mongolia","men35_44",11.2
+"Mongolia","men45_54",11.1
+"Mongolia","men55_64",10.6
+"Mongolia","men65_plus",8.56
+"Mozambique","gdp",1.26
+"Mozambique","women15_24",4.94
+"Mozambique","women25_34",2.99
+"Mozambique","women35_44",3.01
+"Mozambique","women45_54",2.66
+"Mozambique","women55_64",2.46
+"Mozambique","women65_plus",1.05
+"Mozambique","men15_24",4.79
+"Mozambique","men25_34",5.26
+"Mozambique","men35_44",5.05
+"Mozambique","men45_54",4.18
+"Mozambique","men55_64",2.99
+"Mozambique","men65_plus",2.59
+"Mauritania","gdp",5.13
+"Mauritania","women15_24",5.65
+"Mauritania","women25_34",4.44
+"Mauritania","women35_44",2.59
+"Mauritania","women45_54",1.25
+"Mauritania","women55_64",0.46
+"Mauritania","women65_plus",0.31
+"Mauritania","men15_24",6.36
+"Mauritania","men25_34",6.53
+"Mauritania","men35_44",5.01
+"Mauritania","men45_54",3.15
+"Mauritania","men55_64",1.79
+"Mauritania","men65_plus",0.78
+"Mauritius","gdp",19.9
+"Mauritius","women15_24",11.3
+"Mauritius","women25_34",10.4
+"Mauritius","women35_44",9.3
+"Mauritius","women45_54",7.73
+"Mauritius","women55_64",5.82
+"Mauritius","women65_plus",3.89
+"Mauritius","men15_24",10.8
+"Mauritius","men25_34",10.4
+"Mauritius","men35_44",9.88
+"Mauritius","men45_54",9.09
+"Mauritius","men55_64",7.87
+"Mauritius","men65_plus",6.19
+"Malawi","gdp",1.03
+"Malawi","women15_24",6.24
+"Malawi","women25_34",4.98
+"Malawi","women35_44",3.71
+"Malawi","women45_54",2.72
+"Malawi","women55_64",1.97
+"Malawi","women65_plus",1.65
+"Malawi","men15_24",6.85
+"Malawi","men25_34",7.08
+"Malawi","men35_44",6.35
+"Malawi","men45_54",5.61
+"Malawi","men55_64",4.47
+"Malawi","men65_plus",3.28
+"Malaysia","gdp",24.8
+"Malaysia","women15_24",12.7
+"Malaysia","women25_34",11.9
+"Malaysia","women35_44",10.2
+"Malaysia","women45_54",7.75
+"Malaysia","women55_64",4.9
+"Malaysia","women65_plus",2.41
+"Malaysia","men15_24",12.1
+"Malaysia","men25_34",11.7
+"Malaysia","men35_44",10.9
+"Malaysia","men45_54",9.47
+"Malaysia","men55_64",7.58
+"Malaysia","men65_plus",5.35
+"Namibia","gdp",10.5
+"Namibia","women15_24",9.97
+"Namibia","women25_34",9.79
+"Namibia","women35_44",8.43
+"Namibia","women45_54",6.64
+"Namibia","women55_64",4.78
+"Namibia","women65_plus",2.97
+"Namibia","men15_24",8.77
+"Namibia","men25_34",9.18
+"Namibia","men35_44",8.51
+"Namibia","men45_54",6.98
+"Namibia","men55_64",5.33
+"Namibia","men65_plus",3.54
+"Niger","gdp",1.13
+"Niger","women15_24",2.07
+"Niger","women25_34",1.41
+"Niger","women35_44",0.86
+"Niger","women45_54",0.37
+"Niger","women55_64",0.14
+"Niger","women65_plus",0.04
+"Niger","men15_24",3.6
+"Niger","men25_34",2.89
+"Niger","men35_44",2.02
+"Niger","men45_54",1.15
+"Niger","men55_64",0.5
+"Niger","men65_plus",0.2
+"Nigeria","gdp",5.51
+"Nigeria","women15_24",8.23
+"Nigeria","women25_34",6.77
+"Nigeria","women35_44",5.66
+"Nigeria","women45_54",4.26
+"Nigeria","women55_64",2.82
+"Nigeria","women65_plus",1.68
+"Nigeria","men15_24",9.3
+"Nigeria","men25_34",9.14
+"Nigeria","men35_44",7.97
+"Nigeria","men45_54",6.66
+"Nigeria","men55_64",4.97
+"Nigeria","men65_plus",3.52
+"Nicaragua","gdp",5.63
+"Nicaragua","women15_24",9.4
+"Nicaragua","women25_34",9.04
+"Nicaragua","women35_44",7.92
+"Nicaragua","women45_54",6.14
+"Nicaragua","women55_64",4.36
+"Nicaragua","women65_plus",3.15
+"Nicaragua","men15_24",8.07
+"Nicaragua","men25_34",8.04
+"Nicaragua","men35_44",7.66
+"Nicaragua","men45_54",6.57
+"Nicaragua","men55_64",4.9
+"Nicaragua","men65_plus",3.42
+"Netherlands","gdp",53.2
+"Netherlands","women15_24",14.1
+"Netherlands","women25_34",14.7
+"Netherlands","women35_44",14.1
+"Netherlands","women45_54",13.5
+"Netherlands","women55_64",12.8
+"Netherlands","women65_plus",12
+"Netherlands","men15_24",13.4
+"Netherlands","men25_34",14.6
+"Netherlands","men35_44",14.1
+"Netherlands","men45_54",13.9
+"Netherlands","men55_64",13.3
+"Netherlands","men65_plus",12.6
+"Norway","gdp",61.9
+"Norway","women15_24",14.5
+"Norway","women25_34",15.4
+"Norway","women35_44",15
+"Norway","women45_54",14.5
+"Norway","women55_64",13.6
+"Norway","women65_plus",12.3
+"Norway","men15_24",14.1
+"Norway","men25_34",14.9
+"Norway","men35_44",14.8
+"Norway","men45_54",14.4
+"Norway","men55_64",13.4
+"Norway","men65_plus",12.3
+"Nepal","gdp",2.91
+"Nepal","women15_24",5.95
+"Nepal","women25_34",3.6
+"Nepal","women35_44",1.69
+"Nepal","women45_54",0.8
+"Nepal","women55_64",0.35
+"Nepal","women65_plus",0.12
+"Nepal","men15_24",7.98
+"Nepal","men25_34",7.19
+"Nepal","men35_44",5.75
+"Nepal","men45_54",4.18
+"Nepal","men55_64",2.58
+"Nepal","men65_plus",1.43
+"New Zealand","gdp",40.5
+"New Zealand","women15_24",15
+"New Zealand","women25_34",15
+"New Zealand","women35_44",14.7
+"New Zealand","women45_54",14.2
+"New Zealand","women55_64",13.5
+"New Zealand","women65_plus",12.6
+"New Zealand","men15_24",14.3
+"New Zealand","men25_34",14.4
+"New Zealand","men35_44",14.3
+"New Zealand","men45_54",13.8
+"New Zealand","men55_64",13.3
+"New Zealand","men65_plus",12.8
+"Oman","gdp",30.2
+"Oman","women15_24",9.85
+"Oman","women25_34",8.19
+"Oman","women35_44",5.57
+"Oman","women45_54",2.49
+"Oman","women55_64",0.99
+"Oman","women65_plus",0.34
+"Oman","men15_24",10.3
+"Oman","men25_34",9.67
+"Oman","men35_44",8.75
+"Oman","men45_54",6.22
+"Oman","men55_64",3.02
+"Oman","men65_plus",1.03
+"Pakistan","gdp",4.28
+"Pakistan","women15_24",5.65
+"Pakistan","women25_34",4.26
+"Pakistan","women35_44",2.8
+"Pakistan","women45_54",1.78
+"Pakistan","women55_64",0.97
+"Pakistan","women65_plus",0.5
+"Pakistan","men15_24",7.73
+"Pakistan","men25_34",7.55
+"Pakistan","men35_44",6.57
+"Pakistan","men45_54",5.54
+"Pakistan","men55_64",4.34
+"Pakistan","men65_plus",2.91
+"Panama","gdp",28.4
+"Panama","women15_24",12.3
+"Panama","women25_34",12.5
+"Panama","women35_44",11.7
+"Panama","women45_54",10.4
+"Panama","women55_64",8.88
+"Panama","women65_plus",7.13
+"Panama","men15_24",11.1
+"Panama","men25_34",11.4
+"Panama","men35_44",10.9
+"Panama","men45_54",9.9
+"Panama","men55_64",8.49
+"Panama","men65_plus",6.81
+"Peru","gdp",12.1
+"Peru","women15_24",11.7
+"Peru","women25_34",11.6
+"Peru","women35_44",10.3
+"Peru","women45_54",8.82
+"Peru","women55_64",7.09
+"Peru","women65_plus",5.51
+"Peru","men15_24",11.5
+"Peru","men25_34",12
+"Peru","men35_44",11.3
+"Peru","men45_54",10.4
+"Peru","men55_64",8.97
+"Peru","men65_plus",7.44
+"Philippines","gdp",7.3
+"Philippines","women15_24",11.5
+"Philippines","women25_34",11.8
+"Philippines","women35_44",11
+"Philippines","women45_54",9.93
+"Philippines","women55_64",8.82
+"Philippines","women65_plus",7.05
+"Philippines","men15_24",10.4
+"Philippines","men25_34",10.9
+"Philippines","men35_44",10.4
+"Philippines","men45_54",9.65
+"Philippines","men55_64",8.74
+"Philippines","men65_plus",7.5
+"Papua New Guinea","gdp",4.2
+"Papua New Guinea","women15_24",7.52
+"Papua New Guinea","women25_34",6.04
+"Papua New Guinea","women35_44",4.35
+"Papua New Guinea","women45_54",2.52
+"Papua New Guinea","women55_64",1.6
+"Papua New Guinea","women65_plus",1
+"Papua New Guinea","men15_24",8.36
+"Papua New Guinea","men25_34",8.28
+"Papua New Guinea","men35_44",6.97
+"Papua New Guinea","men45_54",4.72
+"Papua New Guinea","men55_64",3.26
+"Papua New Guinea","men65_plus",1.42
+"Poland","gdp",27.9
+"Poland","women15_24",13.7
+"Poland","women25_34",14.8
+"Poland","women35_44",14.4
+"Poland","women45_54",13.4
+"Poland","women55_64",12.2
+"Poland","women65_plus",10.7
+"Poland","men15_24",12.9
+"Poland","men25_34",14.1
+"Poland","men35_44",13.8
+"Poland","men45_54",13.3
+"Poland","men55_64",12.4
+"Poland","men65_plus",11.4
+"Portugal","gdp",31.2
+"Portugal","women15_24",11.3
+"Portugal","women25_34",11.5
+"Portugal","women35_44",9.87
+"Portugal","women45_54",8.25
+"Portugal","women55_64",6.17
+"Portugal","women65_plus",4.24
+"Portugal","men15_24",10.4
+"Portugal","men25_34",10.5
+"Portugal","men35_44",9.53
+"Portugal","men45_54",8.33
+"Portugal","men55_64",7.07
+"Portugal","men65_plus",5.69
+"Paraguay","gdp",11.8
+"Paraguay","women15_24",10.5
+"Paraguay","women25_34",10.2
+"Paraguay","women35_44",9.17
+"Paraguay","women45_54",7.74
+"Paraguay","women55_64",6.7
+"Paraguay","women65_plus",5.41
+"Paraguay","men15_24",9.16
+"Paraguay","men25_34",9.26
+"Paraguay","men35_44",8.67
+"Paraguay","men45_54",7.75
+"Paraguay","men55_64",6.88
+"Paraguay","men65_plus",5.85
+"Palestine","gdp",5.56
+"Palestine","women15_24",11.6
+"Palestine","women25_34",11.1
+"Palestine","women35_44",9.98
+"Palestine","women45_54",7.8
+"Palestine","women55_64",4.43
+"Palestine","women65_plus",1.32
+"Palestine","men15_24",11.1
+"Palestine","men25_34",11.4
+"Palestine","men35_44",11.2
+"Palestine","men45_54",10.6
+"Palestine","men55_64",8.72
+"Palestine","men65_plus",5.06
+"Qatar","gdp",97.3
+"Qatar","women15_24",11.4
+"Qatar","women25_34",10.8
+"Qatar","women35_44",10.1
+"Qatar","women45_54",8.96
+"Qatar","women55_64",6.44
+"Qatar","women65_plus",2.29
+"Qatar","men15_24",8.81
+"Qatar","men25_34",8.84
+"Qatar","men35_44",8.89
+"Qatar","men45_54",8.46
+"Qatar","men55_64",8.14
+"Qatar","men65_plus",5.74
+"Romania","gdp",23.9
+"Romania","women15_24",12.9
+"Romania","women25_34",13.8
+"Romania","women35_44",13.3
+"Romania","women45_54",12
+"Romania","women55_64",10.2
+"Romania","women65_plus",8.37
+"Romania","men15_24",12.4
+"Romania","men25_34",13.6
+"Romania","men35_44",13.5
+"Romania","men45_54",12.9
+"Romania","men55_64",11.5
+"Romania","men65_plus",9.98
+"Russia","gdp",25.6
+"Russia","women15_24",13.6
+"Russia","women25_34",14.7
+"Russia","women35_44",14.5
+"Russia","women45_54",14.1
+"Russia","women55_64",12.9
+"Russia","women65_plus",10.2
+"Russia","men15_24",12.9
+"Russia","men25_34",13.9
+"Russia","men35_44",13.9
+"Russia","men45_54",13.6
+"Russia","men55_64",12.8
+"Russia","men65_plus",10.9
+"Rwanda","gdp",1.89
+"Rwanda","women15_24",5.86
+"Rwanda","women25_34",5.48
+"Rwanda","women35_44",3.98
+"Rwanda","women45_54",2.29
+"Rwanda","women55_64",1.25
+"Rwanda","women65_plus",0.6
+"Rwanda","men15_24",5.82
+"Rwanda","men25_34",6.2
+"Rwanda","men35_44",5.42
+"Rwanda","men45_54",4.35
+"Rwanda","men55_64",3.44
+"Rwanda","men65_plus",2.16
+"Saudi Arabia","gdp",48.9
+"Saudi Arabia","women15_24",11
+"Saudi Arabia","women25_34",9.61
+"Saudi Arabia","women35_44",6.06
+"Saudi Arabia","women45_54",3.07
+"Saudi Arabia","women55_64",1.49
+"Saudi Arabia","women65_plus",0.68
+"Saudi Arabia","men15_24",11.9
+"Saudi Arabia","men25_34",12.5
+"Saudi Arabia","men35_44",11
+"Saudi Arabia","men45_54",8.62
+"Saudi Arabia","men55_64",5.73
+"Saudi Arabia","men65_plus",3.12
+"Sudan","gdp",4.19
+"Sudan","women15_24",6.97
+"Sudan","women25_34",5.67
+"Sudan","women35_44",3.49
+"Sudan","women45_54",1.89
+"Sudan","women55_64",0.87
+"Sudan","women65_plus",0.45
+"Sudan","men15_24",7.79
+"Sudan","men25_34",7.56
+"Sudan","men35_44",6.24
+"Sudan","men45_54",4.75
+"Sudan","men55_64",3.16
+"Sudan","men65_plus",1.81
+"Senegal","gdp",2.97
+"Senegal","women15_24",4.2
+"Senegal","women25_34",3.11
+"Senegal","women35_44",2.25
+"Senegal","women45_54",1.5
+"Senegal","women55_64",0.76
+"Senegal","women65_plus",0.29
+"Senegal","men15_24",5.26
+"Senegal","men25_34",4.9
+"Senegal","men35_44",4.4
+"Senegal","men45_54",3.63
+"Senegal","men55_64",2.55
+"Senegal","men65_plus",1.27
+"Singapore","gdp",89.4
+"Singapore","women15_24",14.1
+"Singapore","women25_34",13.8
+"Singapore","women35_44",12.8
+"Singapore","women45_54",9.47
+"Singapore","women55_64",6.43
+"Singapore","women65_plus",3.28
+"Singapore","men15_24",13.2
+"Singapore","men25_34",14
+"Singapore","men35_44",13.6
+"Singapore","men45_54",10.9
+"Singapore","men55_64",8.93
+"Singapore","men65_plus",6.37
+"Solomon Islands","gdp",2.3
+"Solomon Islands","women15_24",9.2
+"Solomon Islands","women25_34",7.85
+"Solomon Islands","women35_44",6.5
+"Solomon Islands","women45_54",5.26
+"Solomon Islands","women55_64",4.19
+"Solomon Islands","women65_plus",2.63
+"Solomon Islands","men15_24",9.4
+"Solomon Islands","men25_34",8.92
+"Solomon Islands","men35_44",8.28
+"Solomon Islands","men45_54",7.54
+"Solomon Islands","men55_64",6.14
+"Solomon Islands","men65_plus",4.84
+"Sierra Leone","gdp",1.55
+"Sierra Leone","women15_24",4.57
+"Sierra Leone","women25_34",2.58
+"Sierra Leone","women35_44",2.04
+"Sierra Leone","women45_54",1.38
+"Sierra Leone","women55_64",0.84
+"Sierra Leone","women65_plus",0.61
+"Sierra Leone","men15_24",5.97
+"Sierra Leone","men25_34",4.85
+"Sierra Leone","men35_44",4.25
+"Sierra Leone","men45_54",3.66
+"Sierra Leone","men55_64",2.64
+"Sierra Leone","men65_plus",1.57
+"El Salvador","gdp",8.14
+"El Salvador","women15_24",9.81
+"El Salvador","women25_34",9.21
+"El Salvador","women35_44",7.77
+"El Salvador","women45_54",6.81
+"El Salvador","women55_64",5.61
+"El Salvador","women65_plus",4.38
+"El Salvador","men15_24",9.34
+"El Salvador","men25_34",9.34
+"El Salvador","men35_44",8.68
+"El Salvador","men45_54",7.62
+"El Salvador","men55_64",6.3
+"El Salvador","men65_plus",4.82
+"Serbia","gdp",15.5
+"Serbia","women15_24",11.7
+"Serbia","women25_34",13
+"Serbia","women35_44",12.7
+"Serbia","women45_54",11.7
+"Serbia","women55_64",10.4
+"Serbia","women65_plus",7.27
+"Serbia","men15_24",11.3
+"Serbia","men25_34",12.5
+"Serbia","men35_44",12.5
+"Serbia","men45_54",12.1
+"Serbia","men55_64",11.5
+"Serbia","men65_plus",10.1
+"Sao Tome and Principe","gdp",3.76
+"Sao Tome and Principe","women15_24",7.22
+"Sao Tome and Principe","women25_34",6.35
+"Sao Tome and Principe","women35_44",4.48
+"Sao Tome and Principe","women45_54",2.54
+"Sao Tome and Principe","women55_64",1.27
+"Sao Tome and Principe","women65_plus",0.8
+"Sao Tome and Principe","men15_24",7.45
+"Sao Tome and Principe","men25_34",7.64
+"Sao Tome and Principe","men35_44",6.88
+"Sao Tome and Principe","men45_54",5.56
+"Sao Tome and Principe","men55_64",3.98
+"Sao Tome and Principe","men65_plus",2.87
+"Suriname","gdp",17.3
+"Suriname","women15_24",10.1
+"Suriname","women25_34",10.1
+"Suriname","women35_44",9.51
+"Suriname","women45_54",8.64
+"Suriname","women55_64",7.3
+"Suriname","women65_plus",6.45
+"Suriname","men15_24",9.4
+"Suriname","men25_34",10
+"Suriname","men35_44",9.93
+"Suriname","men45_54",9.6
+"Suriname","men55_64",8.63
+"Suriname","men65_plus",6.44
+"Slovak Republic","gdp",29.5
+"Slovak Republic","women15_24",11.9
+"Slovak Republic","women25_34",14
+"Slovak Republic","women35_44",13.5
+"Slovak Republic","women45_54",12.7
+"Slovak Republic","women55_64",11.6
+"Slovak Republic","women65_plus",9.01
+"Slovak Republic","men15_24",11.6
+"Slovak Republic","men25_34",13.5
+"Slovak Republic","men35_44",13.2
+"Slovak Republic","men45_54",13.1
+"Slovak Republic","men55_64",12.5
+"Slovak Republic","men65_plus",11.3
+"Slovenia","gdp",33.9
+"Slovenia","women15_24",12.8
+"Slovenia","women25_34",14.2
+"Slovenia","women35_44",13.3
+"Slovenia","women45_54",12.5
+"Slovenia","women55_64",11.1
+"Slovenia","women65_plus",9.42
+"Slovenia","men15_24",11.9
+"Slovenia","men25_34",13.4
+"Slovenia","men35_44",13
+"Slovenia","men45_54",12.7
+"Slovenia","men55_64",12.2
+"Slovenia","men65_plus",11.1
+"Sweden","gdp",51.7
+"Sweden","women15_24",15
+"Sweden","women25_34",15.1
+"Sweden","women35_44",14.7
+"Sweden","women45_54",14.1
+"Sweden","women55_64",12.9
+"Sweden","women65_plus",11.4
+"Sweden","men15_24",14.2
+"Sweden","men25_34",14.5
+"Sweden","men35_44",14.1
+"Sweden","men45_54",13.5
+"Sweden","men55_64",12.5
+"Sweden","men65_plus",11.4
+"Eswatini","gdp",8.38
+"Eswatini","women15_24",9.97
+"Eswatini","women25_34",10
+"Eswatini","women35_44",8.75
+"Eswatini","women45_54",6.82
+"Eswatini","women55_64",4.96
+"Eswatini","women65_plus",2.8
+"Eswatini","men15_24",9.17
+"Eswatini","men25_34",9.7
+"Eswatini","men35_44",9
+"Eswatini","men45_54",7.8
+"Eswatini","men55_64",5.85
+"Eswatini","men65_plus",3.94
+"Seychelles","gdp",25.6
+"Seychelles","women15_24",11.3
+"Seychelles","women25_34",11.6
+"Seychelles","women35_44",10.8
+"Seychelles","women45_54",9.44
+"Seychelles","women55_64",7.78
+"Seychelles","women65_plus",6.49
+"Seychelles","men15_24",10.9
+"Seychelles","men25_34",11.5
+"Seychelles","men35_44",10.6
+"Seychelles","men45_54",9.3
+"Seychelles","men55_64",7.63
+"Seychelles","men65_plus",6.63
+"Chad","gdp",1.86
+"Chad","women15_24",2.66
+"Chad","women25_34",1.63
+"Chad","women35_44",1.09
+"Chad","women45_54",0.56
+"Chad","women55_64",0.19
+"Chad","women65_plus",0.15
+"Chad","men15_24",5.08
+"Chad","men25_34",4.79
+"Chad","men35_44",3.63
+"Chad","men45_54",2.8
+"Chad","men55_64",1.58
+"Chad","men65_plus",0.59
+"Togo","gdp",1.45
+"Togo","women15_24",6.06
+"Togo","women25_34",4.19
+"Togo","women35_44",3.28
+"Togo","women45_54",2.06
+"Togo","women55_64",0.98
+"Togo","women65_plus",0.45
+"Togo","men15_24",7.71
+"Togo","men25_34",7.52
+"Togo","men35_44",6.7
+"Togo","men45_54",5.67
+"Togo","men55_64",3.89
+"Togo","men65_plus",2.06
+"Thailand","gdp",16.3
+"Thailand","women15_24",11.5
+"Thailand","women25_34",10.1
+"Thailand","women35_44",8.87
+"Thailand","women45_54",7.71
+"Thailand","women55_64",6.56
+"Thailand","women65_plus",5.02
+"Thailand","men15_24",10.8
+"Thailand","men25_34",9.83
+"Thailand","men35_44",9.01
+"Thailand","men45_54",8.32
+"Thailand","men55_64",7.45
+"Thailand","men65_plus",6.42
+"Tajikistan","gdp",2.82
+"Tajikistan","women15_24",11.2
+"Tajikistan","women25_34",11.8
+"Tajikistan","women35_44",11.7
+"Tajikistan","women45_54",11
+"Tajikistan","women55_64",9.38
+"Tajikistan","women65_plus",6.34
+"Tajikistan","men15_24",11.8
+"Tajikistan","men25_34",12.5
+"Tajikistan","men35_44",12.3
+"Tajikistan","men45_54",12.4
+"Tajikistan","men55_64",11.4
+"Tajikistan","men65_plus",8.91
+"Turkmenistan","gdp",13
+"Turkmenistan","women15_24",13.6
+"Turkmenistan","women25_34",14
+"Turkmenistan","women35_44",13.4
+"Turkmenistan","women45_54",11.8
+"Turkmenistan","women55_64",9.65
+"Turkmenistan","women65_plus",6.82
+"Turkmenistan","men15_24",13.1
+"Turkmenistan","men25_34",13.8
+"Turkmenistan","men35_44",13.7
+"Turkmenistan","men45_54",12.6
+"Turkmenistan","men55_64",10.6
+"Turkmenistan","men65_plus",8.39
+"Timor-Leste","gdp",3.3
+"Timor-Leste","women15_24",8.69
+"Timor-Leste","women25_34",6.92
+"Timor-Leste","women35_44",3.92
+"Timor-Leste","women45_54",1.45
+"Timor-Leste","women55_64",0.48
+"Timor-Leste","women65_plus",0.33
+"Timor-Leste","men15_24",8.66
+"Timor-Leste","men25_34",8.2
+"Timor-Leste","men35_44",6.51
+"Timor-Leste","men45_54",3.54
+"Timor-Leste","men55_64",1.4
+"Timor-Leste","men65_plus",0.67
+"Tonga","gdp",6.03
+"Tonga","women15_24",11.7
+"Tonga","women25_34",12.2
+"Tonga","women35_44",11.5
+"Tonga","women45_54",10.4
+"Tonga","women55_64",9.61
+"Tonga","women65_plus",8.66
+"Tonga","men15_24",10.9
+"Tonga","men25_34",11.7
+"Tonga","men35_44",11.4
+"Tonga","men45_54",10.6
+"Tonga","men55_64",9.9
+"Tonga","men65_plus",9.12
+"Trinidad and Tobago","gdp",29.2
+"Trinidad and Tobago","women15_24",14
+"Trinidad and Tobago","women25_34",13.3
+"Trinidad and Tobago","women35_44",12.2
+"Trinidad and Tobago","women45_54",10.8
+"Trinidad and Tobago","women55_64",9.49
+"Trinidad and Tobago","women65_plus",8.26
+"Trinidad and Tobago","men15_24",13.1
+"Trinidad and Tobago","men25_34",12.5
+"Trinidad and Tobago","men35_44",11.6
+"Trinidad and Tobago","men45_54",10.8
+"Trinidad and Tobago","men55_64",9.83
+"Trinidad and Tobago","men65_plus",8.61
+"Tunisia","gdp",10.5
+"Tunisia","women15_24",10.3
+"Tunisia","women25_34",9.1
+"Tunisia","women35_44",6.64
+"Tunisia","women45_54",4.68
+"Tunisia","women55_64",2.35
+"Tunisia","women65_plus",0.77
+"Tunisia","men15_24",11.3
+"Tunisia","men25_34",11.1
+"Tunisia","men35_44",10
+"Tunisia","men45_54",8.19
+"Tunisia","men55_64",5.92
+"Tunisia","men65_plus",3.1
+"Turkey","gdp",26
+"Turkey","women15_24",9.73
+"Turkey","women25_34",8.76
+"Turkey","women35_44",7.37
+"Turkey","women45_54",5.87
+"Turkey","women55_64",4.2
+"Turkey","women65_plus",2.61
+"Turkey","men15_24",10.5
+"Turkey","men25_34",10.3
+"Turkey","men35_44",9.51
+"Turkey","men45_54",8.52
+"Turkey","men55_64",7.06
+"Turkey","men65_plus",5.26
+"Tanzania","gdp",2.35
+"Tanzania","women15_24",7.55
+"Tanzania","women25_34",7.06
+"Tanzania","women35_44",5.68
+"Tanzania","women45_54",3.32
+"Tanzania","women55_64",1.75
+"Tanzania","women65_plus",1.04
+"Tanzania","men15_24",7.67
+"Tanzania","men25_34",7.96
+"Tanzania","men35_44",7.57
+"Tanzania","men45_54",6.41
+"Tanzania","men55_64",4.46
+"Tanzania","men65_plus",2.94
+"Uganda","gdp",2.05
+"Uganda","women15_24",7.29
+"Uganda","women25_34",6.16
+"Uganda","women35_44",4.81
+"Uganda","women45_54",3.48
+"Uganda","women55_64",2.16
+"Uganda","women65_plus",1.27
+"Uganda","men15_24",7.75
+"Uganda","men25_34",8.17
+"Uganda","men35_44",7.56
+"Uganda","men45_54",6.91
+"Uganda","men55_64",5.74
+"Uganda","men65_plus",3.77
+"Ukraine","gdp",11.2
+"Ukraine","women15_24",13.7
+"Ukraine","women25_34",14.7
+"Ukraine","women35_44",14.7
+"Ukraine","women45_54",14.2
+"Ukraine","women55_64",13.1
+"Ukraine","women65_plus",10.7
+"Ukraine","men15_24",13.2
+"Ukraine","men25_34",14.1
+"Ukraine","men35_44",14.2
+"Ukraine","men45_54",13.8
+"Ukraine","men55_64",13.2
+"Ukraine","men65_plus",11.4
+"Uruguay","gdp",20.6
+"Uruguay","women15_24",11.6
+"Uruguay","women25_34",12.1
+"Uruguay","women35_44",11.4
+"Uruguay","women45_54",10.7
+"Uruguay","women55_64",9.69
+"Uruguay","women65_plus",8.13
+"Uruguay","men15_24",10.4
+"Uruguay","men25_34",11
+"Uruguay","men35_44",10.6
+"Uruguay","men45_54",10
+"Uruguay","men55_64",9.12
+"Uruguay","men65_plus",7.71
+"United States","gdp",58.5
+"United States","women15_24",13.8
+"United States","women25_34",15.1
+"United States","women35_44",15.1
+"United States","women45_54",15.1
+"United States","women55_64",14.7
+"United States","women65_plus",13.9
+"United States","men15_24",13.4
+"United States","men25_34",14.6
+"United States","men35_44",14.8
+"United States","men45_54",15
+"United States","men55_64",14.9
+"United States","men65_plus",14.3
+"Uzbekistan","gdp",6.09
+"Uzbekistan","women15_24",12.4
+"Uzbekistan","women25_34",13
+"Uzbekistan","women35_44",13
+"Uzbekistan","women45_54",12.5
+"Uzbekistan","women55_64",11
+"Uzbekistan","women65_plus",8.87
+"Uzbekistan","men15_24",12.1
+"Uzbekistan","men25_34",12.7
+"Uzbekistan","men35_44",12.9
+"Uzbekistan","men45_54",13
+"Uzbekistan","men55_64",12.1
+"Uzbekistan","men65_plus",10.1
+"St. Vincent and the Grenadines","gdp",12
+"St. Vincent and the Grenadines","women15_24",12.6
+"St. Vincent and the Grenadines","women25_34",11.2
+"St. Vincent and the Grenadines","women35_44",9.58
+"St. Vincent and the Grenadines","women45_54",8
+"St. Vincent and the Grenadines","women55_64",6.51
+"St. Vincent and the Grenadines","women65_plus",5.16
+"St. Vincent and the Grenadines","men15_24",11.2
+"St. Vincent and the Grenadines","men25_34",10.3
+"St. Vincent and the Grenadines","men35_44",9.32
+"St. Vincent and the Grenadines","men45_54",8.34
+"St. Vincent and the Grenadines","men55_64",7.37
+"St. Vincent and the Grenadines","men65_plus",6.41
+"Vietnam","gdp",6.44
+"Vietnam","women15_24",10.2
+"Vietnam","women25_34",9.65
+"Vietnam","women35_44",9.2
+"Vietnam","women45_54",8.18
+"Vietnam","women55_64",6.2
+"Vietnam","women65_plus",3.37
+"Vietnam","men15_24",9.9
+"Vietnam","men25_34",9.69
+"Vietnam","men35_44",9.75
+"Vietnam","men45_54",9.6
+"Vietnam","men55_64",8.7
+"Vietnam","men65_plus",6.71
+"Vanuatu","gdp",3.04
+"Vanuatu","women15_24",9.57
+"Vanuatu","women25_34",8.94
+"Vanuatu","women35_44",8.21
+"Vanuatu","women45_54",7.01
+"Vanuatu","women55_64",6.01
+"Vanuatu","women65_plus",4.1
+"Vanuatu","men15_24",9.29
+"Vanuatu","men25_34",9.37
+"Vanuatu","men35_44",8.98
+"Vanuatu","men45_54",8.33
+"Vanuatu","men55_64",7.04
+"Vanuatu","men65_plus",5.49
+"Samoa","gdp",6.01
+"Samoa","women15_24",14.4
+"Samoa","women25_34",13.2
+"Samoa","women35_44",12.1
+"Samoa","women45_54",11.3
+"Samoa","women55_64",10.6
+"Samoa","women65_plus",9.67
+"Samoa","men15_24",12.9
+"Samoa","men25_34",12.3
+"Samoa","men35_44",11.5
+"Samoa","men45_54",11
+"Samoa","men55_64",10.6
+"Samoa","men65_plus",9.82
+"South Africa","gdp",12.8
+"South Africa","women15_24",11.7
+"South Africa","women25_34",11.5
+"South Africa","women35_44",10.2
+"South Africa","women45_54",8.73
+"South Africa","women55_64",7.53
+"South Africa","women65_plus",6.08
+"South Africa","men15_24",10.8
+"South Africa","men25_34",11
+"South Africa","men35_44",10.2
+"South Africa","men45_54",8.98
+"South Africa","men55_64",7.7
+"South Africa","men65_plus",6.3
+"Zambia","gdp",3.44
+"Zambia","women15_24",7.96
+"Zambia","women25_34",7.75
+"Zambia","women35_44",7.02
+"Zambia","women45_54",5.36
+"Zambia","women55_64",3.09
+"Zambia","women65_plus",1.58
+"Zambia","men15_24",8.29
+"Zambia","men25_34",9.11
+"Zambia","men35_44",9.13
+"Zambia","men45_54",8.38
+"Zambia","men55_64",6.59
+"Zambia","men65_plus",4.57
+"Zimbabwe","gdp",2.96
+"Zimbabwe","women15_24",10.8
+"Zimbabwe","women25_34",10.2
+"Zimbabwe","women35_44",8.46
+"Zimbabwe","women45_54",6.37
+"Zimbabwe","women55_64",4.84
+"Zimbabwe","women65_plus",3.12
+"Zimbabwe","men15_24",10.5
+"Zimbabwe","men25_34",11.1
+"Zimbabwe","men35_44",10.2
+"Zimbabwe","men45_54",8.41
+"Zimbabwe","men55_64",6.85
+"Zimbabwe","men65_plus",5.08

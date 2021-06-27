@@ -1,5 +1,5 @@
 ---
-title: "GDP School Hours Comparison"
+title: "GDP School Years Comparison"
 output: pdf_document
 ---
 
@@ -17,6 +17,7 @@ library(GGally)
 library(skimr)
 library(moderndive)
 library(olsrr)
+library(psych)
 ```
 
 This section is the data wrangling that I did with the raw data as each column was contained in a different file.
@@ -84,6 +85,11 @@ data <- GDP %>%
   rename(men55_64 = "2015") %>%
   inner_join(men65_plus, by = "country") %>%
   rename(men65_plus = "2015")
+
+# COnvert to tidy format
+
+data <- data %>%
+  pivot_longer(cols = 2:14, names_to = "variable", values_to = "value")
 
 # Write data to csv file
 
@@ -153,15 +159,50 @@ data <- GDP %>%
   inner_join(men65_plus, by = "country") %>%
   rename(men65_plus = "1990")
 
+# convert to tidy format
+
+data <- data %>%
+  pivot_longer(cols = 2:14, names_to = "variable", values_to = "value")
+
 # Write data to csv file
 
 write.csv(data, "GDP_school_years_1990.csv", row.names = FALSE)
 
 ```
 
-```{r importData}
+Combine 1990 and 2015 data files into one
+
+``` {r combineFiles}
 school2015 <- read.csv("GDP_school_years_2015.csv")
 school1990 <- read.csv("GDP_school_years_1990.csv")
+
+school2015$year <- 2015
+school1990$year <- 1990
+
+school <- rbind(school2015, school1990)
+
+# save as one file
+
+school <- write.csv(school, "GDP_school_years.csv", row.names = FALSE)
+
+```
+
+
+```{r importData}
+
+data <- read.csv("Group_20.csv")
+
+# separate school data by year and widen data
+
+school2015 <- data %>%
+  filter(year == 2015, file == "school") %>%
+  select(-year, -file) %>%
+  pivot_wider(id_cols = "country", names_from = "variable", values_from = "value")
+school1990 <- data %>%
+  filter(year == 1990, file == "school") %>%
+  select(-year, -file) %>%
+  pivot_wider(id_cols = "country", names_from = "variable", values_from = "value")
+
 ```
 
 ``` {r exploration, message = FALSE, warning = FALSE}
@@ -214,6 +255,34 @@ cor2015 %>%
   rownames_to_column("Group") %>%
   ggplot(aes(Group, Correlation)) + geom_col() + theme(axis.text.x = element_text(angle = -45)) +
   labs(y = "Correlation with log GDP")
+```
+
+``` {r corrSigTests}
+
+# test for significance between highest and lowest correlations
+
+# biggest difference in 2015
+
+r.test(n = nrow(school2015), r12 = cor2015["women25_34",], r13 = cor2015["women65_plus",], r23 = cor(school2015$women25_34, school2015$women65_plus))
+cat("  \n  \n")
+
+# smallest difference in 2015
+
+r.test(n = nrow(school2015), r12 = cor2015["women25_34",], r13 = cor2015["women15_24",], r23 = cor(school2015$women25_34, school2015$women15_24))
+cat("  \n  \n")
+
+# biggest difference in 1990
+
+r.test(n = nrow(school1990), r12 = cor1990["women25_34",], r13 = cor1990["women65_plus",], r23 = cor(school1990$women25_34, school1990$women65_plus))
+cat("  \n  \n")
+
+# smallest difference in 1990
+
+r.test(n = nrow(school1990), r12 = cor1990["women25_34",], r13 = cor1990["women15_24",], r23 = cor(school1990$women25_34, school1990$women15_24))
+cat("  \n  \n")
+
+# largest differences are highly significant, smallest differences are not significant at 0.05 threshold
+
 ```
 
 Linear model fitted for highest correlating group 
@@ -269,7 +338,7 @@ get_regression_points(mod2015m) %>%
   ggplot(aes(sample = residual)) + stat_qq()
 ```
 
-Prepare data on child mortality, fertility rate, murders, suicides and female participation in the workforce for 1990 and 2015.  More data wrangling. Skip to the next code chunk to run without the orginal files.
+Prepare data on child mortality, fertility rate, murders, suicides and female participation in the workforce for 1990 and 2015.  More data wrangling. Skip to the next code chunk to run without the original files.
 
 ``` {r otherData}
 # import child mortality data
@@ -322,14 +391,43 @@ gdp <- school1990 %>%
   left_join(suicides, by = "country") %>%
   select(country, gdp_1990, gdp_2015, log_gdp_1990, log_gdp_2015, everything())
 
+# convert to tidy format
+
+gdp <- gdp %>%
+  pivot_longer(cols = 2:17, names_to = "variable", values_to = "value")
+
 # save to data file
 
 write.csv(gdp, "GDP_1990_2015.csv", row.names = FALSE)
 
 ```
 
-``` {r importGDPfemData}
+``` {r combineNewData}
+
 gdp <- read.csv("GDP_1990_2015.csv")
+school <- read.csv("GDP_school_years.csv")
+
+gdp <- gdp %>%
+  mutate(year = str_sub(variable, -4), file = "gdp")
+school <- school %>%
+  mutate(file = "school")
+final <- rbind(school, gdp)
+
+# save to data file
+
+write.csv(final, "Group_20.csv", row.names = FALSE)
+
+```
+
+``` {r importGDPData}
+gdp <- read.csv("Group_20.csv")
+
+# widen data
+gdp <- gdp %>%
+  filter(file == "gdp") %>%
+  select(-year, -file) %>%
+  pivot_wider(id_cols = "country", names_from = "variable", values_from = "value")
+
 ```
 
 Explore new data sets
@@ -353,6 +451,8 @@ Fit new linear models
 
 ``` {r lm2}
 
+# full models
+
 mod_1990_2 <- lm(log_gdp_1990 ~ sch_yrs_1990 + child_mort_1990 + fert_1990 + fem_part_1990 + murders_1990 + suicides_1990, data = gdp)
 summary(mod_1990_2)
 
@@ -371,14 +471,6 @@ summary(mod_1990_3)
 
 mod_2015_3 <- lm(log_gdp_2015 ~ child_mort_2015 + sch_yrs_2015 + fert_2015, data = gdp)
 summary(mod_2015_3)
-
-# try swapping fem_part and fert
-
-mod_1990_4 <- lm(log_gdp_1990 ~ child_mort_1990 + sch_yrs_1990 + fert_1990, data = gdp)
-summary(mod_1990_4)
-
-mod_2015_4 <- lm(log_gdp_2015 ~ child_mort_2015 + sch_yrs_2015 + fem_part_2015, data = gdp)
-summary(mod_2015_4)
 
 ```
 
@@ -420,6 +512,26 @@ print coefficient summaries
 
 get_regression_table(mod_1990_3)
 get_regression_table(mod_2015_3)
+
+
+```
+``` {r graphs, warning = F, message = F}
+
+# plot graphs of explanatory variables against response variable
+
+gdp %>%
+  ggplot(aes(child_mort_1990, log_gdp_1990)) + geom_point() + geom_smooth(method = "lm", se = F)
+gdp %>%
+  ggplot(aes(child_mort_2015, log_gdp_2015)) + geom_point() + geom_smooth(method = "lm", se = F)
+gdp %>%
+  ggplot(aes(sch_yrs_1990, log_gdp_1990)) + geom_point() + geom_smooth(method = "lm", se = F)
+gdp %>%
+  ggplot(aes(sch_yrs_2015, log_gdp_2015)) + geom_point() + geom_smooth(method = "lm", se = F)
+gdp %>%
+  ggplot(aes(fem_part_1990, log_gdp_1990)) + geom_point() + geom_smooth(method = "lm", se = F)
+gdp %>%
+  ggplot(aes(fert_2015, log_gdp_2015)) + geom_point() + geom_smooth(method = "lm", se = F)
+  
 
 
 ```

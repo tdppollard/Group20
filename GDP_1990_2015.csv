@@ -1,179 +1,2849 @@
-"country","gdp_1990","gdp_2015","log_gdp_1990","log_gdp_2015","sch_yrs_1990","sch_yrs_2015","child_mort_1990","child_mort_2015","fert_1990","fert_2015","fem_part_1990","fem_part_2015","murders_1990","murders_2015","suicides_1990","suicides_2015"
-"Angola",5.76,8.04,1.7509374747078,2.08442908319087,2.63,5.31,223,88.1,7.25,5.77,75.2,75.4,NA,NA,NA,NA
-"Albania",4.93,12.1,1.5953389880546,2.4932054526027,8.28,12.3,40.7,9.6,2.98,1.71,53.6,47.7,NA,NA,NA,NA
-"United Arab Emirates",111,65.2,4.70953020131233,4.17745946893261,7.79,13.2,16.6,7.83,4.45,1.77,29.2,41.8,NA,NA,NA,NA
-"Argentina",14.1,23.9,2.64617479738412,3.17387845893747,9.31,13,28.6,11.5,2.99,2.31,44.3,47.5,5.15,NA,6.79,NA
-"Armenia",5.18,11.3,1.64480505627139,2.42480272571829,9.45,13.1,49,14.4,2.54,1.66,49,51.2,6.24,1.12,3.02,2.02
-"Antigua and Barbuda",15.5,18.6,2.7408400239252,2.92316158071916,10.6,14.5,28,7.29,2.06,2.06,NA,NA,NA,NA,NA,NA
-"Australia",31.3,48,3.44361809754611,3.87120101090789,11.2,14.5,9.19,3.87,1.88,1.86,52.3,59.1,2.14,1.11,12.2,11.6
-"Austria",37.7,53.2,3.62966009445396,3.9740583963476,9.88,13.3,9.52,3.71,1.46,1.49,43.4,54.5,1.62,0.508,19.5,10.2
-"Azerbaijan",7.76,14.9,2.04898233419513,2.70136121295141,9.58,13.2,95.6,26.3,3.09,2.09,52.1,62.5,6.49,NA,2.02,NA
-"Burundi",1.18,0.825,0.165514438477573,-0.192371892647456,1.96,4.23,174,67,7.51,5.78,90.8,79.9,NA,NA,NA,NA
-"Belgium",35.5,49.5,3.56953269648137,3.90197266957464,10.9,14.5,10,3.99,1.58,1.79,36.6,48,1.34,0.978,15.7,13.3
-"Benin",2.18,2.95,0.779324876800998,1.08180517035173,1.26,2.73,175,99.9,6.74,5.05,57.3,68.4,NA,NA,NA,NA
-"Burkina Faso",1.02,1.93,0.0198026272961797,0.657520002916794,0.75,1.86,199,86.8,7.01,5.44,76.2,58.3,NA,NA,NA,NA
-"Bangladesh",1.52,3.7,0.418710334858185,1.30833281965018,2.3,5.09,144,36.1,4.55,2.13,23.1,32.4,NA,NA,NA,NA
-"Bulgaria",12.1,19.6,2.4932054526027,2.97552956623647,10.7,13.6,18.3,8.18,1.77,1.55,54.4,48.6,3.19,NA,12.3,NA
-"Bahrain",38.6,48.3,3.65325227647079,3.87743156065853,6.46,10.5,23,7.57,3.74,2.05,28.9,43.8,NA,NA,NA,NA
-"Bahamas",38.7,35.8,3.65583960003574,3.57794789340665,9.61,13.6,23.5,11.2,2.64,1.78,64.8,69.9,NA,NA,NA,NA
-"Belarus",8.9,18.3,2.18605127673809,2.90690105984738,10.8,14.9,15.2,4.03,1.9,1.69,53.2,58.6,6.85,NA,19.3,NA
-"Belize",4.8,7.26,1.56861591791385,1.9823798288367,5.91,9.78,38.3,15.3,4.51,2.54,34.5,52.2,3.33,NA,2.47,NA
-"Bolivia",4.59,7.98,1.52388002407245,2.07693841146172,5.87,9.86,121,30.8,4.91,2.92,55.5,54.5,NA,NA,NA,NA
-"Brazil",10.5,15.1,2.35137525716348,2.71469474382088,5.72,9.6,63,15.7,2.81,1.74,42,53.4,NA,NA,NA,NA
-"Barbados",14,15.4,2.63905732961526,2.73436750941958,7.03,11.2,18.1,13.3,1.74,1.8,61.3,61.9,11.4,NA,6.5,NA
-"Brunei",71.2,63.1,4.26549281841793,4.14472076954717,10.7,14.5,13.5,10.8,3.53,1.88,45.8,59.4,NA,NA,NA,NA
-"Bhutan",2.78,10.1,1.02245092770255,2.31253542384721,1.52,3.23,127,33.3,5.64,2.09,51.5,57.8,NA,NA,NA,NA
-"Botswana",9.07,16.7,2.20497226412705,2.81540871942271,4.7,8.71,51.3,40.7,4.54,2.77,47.7,65,NA,NA,NA,NA
-"Central African Republic",1.2,0.853,0.182321556793955,-0.158995731490458,2.1,4.27,180,129,5.81,4.94,64.6,63.4,NA,NA,NA,NA
-"Canada",32,47.8,3.46573590279973,3.86702563949741,13.1,15.7,8.25,5.28,1.66,1.59,57.9,60.8,2.01,NA,11.9,NA
-"Switzerland",55.6,66.2,4.01818320125654,4.19268046294296,10.6,14.4,8.19,4.32,1.55,1.54,57,62.4,1.47,NA,18.2,NA
-"Chile",9.52,23.6,2.25339484880327,3.16124671203156,9.36,13.3,19.1,7.89,2.55,1.79,32.1,50.1,3.2,NA,6.14,NA
-"China",1.42,12.7,0.350656871613169,2.54160199346455,5.98,9.82,53.7,10.7,2.35,1.62,73.2,62.4,NA,NA,NA,NA
-"Cote d'Ivoire",4.5,4.42,1.50407739677627,1.48613969608961,1.86,3.87,155,90,6.5,4.97,48.5,48,NA,NA,NA,NA
-"Cameroon",3.22,3.46,1.16938135955632,1.24126858906963,3.66,7.17,137,85.8,6.44,4.78,71.5,71.1,NA,NA,NA,NA
-"Congo, Dem. Rep.",1.82,1.07,0.598836501088704,0.0676586484738149,3.32,6.26,186,97.4,7.13,6.17,71.9,71.4,NA,NA,NA,NA
-"Congo, Rep.",3.55,3.8,1.26694760348732,1.33500106673234,4.84,8.85,90.2,54.9,5.35,4.72,65.8,67.5,NA,NA,NA,NA
-"Colombia",8.39,14.2,2.12704052047911,2.65324196460721,6.72,10.8,35.2,15.7,2.99,1.87,29.9,59,NA,NA,NA,NA
-"Comoros",3.06,2.96,1.11841491596429,1.08518926833597,2.95,6.03,125,74.9,5.57,4.45,31.6,35.6,NA,NA,NA,NA
-"Cape Verde",1.75,6.27,0.559615787935423,1.83577635464483,3.2,6.14,60.6,21.5,5.31,2.37,42.3,48.6,NA,NA,NA,NA
-"Costa Rica",9.55,18,2.25654115449264,2.89037175789616,7.3,10.9,16.7,9.05,3.17,1.8,32.9,48.8,4.83,NA,6.12,NA
-"Cyprus",25.2,34.4,3.22684399451738,3.53805656437935,10.9,14.6,11.1,2.74,2.41,1.35,46.2,57.9,NA,1.42,NA,4.19
-"Czech Republic",23.7,36.2,3.16547504814109,3.58905911883173,11.2,14.5,12.2,3.15,1.8,1.52,51.9,51.4,1.81,0.66,16.7,10.2
-"Germany",36.6,51.2,3.60004824040732,3.93573953204546,10.4,14.2,8.53,3.86,1.36,1.45,45.2,54.6,0.976,0.506,13.7,8.53
-"Dominica",7.78,11.9,2.0515563381903,2.47653840011748,8.33,12.5,16.2,32.1,NA,NA,NA,NA,NA,NA,NA,NA
-"Denmark",39.1,53,3.66612246699132,3.97029191355212,11.7,15.1,8.93,4.22,1.67,1.79,61.1,57.7,1,0.572,19.6,7.59
-"Dominican Republic",6.2,15.3,1.82454929205105,2.72785282839839,6.99,11.1,60.2,31.3,3.47,2.45,43.6,53.9,NA,NA,NA,NA
-"Algeria",8.61,11.5,2.15292431843964,2.4423470353692,4.22,7.74,49.5,24.9,4.73,2.84,11.5,15.2,NA,NA,NA,NA
-"Ecuador",8.29,11.9,2.1150499691472,2.47653840011748,7.26,11.2,53.9,15.1,3.77,2.51,45.7,52.2,NA,NA,NA,NA
-"Egypt",6.09,10.6,1.80664808172181,2.36085400111802,4.86,9.06,85.8,23.6,4.66,3.31,21.3,22.2,NA,0.166,NA,0.0578
-"Spain",27.6,37.5,3.3178157727231,3.62434093297637,9.19,13.5,9.14,3.28,1.34,1.35,33.8,52.3,0.929,0.557,6.25,5.62
-"Ethiopia",0.767,1.78,-0.265268477614881,0.576613364303994,1.83,3.75,202,63.5,7.25,4.32,66.5,77,NA,NA,NA,NA
-"Finland",32.9,45.1,3.49347265777133,3.80888224650863,11.5,15.1,6.73,2.2,1.79,1.8,59,55.5,3.01,NA,27.5,NA
-"Fiji",8.43,12.6,2.13179677201376,2.53369681395743,8.14,12.1,29.2,24.6,3.4,2.54,39.9,40.9,NA,NA,NA,NA
-"France",33.9,43.6,3.5234150143864,3.77505715035499,10.2,14,8.99,4.1,1.75,1.98,46.3,50.7,1.04,NA,16.8,NA
-"Micronesia, Fed. Sts.",3,3.46,1.09861228866811,1.24126858906963,8.52,12.6,55.3,33.9,4.96,3.19,NA,NA,NA,NA,NA,NA
-"Gabon",18.2,15.5,2.90142159408275,2.7408400239252,6.99,10.2,92.6,51,5.42,3.85,36.5,42.3,NA,NA,NA,NA
-"United Kingdom",30.7,44.9,3.42426265459315,3.80443779474821,11.2,14.9,9.31,4.45,1.81,1.88,52,56.6,0.724,0.192,7.28,6.7
-"Georgia",11.1,12.6,2.40694510831829,2.53369681395743,10.9,14.6,47.9,10.5,2.18,2,58.1,58.9,2.74,1.7,3.38,4.14
-"Ghana",2.34,4.67,0.85015092936961,1.54115907168081,4.16,7.12,127,54.7,5.6,4.04,72.4,74.5,NA,NA,NA,NA
-"Guinea",1.51,2.09,0.412109650826833,0.73716406597672,0.91,2.07,236,107,6.6,4.93,63,63,NA,NA,NA,NA
-"Gambia",2.27,2.06,0.819779831493311,0.72270598280149,1.62,3.48,167,64.7,6.11,5.49,45,51,NA,NA,NA,NA
-"Guinea-Bissau",1.99,1.8,0.688134638736401,0.587786664902119,1.02,2.36,223,91.2,6.63,4.71,65.1,65.3,NA,NA,NA,NA
-"Equatorial Guinea",1.04,28.3,0.0392207131532813,3.34286180464919,3.95,7.28,179,94.2,5.99,4.78,49.4,56.1,NA,NA,NA,NA
-"Greece",24.5,28.5,3.19867311755068,3.3499040872746,9.77,13.9,10.4,4.58,1.47,1.31,36.1,45.5,1.01,0.752,2.95,3.69
-"Grenada",8.81,15.1,2.17588743994809,2.71469474382088,7.03,11.2,22.3,15.1,3.84,2.13,NA,NA,0.839,NA,2.92,NA
-"Guatemala",5.56,8.13,1.71559810826249,2.09556092355972,3.57,6.65,80.1,29,5.44,3.03,38.7,39.1,NA,NA,NA,NA
-"Guyana",3.49,8.6,1.24990173621434,2.15176220325946,7.08,10.8,60.3,33.1,3.07,2.53,37.3,40.2,NA,NA,NA,NA
-"Honduras",3.99,5.28,1.38379123090177,1.66392609771817,4.84,8.58,58,19.5,5.14,2.51,43.1,50.3,NA,NA,NA,NA
-"Haiti",2.2,1.76,0.78845736036427,0.56531380905006,3.4,6.9,144,70.6,5.43,2.97,57.4,63.2,NA,NA,NA,NA
-"Indonesia",4.53,10.1,1.51072193949494,2.31253542384721,5.29,9.56,84.2,28,3.12,2.39,44.5,48.9,NA,NA,NA,NA
-"India",1.81,5.45,0.593326845277734,1.69561560867515,2.75,5.79,126,43.6,4.05,2.35,35.1,27.3,NA,NA,NA,NA
-"Ireland",26.5,71.2,3.27714473299218,4.26549281841793,10.6,14.5,9.16,3.83,2,1.99,35.8,52.6,0.667,NA,9.99,NA
-"Iran",8.65,12.7,2.15755932094379,2.54160199346455,4.78,9.89,56,16,4.82,1.69,9.83,15.2,NA,NA,NA,NA
-"Iraq",7.96,10.3,2.07442899985629,2.33214389523559,3.92,7.88,53.7,29.5,5.88,4.43,8.12,18.4,NA,NA,NA,NA
-"Iceland",34.4,51.7,3.53805656437935,3.94545778151438,11.1,14.9,6.43,2.18,2.16,1.95,67.6,73.1,0.468,0.744,15.7,11.3
-"Israel",24.5,37.6,3.19867311755068,3.62700405039585,12.5,15.7,11.6,3.92,3,3,46.3,59,1.9,1.7,7,4.07
-"Italy",36.8,40.4,3.60549784517489,3.6988297849671,10.7,14.3,9.65,3.43,1.3,1.46,35.3,39,2.55,0.564,5.98,4.69
-"Jamaica",8.59,9.47,2.15059873599616,2.24812890719799,8.61,12.8,30.4,15.9,2.95,2.03,59.5,56.7,NA,NA,NA,NA
-"Jordan",7.45,9.97,2.00821403239147,2.29958058397375,7.94,12.4,36.1,17.7,5.49,3.45,10.6,13.9,NA,NA,NA,NA
-"Japan",32.1,39.7,3.46885603013597,3.68135118769314,12.2,15.5,6.32,3.02,1.56,1.44,50.1,49.9,0.604,0.208,13.4,14.5
-"Kazakhstan",13.5,24.3,2.60268968544438,3.1904763503465,10.3,13.9,52.3,11.9,2.83,2.66,65.3,65.4,12.5,5.89,21,16.4
-"Kenya",3.21,3.82,1.16627093714192,1.34025042261848,5.02,9.14,107,46.3,6.07,3.92,70.3,62.4,NA,NA,NA,NA
-"Kyrgyz Republic",5.16,4.81,1.64093657949347,1.57069708411767,10.4,13.8,64.8,22.3,3.89,3.05,50.8,49.8,16.8,3.74,16.1,7.55
-"Kiribati",2.14,2.17,0.76080582903376,0.774727167552368,6.5,10,95.5,57.5,4.69,3.69,NA,NA,NA,NA,NA,NA
-"South Korea",12.7,38.9,2.54160199346455,3.6609942506244,10.5,14.6,15.4,3.5,1.58,1.28,47,51.9,1.51,0.87,7.59,20.2
-"Lao",1.96,6.54,0.672944473242426,1.87793716546911,3.11,6.11,153,53.6,6.15,2.76,79.9,76.8,NA,NA,NA,NA
-"Lebanon",7.55,16.3,2.02154756326093,2.79116510781272,7.17,11.4,32.3,8.3,3,1.72,19,22.9,NA,NA,NA,NA
-"St. Lucia",11.7,14,2.45958884180371,2.63905732961526,7.88,11.9,22.3,17.8,3.4,1.47,47.3,60.6,NA,NA,NA,NA
-"Sri Lanka",3.88,11.9,1.35583515363518,2.47653840011748,7.81,11.6,21.9,8.75,2.48,2.06,45.5,34.9,NA,NA,NA,NA
-"Lesotho",1.28,2.73,0.246860077931526,1.00430160919687,6.48,10.2,90.1,92.5,4.92,3.14,68.7,59.1,NA,NA,NA,NA
-"Luxembourg",68,111,4.21950770517611,4.70953020131233,10.1,14.1,8.7,2.64,1.56,1.56,34.1,53.6,2.64,0.711,15.2,9.04
-"Morocco",3.82,7.13,1.34025042261848,1.9643112344262,2.28,4.84,79.1,25.5,4.06,2.53,24.1,25,NA,NA,NA,NA
-"Madagascar",1.85,1.55,0.615185639090233,0.438254930931155,3.46,6.46,159,58.1,6.18,4.24,84.2,83.5,NA,NA,NA,NA
-"Mexico",15,19.3,2.70805020110221,2.96010509591084,6.68,10.8,44.8,14.8,3.47,2.22,33.5,43.9,20.4,NA,2.85,NA
-"Marshall Islands",3.39,3.63,1.22082992139236,1.28923264827676,6.7,10.8,49,36,NA,NA,NA,NA,NA,NA,NA,NA
-"North Macedonia",11.3,15,2.42480272571829,2.70805020110221,8.93,12.7,36.5,12.3,2.21,1.52,43.1,43.5,NA,NA,NA,NA
-"Mali",1.42,2.14,0.350656871613169,0.76080582903376,0.68,1.56,230,109,7.17,6.15,35.4,60.4,NA,NA,NA,NA
-"Malta",18,38.8,2.89037175789616,3.65842024662923,8.14,11.6,11.3,6.99,2.03,1.44,27.9,41.6,0.959,0.606,2.35,7.19
-"Myanmar",0.62,4.27,-0.478035800943,1.45161382724053,4.24,7.74,115,51.6,3.46,2.23,61.2,51.8,NA,NA,NA,NA
-"Mongolia",4.98,11,1.60542989103656,2.39789527279837,8.15,12.1,108,18.6,4.05,2.79,50.9,53.7,NA,NA,NA,NA
-"Mozambique",0.471,1.26,-0.752897184965719,0.231111720963387,1.49,2.99,241,81.8,6.21,5.31,87.2,82.8,NA,NA,NA,NA
-"Mauritania",4.64,5.13,1.53471436623816,1.63510565918268,2.25,4.44,117,83.5,6.04,4.74,29.9,30.9,NA,NA,NA,NA
-"Mauritius",7.99,19.9,2.07819075977818,2.99071973173045,6.11,10.4,23.1,14.3,2.29,1.44,38.3,46.2,2.55,2.26,14.4,8.08
-"Malawi",0.671,1.03,-0.398986142010455,0.0295588022415444,2.53,4.98,239,59.2,6.92,4.65,76.1,72.4,NA,NA,NA,NA
-"Malaysia",10.3,24.8,2.33214389523559,3.21084365317094,7.29,11.9,16.6,8,3.55,2.06,45.5,50.3,NA,NA,NA,NA
-"Namibia",5.85,10.5,1.76644166124377,2.35137525716348,5.85,9.79,73.7,44.9,5.23,3.47,48.8,57.7,NA,NA,NA,NA
-"Niger",1.12,1.13,0.113328685307003,0.122217632724249,0.63,1.41,329,94.3,7.77,7.29,68.1,67.5,NA,NA,NA,NA
-"Nigeria",3.26,5.51,1.18172719537862,1.70656462316482,3.55,6.77,211,125,6.49,5.59,47.6,50.4,NA,NA,NA,NA
-"Nicaragua",3.45,5.63,1.23837423104327,1.7281094421516,5.4,9.04,66.4,18.8,4.6,2.23,36.5,49.5,NA,NA,NA,NA
-"Netherlands",36.6,53.2,3.60004824040732,3.9740583963476,10.9,14.7,8.32,4.03,1.62,1.75,43,58.2,0.887,0.603,8.41,8.91
-"Norway",41.4,61.9,3.72328088083127,4.12552017969055,11.8,15.4,8.66,2.72,1.93,1.84,55.2,61.3,1.16,0.389,14,9.78
-"Nepal",1.41,2.91,0.343589704390077,1.0681530811834,1.44,3.6,140,36.4,5.17,2.16,80.5,82.3,NA,NA,NA,NA
-"New Zealand",27.6,40.5,3.3178157727231,3.70130197411249,11.6,15,11.2,5.97,2.4,2.01,53.3,62.8,2.27,NA,13.1,NA
-"Oman",27,30.2,3.29583686600433,3.40784192438082,4.56,8.19,38.9,11.2,7.17,2.74,20.1,30.4,NA,NA,NA,NA
-"Pakistan",2.92,4.28,1.07158361628019,1.45395300959371,1.78,4.26,139,76,6.02,3.55,14,23.9,NA,NA,NA,NA
-"Panama",10.7,28.4,2.37024374146786,3.34638914516716,8.72,12.5,30.8,16.9,3.06,2.54,38.2,51.8,NA,NA,NA,NA
-"Peru",5.25,12.1,1.65822807660353,2.4932054526027,7.56,11.6,80.5,16.1,3.83,2.43,43.1,68.1,NA,NA,NA,NA
-"Philippines",4.23,7.3,1.44220199305819,1.98787434815435,8.42,11.8,56.7,30.1,4.32,2.96,46.6,49.4,NA,NA,NA,NA
-"Papua New Guinea",2.44,4.2,0.89199803930511,1.43508452528932,3.15,6.04,87.1,51.7,4.8,3.71,71,69.1,NA,NA,NA,NA
-"Poland",11.3,27.9,2.42480272571829,3.32862668882732,11.5,14.8,17.4,4.86,2.08,1.31,53.9,49,2.84,0.588,12.7,11.9
-"Portugal",23.6,31.2,3.16124671203156,3.44041809481544,7.32,11.5,14.7,3.66,1.52,1.25,48.4,53.8,1.63,NA,7.36,NA
-"Paraguay",8.47,11.8,2.13653050866396,2.46809953147162,6.42,10.2,45.4,22.2,4.55,2.51,51.8,55.9,NA,NA,NA,NA
-"Romania",13.3,23.9,2.58776403522771,3.17387845893747,10.4,13.8,31.1,9.21,1.87,1.51,62.1,45.2,5.14,1.15,8.39,8.87
-"Russia",21.5,25.6,3.06805293513362,3.24259235148552,11.3,14.7,21.6,8.53,1.89,1.74,59.3,56.8,13.8,NA,24.6,NA
-"Rwanda",0.937,1.89,-0.0650719967437148,0.636576829071551,2.66,5.48,154,41.3,7.18,3.97,86.8,86.1,NA,NA,NA,NA
-"Saudi Arabia",41.4,48.9,3.72328088083127,3.88977739648083,5.18,9.61,44.7,8.54,5.91,2.58,14.2,22.1,NA,NA,NA,NA
-"Sudan",1.73,4.19,0.548121408509688,1.43270073393405,2.8,5.67,132,66.3,6.15,4.6,23.4,23.6,NA,NA,NA,NA
-"Senegal",2.3,2.97,0.832909122935104,1.08856195281461,1.44,3.11,139,50.1,6.53,4.84,33.4,45,NA,NA,NA,NA
-"Singapore",37.3,89.4,3.61899332664977,4.49312068217947,8.72,13.8,7.66,2.72,1.83,1.24,47.6,60.8,1.4,0.361,13.4,7.09
-"Solomon Islands",2.07,2.3,0.727548607277278,0.832909122935104,3.73,7.85,38.5,22,5.85,3.91,62.6,62.6,NA,NA,NA,NA
-"Sierra Leone",1.46,1.55,0.378436435720245,0.438254930931155,1.12,2.58,263,122,6.72,4.56,63.9,57.2,NA,NA,NA,NA
-"El Salvador",5.26,8.14,1.66013102674962,2.09679018001445,5.36,9.21,59.8,15.3,3.96,2.1,39.7,47.1,NA,NA,NA,NA
-"Suriname",12.5,17.3,2.52572864430826,2.85070650150373,6.15,10.1,47.9,20.9,3.03,2.4,33.4,42.2,4.82,NA,6.93,NA
-"Slovenia",22.1,33.9,3.09557760852371,3.5234150143864,10.2,14.2,10.4,2.48,1.48,1.61,52.5,52,1.98,0.56,24.4,14.3
-"Sweden",34.7,51.7,3.54673968695281,3.94545778151438,11.7,15.1,6.96,2.87,2.14,1.91,63.1,60.6,1.23,1.08,14.3,10.1
-"Eswatini",5.14,8.38,1.63705307946707,2.12584791449399,5.94,10,70.9,62.9,5.62,3.14,37.6,42.1,NA,NA,NA,NA
-"Seychelles",14.6,25.6,2.68102152871429,3.24259235148552,7.49,11.6,16.6,14.7,2.74,2.33,NA,NA,NA,NA,NA,NA
-"Chad",1,1.86,0,0.62057648772511,0.72,1.63,212,130,7.31,6.05,64.9,64.8,NA,NA,NA,NA
-"Togo",1.35,1.45,0.300104592450338,0.371563556432483,1.98,4.19,145,76.8,6.32,4.52,80.8,76.1,NA,NA,NA,NA
-"Thailand",7.11,16.3,1.96150224381515,2.79116510781272,6.23,10.1,36.9,10.5,2.11,1.5,67.2,61,NA,3.15,NA,5.65
-"Tajikistan",3.87,2.82,1.35325450704169,1.03673688495002,8.96,11.8,102,37.9,5.23,3.4,45.4,45.7,3.15,NA,6.46,NA
-"Turkmenistan",7.21,13,1.97546895129686,2.56494935746154,10.1,14,84.6,50.7,4.34,2.93,49.9,53.5,8.38,NA,10.6,NA
-"Tonga",3.94,6.03,1.37118072330984,1.79674701073909,8.85,12.2,22.2,16.8,4.64,3.68,35.9,45.2,NA,NA,NA,NA
-"Trinidad and Tobago",10.1,29.2,2.31253542384721,3.37416870927424,9.35,13.3,30.4,20.2,2.45,1.77,38.6,51.7,6.86,NA,14.8,NA
-"Tunisia",5.43,10.5,1.69193913394584,2.35137525716348,4.04,9.1,55.5,17.2,3.48,2.22,22.5,24.6,NA,NA,NA,NA
-"Turkey",12.7,26,2.54160199346455,3.25809653802148,4.94,8.76,73.9,12.6,3.11,2.07,34,31.5,NA,1.35,NA,1.91
-"Tanzania",1.39,2.35,0.3293037471426,0.854415328156068,4.02,7.06,166,59.1,6.21,5.08,82.1,79.5,NA,NA,NA,NA
-"Uganda",0.907,2.05,-0.0976128288670004,0.717839793150317,3.2,6.16,185,54.8,7.09,5.68,62.5,66.4,NA,NA,NA,NA
-"Ukraine",15.8,11.2,2.76000994003292,2.41591377830105,10.6,14.7,19.4,9.5,1.81,1.53,54.7,47.3,7.72,NA,18.4,NA
-"Uruguay",10.2,20.6,2.32238772029023,3.02529107579554,8.72,12.1,22.9,8.85,2.52,2.01,45.6,55.7,4.29,NA,9.52,NA
-"United States",40.5,58.5,3.70130197411249,4.06902675423781,13.3,15.1,11.2,6.8,2.07,1.93,56.2,55.8,9.74,NA,11.4,NA
-"Uzbekistan",3.42,6.09,1.22964055107451,1.80664808172181,9.49,13,72.5,25.9,4.21,2.31,50,53.7,7.93,NA,9.44,NA
-"St. Vincent and the Grenadines",6.38,12,1.8531680973567,2.484906649788,7.03,11.2,23.8,18,2.96,1.95,44.1,58.3,NA,NA,NA,NA
-"Vietnam",1.67,6.44,0.512823626428664,1.86252854011626,5.96,9.65,51.4,21.8,3.55,1.96,73.2,73.4,NA,NA,NA,NA
-"Vanuatu",2.81,3.04,1.03318448334565,1.11185751541813,5.2,8.94,35.7,28.6,4.93,3.31,61.4,61.6,NA,NA,NA,NA
-"Samoa",4.07,6.01,1.4036429994545,1.79342474854712,8.93,13.2,30.1,17.2,5.12,4.03,25,23.9,NA,NA,NA,NA
-"South Africa",10.3,12.8,2.33214389523559,2.54944517092557,7.62,11.5,59.2,37.7,3.65,2.49,41.6,47.8,NA,NA,NA,NA
-"Zambia",2.19,3.44,0.783901543828409,1.23547147138531,4.45,7.75,186,64.6,6.44,5.04,73.8,70.1,NA,NA,NA,NA
-"Zimbabwe",3.32,2.96,1.1999647829284,1.08518926833597,6.16,10.2,80.5,54.3,5.18,3.84,67.8,78.1,NA,NA,NA,NA
-"Afghanistan",NA,2.21,NA,0.792992515529661,NA,0.98,179,70.4,7.47,4.8,14.8,18.7,NA,NA,NA,NA
-"Bosnia and Herzegovina",NA,12.8,NA,2.54944517092557,NA,11.3,18.1,6.14,1.77,1.35,41.2,35.7,0.0186,NA,10.2,NA
-"Djibouti",NA,4.49,NA,1.50185270175416,NA,4.05,118,65.3,6.09,2.91,46.2,49.1,NA,NA,NA,NA
-"Estonia",NA,31.2,NA,3.44041809481544,NA,14.5,17.6,3.18,1.94,1.62,54.9,56,10.9,2.74,25,12.4
-"Croatia",NA,24.4,NA,3.19458313229916,NA,12.6,12.8,4.88,1.67,1.47,47.3,47,2.5,0.646,19.8,12.2
-"Hungary",NA,27.5,NA,3.31418600467253,NA,13.9,17.3,5.14,1.81,1.36,47,47.3,2.9,1.02,33.5,13.7
-"Cambodia",NA,3.54,NA,1.26412672714568,NA,5.69,116,32,5.6,2.59,77,80.8,NA,NA,NA,NA
-"Kuwait",NA,54.8,NA,4.00369019395397,NA,12.5,17.5,8.56,2.97,1.99,39.1,48.9,NA,NA,NA,NA
-"Liberia",NA,1.58,NA,0.457424847038875,NA,4.37,262,78.9,6.5,4.65,52.8,54,NA,NA,NA,NA
-"Libya",NA,11,NA,2.39789527279837,NA,6.27,41.6,13.3,4.97,2.31,20,25.8,NA,NA,NA,NA
-"Lithuania",NA,30.8,NA,3.42751468997953,NA,14.2,15,4.9,1.96,1.64,54.6,54.5,7.43,3.66,24.3,25.2
-"Latvia",NA,26.5,NA,3.27714473299218,NA,14.4,17,4.97,1.94,1.53,53.4,54.3,8.8,4.26,23.4,15.5
-"Moldova",NA,10.4,NA,2.34180580614733,NA,13.8,33.3,16.3,2.41,1.25,47.3,41.3,9.31,4.02,15.1,13.3
-"Maldives",NA,17.3,NA,2.85070650150373,NA,7.6,85.8,9.98,5.99,2.13,20.2,44.5,NA,NA,NA,NA
-"Montenegro",NA,18.2,NA,2.90142159408275,NA,13.1,16.5,3.46,2.08,1.68,44.2,42.4,NA,NA,NA,NA
-"Palestine",NA,5.56,NA,1.71559810826249,NA,11.1,44.4,21.7,6.72,4.08,10.2,19,NA,NA,NA,NA
-"Qatar",NA,97.3,NA,4.57779898919196,NA,10.8,20.8,7.83,4.01,1.93,40.1,58.9,NA,NA,NA,NA
-"Serbia",NA,15.5,NA,2.7408400239252,NA,13,27.9,6.28,2.1,1.6,48,44.1,NA,1.17,NA,10.2
-"Sao Tome and Principe",NA,3.76,NA,1.3244189574018,NA,6.35,108,35.1,5.82,4.52,36.1,41.2,NA,NA,NA,NA
-"Slovak Republic",NA,29.5,NA,3.38439026334577,NA,14,14.7,6.06,2.04,1.43,59.8,52,NA,NA,NA,NA
-"Timor-Leste",NA,3.3,NA,1.19392246847243,NA,6.92,174,51,5.34,5.62,44.1,25.2,NA,NA,NA,NA
+"country","variable","value"
+"Angola","gdp_1990",5.76
+"Angola","gdp_2015",8.04
+"Angola","log_gdp_1990",1.7509374747078
+"Angola","log_gdp_2015",2.08442908319087
+"Angola","sch_yrs_1990",2.63
+"Angola","sch_yrs_2015",5.31
+"Angola","child_mort_1990",223
+"Angola","child_mort_2015",88.1
+"Angola","fert_1990",7.25
+"Angola","fert_2015",5.77
+"Angola","fem_part_1990",75.2
+"Angola","fem_part_2015",75.4
+"Angola","murders_1990",NA
+"Angola","murders_2015",NA
+"Angola","suicides_1990",NA
+"Angola","suicides_2015",NA
+"Albania","gdp_1990",4.93
+"Albania","gdp_2015",12.1
+"Albania","log_gdp_1990",1.5953389880546
+"Albania","log_gdp_2015",2.4932054526027
+"Albania","sch_yrs_1990",8.28
+"Albania","sch_yrs_2015",12.3
+"Albania","child_mort_1990",40.7
+"Albania","child_mort_2015",9.6
+"Albania","fert_1990",2.98
+"Albania","fert_2015",1.71
+"Albania","fem_part_1990",53.6
+"Albania","fem_part_2015",47.7
+"Albania","murders_1990",NA
+"Albania","murders_2015",NA
+"Albania","suicides_1990",NA
+"Albania","suicides_2015",NA
+"United Arab Emirates","gdp_1990",111
+"United Arab Emirates","gdp_2015",65.2
+"United Arab Emirates","log_gdp_1990",4.70953020131233
+"United Arab Emirates","log_gdp_2015",4.17745946893261
+"United Arab Emirates","sch_yrs_1990",7.79
+"United Arab Emirates","sch_yrs_2015",13.2
+"United Arab Emirates","child_mort_1990",16.6
+"United Arab Emirates","child_mort_2015",7.83
+"United Arab Emirates","fert_1990",4.45
+"United Arab Emirates","fert_2015",1.77
+"United Arab Emirates","fem_part_1990",29.2
+"United Arab Emirates","fem_part_2015",41.8
+"United Arab Emirates","murders_1990",NA
+"United Arab Emirates","murders_2015",NA
+"United Arab Emirates","suicides_1990",NA
+"United Arab Emirates","suicides_2015",NA
+"Argentina","gdp_1990",14.1
+"Argentina","gdp_2015",23.9
+"Argentina","log_gdp_1990",2.64617479738412
+"Argentina","log_gdp_2015",3.17387845893747
+"Argentina","sch_yrs_1990",9.31
+"Argentina","sch_yrs_2015",13
+"Argentina","child_mort_1990",28.6
+"Argentina","child_mort_2015",11.5
+"Argentina","fert_1990",2.99
+"Argentina","fert_2015",2.31
+"Argentina","fem_part_1990",44.3
+"Argentina","fem_part_2015",47.5
+"Argentina","murders_1990",5.15
+"Argentina","murders_2015",NA
+"Argentina","suicides_1990",6.79
+"Argentina","suicides_2015",NA
+"Armenia","gdp_1990",5.18
+"Armenia","gdp_2015",11.3
+"Armenia","log_gdp_1990",1.64480505627139
+"Armenia","log_gdp_2015",2.42480272571829
+"Armenia","sch_yrs_1990",9.45
+"Armenia","sch_yrs_2015",13.1
+"Armenia","child_mort_1990",49
+"Armenia","child_mort_2015",14.4
+"Armenia","fert_1990",2.54
+"Armenia","fert_2015",1.66
+"Armenia","fem_part_1990",49
+"Armenia","fem_part_2015",51.2
+"Armenia","murders_1990",6.24
+"Armenia","murders_2015",1.12
+"Armenia","suicides_1990",3.02
+"Armenia","suicides_2015",2.02
+"Antigua and Barbuda","gdp_1990",15.5
+"Antigua and Barbuda","gdp_2015",18.6
+"Antigua and Barbuda","log_gdp_1990",2.7408400239252
+"Antigua and Barbuda","log_gdp_2015",2.92316158071916
+"Antigua and Barbuda","sch_yrs_1990",10.6
+"Antigua and Barbuda","sch_yrs_2015",14.5
+"Antigua and Barbuda","child_mort_1990",28
+"Antigua and Barbuda","child_mort_2015",7.29
+"Antigua and Barbuda","fert_1990",2.06
+"Antigua and Barbuda","fert_2015",2.06
+"Antigua and Barbuda","fem_part_1990",NA
+"Antigua and Barbuda","fem_part_2015",NA
+"Antigua and Barbuda","murders_1990",NA
+"Antigua and Barbuda","murders_2015",NA
+"Antigua and Barbuda","suicides_1990",NA
+"Antigua and Barbuda","suicides_2015",NA
+"Australia","gdp_1990",31.3
+"Australia","gdp_2015",48
+"Australia","log_gdp_1990",3.44361809754611
+"Australia","log_gdp_2015",3.87120101090789
+"Australia","sch_yrs_1990",11.2
+"Australia","sch_yrs_2015",14.5
+"Australia","child_mort_1990",9.19
+"Australia","child_mort_2015",3.87
+"Australia","fert_1990",1.88
+"Australia","fert_2015",1.86
+"Australia","fem_part_1990",52.3
+"Australia","fem_part_2015",59.1
+"Australia","murders_1990",2.14
+"Australia","murders_2015",1.11
+"Australia","suicides_1990",12.2
+"Australia","suicides_2015",11.6
+"Austria","gdp_1990",37.7
+"Austria","gdp_2015",53.2
+"Austria","log_gdp_1990",3.62966009445396
+"Austria","log_gdp_2015",3.9740583963476
+"Austria","sch_yrs_1990",9.88
+"Austria","sch_yrs_2015",13.3
+"Austria","child_mort_1990",9.52
+"Austria","child_mort_2015",3.71
+"Austria","fert_1990",1.46
+"Austria","fert_2015",1.49
+"Austria","fem_part_1990",43.4
+"Austria","fem_part_2015",54.5
+"Austria","murders_1990",1.62
+"Austria","murders_2015",0.508
+"Austria","suicides_1990",19.5
+"Austria","suicides_2015",10.2
+"Azerbaijan","gdp_1990",7.76
+"Azerbaijan","gdp_2015",14.9
+"Azerbaijan","log_gdp_1990",2.04898233419513
+"Azerbaijan","log_gdp_2015",2.70136121295141
+"Azerbaijan","sch_yrs_1990",9.58
+"Azerbaijan","sch_yrs_2015",13.2
+"Azerbaijan","child_mort_1990",95.6
+"Azerbaijan","child_mort_2015",26.3
+"Azerbaijan","fert_1990",3.09
+"Azerbaijan","fert_2015",2.09
+"Azerbaijan","fem_part_1990",52.1
+"Azerbaijan","fem_part_2015",62.5
+"Azerbaijan","murders_1990",6.49
+"Azerbaijan","murders_2015",NA
+"Azerbaijan","suicides_1990",2.02
+"Azerbaijan","suicides_2015",NA
+"Burundi","gdp_1990",1.18
+"Burundi","gdp_2015",0.825
+"Burundi","log_gdp_1990",0.165514438477573
+"Burundi","log_gdp_2015",-0.192371892647456
+"Burundi","sch_yrs_1990",1.96
+"Burundi","sch_yrs_2015",4.23
+"Burundi","child_mort_1990",174
+"Burundi","child_mort_2015",67
+"Burundi","fert_1990",7.51
+"Burundi","fert_2015",5.78
+"Burundi","fem_part_1990",90.8
+"Burundi","fem_part_2015",79.9
+"Burundi","murders_1990",NA
+"Burundi","murders_2015",NA
+"Burundi","suicides_1990",NA
+"Burundi","suicides_2015",NA
+"Belgium","gdp_1990",35.5
+"Belgium","gdp_2015",49.5
+"Belgium","log_gdp_1990",3.56953269648137
+"Belgium","log_gdp_2015",3.90197266957464
+"Belgium","sch_yrs_1990",10.9
+"Belgium","sch_yrs_2015",14.5
+"Belgium","child_mort_1990",10
+"Belgium","child_mort_2015",3.99
+"Belgium","fert_1990",1.58
+"Belgium","fert_2015",1.79
+"Belgium","fem_part_1990",36.6
+"Belgium","fem_part_2015",48
+"Belgium","murders_1990",1.34
+"Belgium","murders_2015",0.978
+"Belgium","suicides_1990",15.7
+"Belgium","suicides_2015",13.3
+"Benin","gdp_1990",2.18
+"Benin","gdp_2015",2.95
+"Benin","log_gdp_1990",0.779324876800998
+"Benin","log_gdp_2015",1.08180517035173
+"Benin","sch_yrs_1990",1.26
+"Benin","sch_yrs_2015",2.73
+"Benin","child_mort_1990",175
+"Benin","child_mort_2015",99.9
+"Benin","fert_1990",6.74
+"Benin","fert_2015",5.05
+"Benin","fem_part_1990",57.3
+"Benin","fem_part_2015",68.4
+"Benin","murders_1990",NA
+"Benin","murders_2015",NA
+"Benin","suicides_1990",NA
+"Benin","suicides_2015",NA
+"Burkina Faso","gdp_1990",1.02
+"Burkina Faso","gdp_2015",1.93
+"Burkina Faso","log_gdp_1990",0.0198026272961797
+"Burkina Faso","log_gdp_2015",0.657520002916794
+"Burkina Faso","sch_yrs_1990",0.75
+"Burkina Faso","sch_yrs_2015",1.86
+"Burkina Faso","child_mort_1990",199
+"Burkina Faso","child_mort_2015",86.8
+"Burkina Faso","fert_1990",7.01
+"Burkina Faso","fert_2015",5.44
+"Burkina Faso","fem_part_1990",76.2
+"Burkina Faso","fem_part_2015",58.3
+"Burkina Faso","murders_1990",NA
+"Burkina Faso","murders_2015",NA
+"Burkina Faso","suicides_1990",NA
+"Burkina Faso","suicides_2015",NA
+"Bangladesh","gdp_1990",1.52
+"Bangladesh","gdp_2015",3.7
+"Bangladesh","log_gdp_1990",0.418710334858185
+"Bangladesh","log_gdp_2015",1.30833281965018
+"Bangladesh","sch_yrs_1990",2.3
+"Bangladesh","sch_yrs_2015",5.09
+"Bangladesh","child_mort_1990",144
+"Bangladesh","child_mort_2015",36.1
+"Bangladesh","fert_1990",4.55
+"Bangladesh","fert_2015",2.13
+"Bangladesh","fem_part_1990",23.1
+"Bangladesh","fem_part_2015",32.4
+"Bangladesh","murders_1990",NA
+"Bangladesh","murders_2015",NA
+"Bangladesh","suicides_1990",NA
+"Bangladesh","suicides_2015",NA
+"Bulgaria","gdp_1990",12.1
+"Bulgaria","gdp_2015",19.6
+"Bulgaria","log_gdp_1990",2.4932054526027
+"Bulgaria","log_gdp_2015",2.97552956623647
+"Bulgaria","sch_yrs_1990",10.7
+"Bulgaria","sch_yrs_2015",13.6
+"Bulgaria","child_mort_1990",18.3
+"Bulgaria","child_mort_2015",8.18
+"Bulgaria","fert_1990",1.77
+"Bulgaria","fert_2015",1.55
+"Bulgaria","fem_part_1990",54.4
+"Bulgaria","fem_part_2015",48.6
+"Bulgaria","murders_1990",3.19
+"Bulgaria","murders_2015",NA
+"Bulgaria","suicides_1990",12.3
+"Bulgaria","suicides_2015",NA
+"Bahrain","gdp_1990",38.6
+"Bahrain","gdp_2015",48.3
+"Bahrain","log_gdp_1990",3.65325227647079
+"Bahrain","log_gdp_2015",3.87743156065853
+"Bahrain","sch_yrs_1990",6.46
+"Bahrain","sch_yrs_2015",10.5
+"Bahrain","child_mort_1990",23
+"Bahrain","child_mort_2015",7.57
+"Bahrain","fert_1990",3.74
+"Bahrain","fert_2015",2.05
+"Bahrain","fem_part_1990",28.9
+"Bahrain","fem_part_2015",43.8
+"Bahrain","murders_1990",NA
+"Bahrain","murders_2015",NA
+"Bahrain","suicides_1990",NA
+"Bahrain","suicides_2015",NA
+"Bahamas","gdp_1990",38.7
+"Bahamas","gdp_2015",35.8
+"Bahamas","log_gdp_1990",3.65583960003574
+"Bahamas","log_gdp_2015",3.57794789340665
+"Bahamas","sch_yrs_1990",9.61
+"Bahamas","sch_yrs_2015",13.6
+"Bahamas","child_mort_1990",23.5
+"Bahamas","child_mort_2015",11.2
+"Bahamas","fert_1990",2.64
+"Bahamas","fert_2015",1.78
+"Bahamas","fem_part_1990",64.8
+"Bahamas","fem_part_2015",69.9
+"Bahamas","murders_1990",NA
+"Bahamas","murders_2015",NA
+"Bahamas","suicides_1990",NA
+"Bahamas","suicides_2015",NA
+"Belarus","gdp_1990",8.9
+"Belarus","gdp_2015",18.3
+"Belarus","log_gdp_1990",2.18605127673809
+"Belarus","log_gdp_2015",2.90690105984738
+"Belarus","sch_yrs_1990",10.8
+"Belarus","sch_yrs_2015",14.9
+"Belarus","child_mort_1990",15.2
+"Belarus","child_mort_2015",4.03
+"Belarus","fert_1990",1.9
+"Belarus","fert_2015",1.69
+"Belarus","fem_part_1990",53.2
+"Belarus","fem_part_2015",58.6
+"Belarus","murders_1990",6.85
+"Belarus","murders_2015",NA
+"Belarus","suicides_1990",19.3
+"Belarus","suicides_2015",NA
+"Belize","gdp_1990",4.8
+"Belize","gdp_2015",7.26
+"Belize","log_gdp_1990",1.56861591791385
+"Belize","log_gdp_2015",1.9823798288367
+"Belize","sch_yrs_1990",5.91
+"Belize","sch_yrs_2015",9.78
+"Belize","child_mort_1990",38.3
+"Belize","child_mort_2015",15.3
+"Belize","fert_1990",4.51
+"Belize","fert_2015",2.54
+"Belize","fem_part_1990",34.5
+"Belize","fem_part_2015",52.2
+"Belize","murders_1990",3.33
+"Belize","murders_2015",NA
+"Belize","suicides_1990",2.47
+"Belize","suicides_2015",NA
+"Bolivia","gdp_1990",4.59
+"Bolivia","gdp_2015",7.98
+"Bolivia","log_gdp_1990",1.52388002407245
+"Bolivia","log_gdp_2015",2.07693841146172
+"Bolivia","sch_yrs_1990",5.87
+"Bolivia","sch_yrs_2015",9.86
+"Bolivia","child_mort_1990",121
+"Bolivia","child_mort_2015",30.8
+"Bolivia","fert_1990",4.91
+"Bolivia","fert_2015",2.92
+"Bolivia","fem_part_1990",55.5
+"Bolivia","fem_part_2015",54.5
+"Bolivia","murders_1990",NA
+"Bolivia","murders_2015",NA
+"Bolivia","suicides_1990",NA
+"Bolivia","suicides_2015",NA
+"Brazil","gdp_1990",10.5
+"Brazil","gdp_2015",15.1
+"Brazil","log_gdp_1990",2.35137525716348
+"Brazil","log_gdp_2015",2.71469474382088
+"Brazil","sch_yrs_1990",5.72
+"Brazil","sch_yrs_2015",9.6
+"Brazil","child_mort_1990",63
+"Brazil","child_mort_2015",15.7
+"Brazil","fert_1990",2.81
+"Brazil","fert_2015",1.74
+"Brazil","fem_part_1990",42
+"Brazil","fem_part_2015",53.4
+"Brazil","murders_1990",NA
+"Brazil","murders_2015",NA
+"Brazil","suicides_1990",NA
+"Brazil","suicides_2015",NA
+"Barbados","gdp_1990",14
+"Barbados","gdp_2015",15.4
+"Barbados","log_gdp_1990",2.63905732961526
+"Barbados","log_gdp_2015",2.73436750941958
+"Barbados","sch_yrs_1990",7.03
+"Barbados","sch_yrs_2015",11.2
+"Barbados","child_mort_1990",18.1
+"Barbados","child_mort_2015",13.3
+"Barbados","fert_1990",1.74
+"Barbados","fert_2015",1.8
+"Barbados","fem_part_1990",61.3
+"Barbados","fem_part_2015",61.9
+"Barbados","murders_1990",11.4
+"Barbados","murders_2015",NA
+"Barbados","suicides_1990",6.5
+"Barbados","suicides_2015",NA
+"Brunei","gdp_1990",71.2
+"Brunei","gdp_2015",63.1
+"Brunei","log_gdp_1990",4.26549281841793
+"Brunei","log_gdp_2015",4.14472076954717
+"Brunei","sch_yrs_1990",10.7
+"Brunei","sch_yrs_2015",14.5
+"Brunei","child_mort_1990",13.5
+"Brunei","child_mort_2015",10.8
+"Brunei","fert_1990",3.53
+"Brunei","fert_2015",1.88
+"Brunei","fem_part_1990",45.8
+"Brunei","fem_part_2015",59.4
+"Brunei","murders_1990",NA
+"Brunei","murders_2015",NA
+"Brunei","suicides_1990",NA
+"Brunei","suicides_2015",NA
+"Bhutan","gdp_1990",2.78
+"Bhutan","gdp_2015",10.1
+"Bhutan","log_gdp_1990",1.02245092770255
+"Bhutan","log_gdp_2015",2.31253542384721
+"Bhutan","sch_yrs_1990",1.52
+"Bhutan","sch_yrs_2015",3.23
+"Bhutan","child_mort_1990",127
+"Bhutan","child_mort_2015",33.3
+"Bhutan","fert_1990",5.64
+"Bhutan","fert_2015",2.09
+"Bhutan","fem_part_1990",51.5
+"Bhutan","fem_part_2015",57.8
+"Bhutan","murders_1990",NA
+"Bhutan","murders_2015",NA
+"Bhutan","suicides_1990",NA
+"Bhutan","suicides_2015",NA
+"Botswana","gdp_1990",9.07
+"Botswana","gdp_2015",16.7
+"Botswana","log_gdp_1990",2.20497226412705
+"Botswana","log_gdp_2015",2.81540871942271
+"Botswana","sch_yrs_1990",4.7
+"Botswana","sch_yrs_2015",8.71
+"Botswana","child_mort_1990",51.3
+"Botswana","child_mort_2015",40.7
+"Botswana","fert_1990",4.54
+"Botswana","fert_2015",2.77
+"Botswana","fem_part_1990",47.7
+"Botswana","fem_part_2015",65
+"Botswana","murders_1990",NA
+"Botswana","murders_2015",NA
+"Botswana","suicides_1990",NA
+"Botswana","suicides_2015",NA
+"Central African Republic","gdp_1990",1.2
+"Central African Republic","gdp_2015",0.853
+"Central African Republic","log_gdp_1990",0.182321556793955
+"Central African Republic","log_gdp_2015",-0.158995731490458
+"Central African Republic","sch_yrs_1990",2.1
+"Central African Republic","sch_yrs_2015",4.27
+"Central African Republic","child_mort_1990",180
+"Central African Republic","child_mort_2015",129
+"Central African Republic","fert_1990",5.81
+"Central African Republic","fert_2015",4.94
+"Central African Republic","fem_part_1990",64.6
+"Central African Republic","fem_part_2015",63.4
+"Central African Republic","murders_1990",NA
+"Central African Republic","murders_2015",NA
+"Central African Republic","suicides_1990",NA
+"Central African Republic","suicides_2015",NA
+"Canada","gdp_1990",32
+"Canada","gdp_2015",47.8
+"Canada","log_gdp_1990",3.46573590279973
+"Canada","log_gdp_2015",3.86702563949741
+"Canada","sch_yrs_1990",13.1
+"Canada","sch_yrs_2015",15.7
+"Canada","child_mort_1990",8.25
+"Canada","child_mort_2015",5.28
+"Canada","fert_1990",1.66
+"Canada","fert_2015",1.59
+"Canada","fem_part_1990",57.9
+"Canada","fem_part_2015",60.8
+"Canada","murders_1990",2.01
+"Canada","murders_2015",NA
+"Canada","suicides_1990",11.9
+"Canada","suicides_2015",NA
+"Switzerland","gdp_1990",55.6
+"Switzerland","gdp_2015",66.2
+"Switzerland","log_gdp_1990",4.01818320125654
+"Switzerland","log_gdp_2015",4.19268046294296
+"Switzerland","sch_yrs_1990",10.6
+"Switzerland","sch_yrs_2015",14.4
+"Switzerland","child_mort_1990",8.19
+"Switzerland","child_mort_2015",4.32
+"Switzerland","fert_1990",1.55
+"Switzerland","fert_2015",1.54
+"Switzerland","fem_part_1990",57
+"Switzerland","fem_part_2015",62.4
+"Switzerland","murders_1990",1.47
+"Switzerland","murders_2015",NA
+"Switzerland","suicides_1990",18.2
+"Switzerland","suicides_2015",NA
+"Chile","gdp_1990",9.52
+"Chile","gdp_2015",23.6
+"Chile","log_gdp_1990",2.25339484880327
+"Chile","log_gdp_2015",3.16124671203156
+"Chile","sch_yrs_1990",9.36
+"Chile","sch_yrs_2015",13.3
+"Chile","child_mort_1990",19.1
+"Chile","child_mort_2015",7.89
+"Chile","fert_1990",2.55
+"Chile","fert_2015",1.79
+"Chile","fem_part_1990",32.1
+"Chile","fem_part_2015",50.1
+"Chile","murders_1990",3.2
+"Chile","murders_2015",NA
+"Chile","suicides_1990",6.14
+"Chile","suicides_2015",NA
+"China","gdp_1990",1.42
+"China","gdp_2015",12.7
+"China","log_gdp_1990",0.350656871613169
+"China","log_gdp_2015",2.54160199346455
+"China","sch_yrs_1990",5.98
+"China","sch_yrs_2015",9.82
+"China","child_mort_1990",53.7
+"China","child_mort_2015",10.7
+"China","fert_1990",2.35
+"China","fert_2015",1.62
+"China","fem_part_1990",73.2
+"China","fem_part_2015",62.4
+"China","murders_1990",NA
+"China","murders_2015",NA
+"China","suicides_1990",NA
+"China","suicides_2015",NA
+"Cote d'Ivoire","gdp_1990",4.5
+"Cote d'Ivoire","gdp_2015",4.42
+"Cote d'Ivoire","log_gdp_1990",1.50407739677627
+"Cote d'Ivoire","log_gdp_2015",1.48613969608961
+"Cote d'Ivoire","sch_yrs_1990",1.86
+"Cote d'Ivoire","sch_yrs_2015",3.87
+"Cote d'Ivoire","child_mort_1990",155
+"Cote d'Ivoire","child_mort_2015",90
+"Cote d'Ivoire","fert_1990",6.5
+"Cote d'Ivoire","fert_2015",4.97
+"Cote d'Ivoire","fem_part_1990",48.5
+"Cote d'Ivoire","fem_part_2015",48
+"Cote d'Ivoire","murders_1990",NA
+"Cote d'Ivoire","murders_2015",NA
+"Cote d'Ivoire","suicides_1990",NA
+"Cote d'Ivoire","suicides_2015",NA
+"Cameroon","gdp_1990",3.22
+"Cameroon","gdp_2015",3.46
+"Cameroon","log_gdp_1990",1.16938135955632
+"Cameroon","log_gdp_2015",1.24126858906963
+"Cameroon","sch_yrs_1990",3.66
+"Cameroon","sch_yrs_2015",7.17
+"Cameroon","child_mort_1990",137
+"Cameroon","child_mort_2015",85.8
+"Cameroon","fert_1990",6.44
+"Cameroon","fert_2015",4.78
+"Cameroon","fem_part_1990",71.5
+"Cameroon","fem_part_2015",71.1
+"Cameroon","murders_1990",NA
+"Cameroon","murders_2015",NA
+"Cameroon","suicides_1990",NA
+"Cameroon","suicides_2015",NA
+"Congo, Dem. Rep.","gdp_1990",1.82
+"Congo, Dem. Rep.","gdp_2015",1.07
+"Congo, Dem. Rep.","log_gdp_1990",0.598836501088704
+"Congo, Dem. Rep.","log_gdp_2015",0.0676586484738149
+"Congo, Dem. Rep.","sch_yrs_1990",3.32
+"Congo, Dem. Rep.","sch_yrs_2015",6.26
+"Congo, Dem. Rep.","child_mort_1990",186
+"Congo, Dem. Rep.","child_mort_2015",97.4
+"Congo, Dem. Rep.","fert_1990",7.13
+"Congo, Dem. Rep.","fert_2015",6.17
+"Congo, Dem. Rep.","fem_part_1990",71.9
+"Congo, Dem. Rep.","fem_part_2015",71.4
+"Congo, Dem. Rep.","murders_1990",NA
+"Congo, Dem. Rep.","murders_2015",NA
+"Congo, Dem. Rep.","suicides_1990",NA
+"Congo, Dem. Rep.","suicides_2015",NA
+"Congo, Rep.","gdp_1990",3.55
+"Congo, Rep.","gdp_2015",3.8
+"Congo, Rep.","log_gdp_1990",1.26694760348732
+"Congo, Rep.","log_gdp_2015",1.33500106673234
+"Congo, Rep.","sch_yrs_1990",4.84
+"Congo, Rep.","sch_yrs_2015",8.85
+"Congo, Rep.","child_mort_1990",90.2
+"Congo, Rep.","child_mort_2015",54.9
+"Congo, Rep.","fert_1990",5.35
+"Congo, Rep.","fert_2015",4.72
+"Congo, Rep.","fem_part_1990",65.8
+"Congo, Rep.","fem_part_2015",67.5
+"Congo, Rep.","murders_1990",NA
+"Congo, Rep.","murders_2015",NA
+"Congo, Rep.","suicides_1990",NA
+"Congo, Rep.","suicides_2015",NA
+"Colombia","gdp_1990",8.39
+"Colombia","gdp_2015",14.2
+"Colombia","log_gdp_1990",2.12704052047911
+"Colombia","log_gdp_2015",2.65324196460721
+"Colombia","sch_yrs_1990",6.72
+"Colombia","sch_yrs_2015",10.8
+"Colombia","child_mort_1990",35.2
+"Colombia","child_mort_2015",15.7
+"Colombia","fert_1990",2.99
+"Colombia","fert_2015",1.87
+"Colombia","fem_part_1990",29.9
+"Colombia","fem_part_2015",59
+"Colombia","murders_1990",NA
+"Colombia","murders_2015",NA
+"Colombia","suicides_1990",NA
+"Colombia","suicides_2015",NA
+"Comoros","gdp_1990",3.06
+"Comoros","gdp_2015",2.96
+"Comoros","log_gdp_1990",1.11841491596429
+"Comoros","log_gdp_2015",1.08518926833597
+"Comoros","sch_yrs_1990",2.95
+"Comoros","sch_yrs_2015",6.03
+"Comoros","child_mort_1990",125
+"Comoros","child_mort_2015",74.9
+"Comoros","fert_1990",5.57
+"Comoros","fert_2015",4.45
+"Comoros","fem_part_1990",31.6
+"Comoros","fem_part_2015",35.6
+"Comoros","murders_1990",NA
+"Comoros","murders_2015",NA
+"Comoros","suicides_1990",NA
+"Comoros","suicides_2015",NA
+"Cape Verde","gdp_1990",1.75
+"Cape Verde","gdp_2015",6.27
+"Cape Verde","log_gdp_1990",0.559615787935423
+"Cape Verde","log_gdp_2015",1.83577635464483
+"Cape Verde","sch_yrs_1990",3.2
+"Cape Verde","sch_yrs_2015",6.14
+"Cape Verde","child_mort_1990",60.6
+"Cape Verde","child_mort_2015",21.5
+"Cape Verde","fert_1990",5.31
+"Cape Verde","fert_2015",2.37
+"Cape Verde","fem_part_1990",42.3
+"Cape Verde","fem_part_2015",48.6
+"Cape Verde","murders_1990",NA
+"Cape Verde","murders_2015",NA
+"Cape Verde","suicides_1990",NA
+"Cape Verde","suicides_2015",NA
+"Costa Rica","gdp_1990",9.55
+"Costa Rica","gdp_2015",18
+"Costa Rica","log_gdp_1990",2.25654115449264
+"Costa Rica","log_gdp_2015",2.89037175789616
+"Costa Rica","sch_yrs_1990",7.3
+"Costa Rica","sch_yrs_2015",10.9
+"Costa Rica","child_mort_1990",16.7
+"Costa Rica","child_mort_2015",9.05
+"Costa Rica","fert_1990",3.17
+"Costa Rica","fert_2015",1.8
+"Costa Rica","fem_part_1990",32.9
+"Costa Rica","fem_part_2015",48.8
+"Costa Rica","murders_1990",4.83
+"Costa Rica","murders_2015",NA
+"Costa Rica","suicides_1990",6.12
+"Costa Rica","suicides_2015",NA
+"Cyprus","gdp_1990",25.2
+"Cyprus","gdp_2015",34.4
+"Cyprus","log_gdp_1990",3.22684399451738
+"Cyprus","log_gdp_2015",3.53805656437935
+"Cyprus","sch_yrs_1990",10.9
+"Cyprus","sch_yrs_2015",14.6
+"Cyprus","child_mort_1990",11.1
+"Cyprus","child_mort_2015",2.74
+"Cyprus","fert_1990",2.41
+"Cyprus","fert_2015",1.35
+"Cyprus","fem_part_1990",46.2
+"Cyprus","fem_part_2015",57.9
+"Cyprus","murders_1990",NA
+"Cyprus","murders_2015",1.42
+"Cyprus","suicides_1990",NA
+"Cyprus","suicides_2015",4.19
+"Czech Republic","gdp_1990",23.7
+"Czech Republic","gdp_2015",36.2
+"Czech Republic","log_gdp_1990",3.16547504814109
+"Czech Republic","log_gdp_2015",3.58905911883173
+"Czech Republic","sch_yrs_1990",11.2
+"Czech Republic","sch_yrs_2015",14.5
+"Czech Republic","child_mort_1990",12.2
+"Czech Republic","child_mort_2015",3.15
+"Czech Republic","fert_1990",1.8
+"Czech Republic","fert_2015",1.52
+"Czech Republic","fem_part_1990",51.9
+"Czech Republic","fem_part_2015",51.4
+"Czech Republic","murders_1990",1.81
+"Czech Republic","murders_2015",0.66
+"Czech Republic","suicides_1990",16.7
+"Czech Republic","suicides_2015",10.2
+"Germany","gdp_1990",36.6
+"Germany","gdp_2015",51.2
+"Germany","log_gdp_1990",3.60004824040732
+"Germany","log_gdp_2015",3.93573953204546
+"Germany","sch_yrs_1990",10.4
+"Germany","sch_yrs_2015",14.2
+"Germany","child_mort_1990",8.53
+"Germany","child_mort_2015",3.86
+"Germany","fert_1990",1.36
+"Germany","fert_2015",1.45
+"Germany","fem_part_1990",45.2
+"Germany","fem_part_2015",54.6
+"Germany","murders_1990",0.976
+"Germany","murders_2015",0.506
+"Germany","suicides_1990",13.7
+"Germany","suicides_2015",8.53
+"Dominica","gdp_1990",7.78
+"Dominica","gdp_2015",11.9
+"Dominica","log_gdp_1990",2.0515563381903
+"Dominica","log_gdp_2015",2.47653840011748
+"Dominica","sch_yrs_1990",8.33
+"Dominica","sch_yrs_2015",12.5
+"Dominica","child_mort_1990",16.2
+"Dominica","child_mort_2015",32.1
+"Dominica","fert_1990",NA
+"Dominica","fert_2015",NA
+"Dominica","fem_part_1990",NA
+"Dominica","fem_part_2015",NA
+"Dominica","murders_1990",NA
+"Dominica","murders_2015",NA
+"Dominica","suicides_1990",NA
+"Dominica","suicides_2015",NA
+"Denmark","gdp_1990",39.1
+"Denmark","gdp_2015",53
+"Denmark","log_gdp_1990",3.66612246699132
+"Denmark","log_gdp_2015",3.97029191355212
+"Denmark","sch_yrs_1990",11.7
+"Denmark","sch_yrs_2015",15.1
+"Denmark","child_mort_1990",8.93
+"Denmark","child_mort_2015",4.22
+"Denmark","fert_1990",1.67
+"Denmark","fert_2015",1.79
+"Denmark","fem_part_1990",61.1
+"Denmark","fem_part_2015",57.7
+"Denmark","murders_1990",1
+"Denmark","murders_2015",0.572
+"Denmark","suicides_1990",19.6
+"Denmark","suicides_2015",7.59
+"Dominican Republic","gdp_1990",6.2
+"Dominican Republic","gdp_2015",15.3
+"Dominican Republic","log_gdp_1990",1.82454929205105
+"Dominican Republic","log_gdp_2015",2.72785282839839
+"Dominican Republic","sch_yrs_1990",6.99
+"Dominican Republic","sch_yrs_2015",11.1
+"Dominican Republic","child_mort_1990",60.2
+"Dominican Republic","child_mort_2015",31.3
+"Dominican Republic","fert_1990",3.47
+"Dominican Republic","fert_2015",2.45
+"Dominican Republic","fem_part_1990",43.6
+"Dominican Republic","fem_part_2015",53.9
+"Dominican Republic","murders_1990",NA
+"Dominican Republic","murders_2015",NA
+"Dominican Republic","suicides_1990",NA
+"Dominican Republic","suicides_2015",NA
+"Algeria","gdp_1990",8.61
+"Algeria","gdp_2015",11.5
+"Algeria","log_gdp_1990",2.15292431843964
+"Algeria","log_gdp_2015",2.4423470353692
+"Algeria","sch_yrs_1990",4.22
+"Algeria","sch_yrs_2015",7.74
+"Algeria","child_mort_1990",49.5
+"Algeria","child_mort_2015",24.9
+"Algeria","fert_1990",4.73
+"Algeria","fert_2015",2.84
+"Algeria","fem_part_1990",11.5
+"Algeria","fem_part_2015",15.2
+"Algeria","murders_1990",NA
+"Algeria","murders_2015",NA
+"Algeria","suicides_1990",NA
+"Algeria","suicides_2015",NA
+"Ecuador","gdp_1990",8.29
+"Ecuador","gdp_2015",11.9
+"Ecuador","log_gdp_1990",2.1150499691472
+"Ecuador","log_gdp_2015",2.47653840011748
+"Ecuador","sch_yrs_1990",7.26
+"Ecuador","sch_yrs_2015",11.2
+"Ecuador","child_mort_1990",53.9
+"Ecuador","child_mort_2015",15.1
+"Ecuador","fert_1990",3.77
+"Ecuador","fert_2015",2.51
+"Ecuador","fem_part_1990",45.7
+"Ecuador","fem_part_2015",52.2
+"Ecuador","murders_1990",NA
+"Ecuador","murders_2015",NA
+"Ecuador","suicides_1990",NA
+"Ecuador","suicides_2015",NA
+"Egypt","gdp_1990",6.09
+"Egypt","gdp_2015",10.6
+"Egypt","log_gdp_1990",1.80664808172181
+"Egypt","log_gdp_2015",2.36085400111802
+"Egypt","sch_yrs_1990",4.86
+"Egypt","sch_yrs_2015",9.06
+"Egypt","child_mort_1990",85.8
+"Egypt","child_mort_2015",23.6
+"Egypt","fert_1990",4.66
+"Egypt","fert_2015",3.31
+"Egypt","fem_part_1990",21.3
+"Egypt","fem_part_2015",22.2
+"Egypt","murders_1990",NA
+"Egypt","murders_2015",0.166
+"Egypt","suicides_1990",NA
+"Egypt","suicides_2015",0.0578
+"Spain","gdp_1990",27.6
+"Spain","gdp_2015",37.5
+"Spain","log_gdp_1990",3.3178157727231
+"Spain","log_gdp_2015",3.62434093297637
+"Spain","sch_yrs_1990",9.19
+"Spain","sch_yrs_2015",13.5
+"Spain","child_mort_1990",9.14
+"Spain","child_mort_2015",3.28
+"Spain","fert_1990",1.34
+"Spain","fert_2015",1.35
+"Spain","fem_part_1990",33.8
+"Spain","fem_part_2015",52.3
+"Spain","murders_1990",0.929
+"Spain","murders_2015",0.557
+"Spain","suicides_1990",6.25
+"Spain","suicides_2015",5.62
+"Ethiopia","gdp_1990",0.767
+"Ethiopia","gdp_2015",1.78
+"Ethiopia","log_gdp_1990",-0.265268477614881
+"Ethiopia","log_gdp_2015",0.576613364303994
+"Ethiopia","sch_yrs_1990",1.83
+"Ethiopia","sch_yrs_2015",3.75
+"Ethiopia","child_mort_1990",202
+"Ethiopia","child_mort_2015",63.5
+"Ethiopia","fert_1990",7.25
+"Ethiopia","fert_2015",4.32
+"Ethiopia","fem_part_1990",66.5
+"Ethiopia","fem_part_2015",77
+"Ethiopia","murders_1990",NA
+"Ethiopia","murders_2015",NA
+"Ethiopia","suicides_1990",NA
+"Ethiopia","suicides_2015",NA
+"Finland","gdp_1990",32.9
+"Finland","gdp_2015",45.1
+"Finland","log_gdp_1990",3.49347265777133
+"Finland","log_gdp_2015",3.80888224650863
+"Finland","sch_yrs_1990",11.5
+"Finland","sch_yrs_2015",15.1
+"Finland","child_mort_1990",6.73
+"Finland","child_mort_2015",2.2
+"Finland","fert_1990",1.79
+"Finland","fert_2015",1.8
+"Finland","fem_part_1990",59
+"Finland","fem_part_2015",55.5
+"Finland","murders_1990",3.01
+"Finland","murders_2015",NA
+"Finland","suicides_1990",27.5
+"Finland","suicides_2015",NA
+"Fiji","gdp_1990",8.43
+"Fiji","gdp_2015",12.6
+"Fiji","log_gdp_1990",2.13179677201376
+"Fiji","log_gdp_2015",2.53369681395743
+"Fiji","sch_yrs_1990",8.14
+"Fiji","sch_yrs_2015",12.1
+"Fiji","child_mort_1990",29.2
+"Fiji","child_mort_2015",24.6
+"Fiji","fert_1990",3.4
+"Fiji","fert_2015",2.54
+"Fiji","fem_part_1990",39.9
+"Fiji","fem_part_2015",40.9
+"Fiji","murders_1990",NA
+"Fiji","murders_2015",NA
+"Fiji","suicides_1990",NA
+"Fiji","suicides_2015",NA
+"France","gdp_1990",33.9
+"France","gdp_2015",43.6
+"France","log_gdp_1990",3.5234150143864
+"France","log_gdp_2015",3.77505715035499
+"France","sch_yrs_1990",10.2
+"France","sch_yrs_2015",14
+"France","child_mort_1990",8.99
+"France","child_mort_2015",4.1
+"France","fert_1990",1.75
+"France","fert_2015",1.98
+"France","fem_part_1990",46.3
+"France","fem_part_2015",50.7
+"France","murders_1990",1.04
+"France","murders_2015",NA
+"France","suicides_1990",16.8
+"France","suicides_2015",NA
+"Micronesia, Fed. Sts.","gdp_1990",3
+"Micronesia, Fed. Sts.","gdp_2015",3.46
+"Micronesia, Fed. Sts.","log_gdp_1990",1.09861228866811
+"Micronesia, Fed. Sts.","log_gdp_2015",1.24126858906963
+"Micronesia, Fed. Sts.","sch_yrs_1990",8.52
+"Micronesia, Fed. Sts.","sch_yrs_2015",12.6
+"Micronesia, Fed. Sts.","child_mort_1990",55.3
+"Micronesia, Fed. Sts.","child_mort_2015",33.9
+"Micronesia, Fed. Sts.","fert_1990",4.96
+"Micronesia, Fed. Sts.","fert_2015",3.19
+"Micronesia, Fed. Sts.","fem_part_1990",NA
+"Micronesia, Fed. Sts.","fem_part_2015",NA
+"Micronesia, Fed. Sts.","murders_1990",NA
+"Micronesia, Fed. Sts.","murders_2015",NA
+"Micronesia, Fed. Sts.","suicides_1990",NA
+"Micronesia, Fed. Sts.","suicides_2015",NA
+"Gabon","gdp_1990",18.2
+"Gabon","gdp_2015",15.5
+"Gabon","log_gdp_1990",2.90142159408275
+"Gabon","log_gdp_2015",2.7408400239252
+"Gabon","sch_yrs_1990",6.99
+"Gabon","sch_yrs_2015",10.2
+"Gabon","child_mort_1990",92.6
+"Gabon","child_mort_2015",51
+"Gabon","fert_1990",5.42
+"Gabon","fert_2015",3.85
+"Gabon","fem_part_1990",36.5
+"Gabon","fem_part_2015",42.3
+"Gabon","murders_1990",NA
+"Gabon","murders_2015",NA
+"Gabon","suicides_1990",NA
+"Gabon","suicides_2015",NA
+"United Kingdom","gdp_1990",30.7
+"United Kingdom","gdp_2015",44.9
+"United Kingdom","log_gdp_1990",3.42426265459315
+"United Kingdom","log_gdp_2015",3.80443779474821
+"United Kingdom","sch_yrs_1990",11.2
+"United Kingdom","sch_yrs_2015",14.9
+"United Kingdom","child_mort_1990",9.31
+"United Kingdom","child_mort_2015",4.45
+"United Kingdom","fert_1990",1.81
+"United Kingdom","fert_2015",1.88
+"United Kingdom","fem_part_1990",52
+"United Kingdom","fem_part_2015",56.6
+"United Kingdom","murders_1990",0.724
+"United Kingdom","murders_2015",0.192
+"United Kingdom","suicides_1990",7.28
+"United Kingdom","suicides_2015",6.7
+"Georgia","gdp_1990",11.1
+"Georgia","gdp_2015",12.6
+"Georgia","log_gdp_1990",2.40694510831829
+"Georgia","log_gdp_2015",2.53369681395743
+"Georgia","sch_yrs_1990",10.9
+"Georgia","sch_yrs_2015",14.6
+"Georgia","child_mort_1990",47.9
+"Georgia","child_mort_2015",10.5
+"Georgia","fert_1990",2.18
+"Georgia","fert_2015",2
+"Georgia","fem_part_1990",58.1
+"Georgia","fem_part_2015",58.9
+"Georgia","murders_1990",2.74
+"Georgia","murders_2015",1.7
+"Georgia","suicides_1990",3.38
+"Georgia","suicides_2015",4.14
+"Ghana","gdp_1990",2.34
+"Ghana","gdp_2015",4.67
+"Ghana","log_gdp_1990",0.85015092936961
+"Ghana","log_gdp_2015",1.54115907168081
+"Ghana","sch_yrs_1990",4.16
+"Ghana","sch_yrs_2015",7.12
+"Ghana","child_mort_1990",127
+"Ghana","child_mort_2015",54.7
+"Ghana","fert_1990",5.6
+"Ghana","fert_2015",4.04
+"Ghana","fem_part_1990",72.4
+"Ghana","fem_part_2015",74.5
+"Ghana","murders_1990",NA
+"Ghana","murders_2015",NA
+"Ghana","suicides_1990",NA
+"Ghana","suicides_2015",NA
+"Guinea","gdp_1990",1.51
+"Guinea","gdp_2015",2.09
+"Guinea","log_gdp_1990",0.412109650826833
+"Guinea","log_gdp_2015",0.73716406597672
+"Guinea","sch_yrs_1990",0.91
+"Guinea","sch_yrs_2015",2.07
+"Guinea","child_mort_1990",236
+"Guinea","child_mort_2015",107
+"Guinea","fert_1990",6.6
+"Guinea","fert_2015",4.93
+"Guinea","fem_part_1990",63
+"Guinea","fem_part_2015",63
+"Guinea","murders_1990",NA
+"Guinea","murders_2015",NA
+"Guinea","suicides_1990",NA
+"Guinea","suicides_2015",NA
+"Gambia","gdp_1990",2.27
+"Gambia","gdp_2015",2.06
+"Gambia","log_gdp_1990",0.819779831493311
+"Gambia","log_gdp_2015",0.72270598280149
+"Gambia","sch_yrs_1990",1.62
+"Gambia","sch_yrs_2015",3.48
+"Gambia","child_mort_1990",167
+"Gambia","child_mort_2015",64.7
+"Gambia","fert_1990",6.11
+"Gambia","fert_2015",5.49
+"Gambia","fem_part_1990",45
+"Gambia","fem_part_2015",51
+"Gambia","murders_1990",NA
+"Gambia","murders_2015",NA
+"Gambia","suicides_1990",NA
+"Gambia","suicides_2015",NA
+"Guinea-Bissau","gdp_1990",1.99
+"Guinea-Bissau","gdp_2015",1.8
+"Guinea-Bissau","log_gdp_1990",0.688134638736401
+"Guinea-Bissau","log_gdp_2015",0.587786664902119
+"Guinea-Bissau","sch_yrs_1990",1.02
+"Guinea-Bissau","sch_yrs_2015",2.36
+"Guinea-Bissau","child_mort_1990",223
+"Guinea-Bissau","child_mort_2015",91.2
+"Guinea-Bissau","fert_1990",6.63
+"Guinea-Bissau","fert_2015",4.71
+"Guinea-Bissau","fem_part_1990",65.1
+"Guinea-Bissau","fem_part_2015",65.3
+"Guinea-Bissau","murders_1990",NA
+"Guinea-Bissau","murders_2015",NA
+"Guinea-Bissau","suicides_1990",NA
+"Guinea-Bissau","suicides_2015",NA
+"Equatorial Guinea","gdp_1990",1.04
+"Equatorial Guinea","gdp_2015",28.3
+"Equatorial Guinea","log_gdp_1990",0.0392207131532813
+"Equatorial Guinea","log_gdp_2015",3.34286180464919
+"Equatorial Guinea","sch_yrs_1990",3.95
+"Equatorial Guinea","sch_yrs_2015",7.28
+"Equatorial Guinea","child_mort_1990",179
+"Equatorial Guinea","child_mort_2015",94.2
+"Equatorial Guinea","fert_1990",5.99
+"Equatorial Guinea","fert_2015",4.78
+"Equatorial Guinea","fem_part_1990",49.4
+"Equatorial Guinea","fem_part_2015",56.1
+"Equatorial Guinea","murders_1990",NA
+"Equatorial Guinea","murders_2015",NA
+"Equatorial Guinea","suicides_1990",NA
+"Equatorial Guinea","suicides_2015",NA
+"Greece","gdp_1990",24.5
+"Greece","gdp_2015",28.5
+"Greece","log_gdp_1990",3.19867311755068
+"Greece","log_gdp_2015",3.3499040872746
+"Greece","sch_yrs_1990",9.77
+"Greece","sch_yrs_2015",13.9
+"Greece","child_mort_1990",10.4
+"Greece","child_mort_2015",4.58
+"Greece","fert_1990",1.47
+"Greece","fert_2015",1.31
+"Greece","fem_part_1990",36.1
+"Greece","fem_part_2015",45.5
+"Greece","murders_1990",1.01
+"Greece","murders_2015",0.752
+"Greece","suicides_1990",2.95
+"Greece","suicides_2015",3.69
+"Grenada","gdp_1990",8.81
+"Grenada","gdp_2015",15.1
+"Grenada","log_gdp_1990",2.17588743994809
+"Grenada","log_gdp_2015",2.71469474382088
+"Grenada","sch_yrs_1990",7.03
+"Grenada","sch_yrs_2015",11.2
+"Grenada","child_mort_1990",22.3
+"Grenada","child_mort_2015",15.1
+"Grenada","fert_1990",3.84
+"Grenada","fert_2015",2.13
+"Grenada","fem_part_1990",NA
+"Grenada","fem_part_2015",NA
+"Grenada","murders_1990",0.839
+"Grenada","murders_2015",NA
+"Grenada","suicides_1990",2.92
+"Grenada","suicides_2015",NA
+"Guatemala","gdp_1990",5.56
+"Guatemala","gdp_2015",8.13
+"Guatemala","log_gdp_1990",1.71559810826249
+"Guatemala","log_gdp_2015",2.09556092355972
+"Guatemala","sch_yrs_1990",3.57
+"Guatemala","sch_yrs_2015",6.65
+"Guatemala","child_mort_1990",80.1
+"Guatemala","child_mort_2015",29
+"Guatemala","fert_1990",5.44
+"Guatemala","fert_2015",3.03
+"Guatemala","fem_part_1990",38.7
+"Guatemala","fem_part_2015",39.1
+"Guatemala","murders_1990",NA
+"Guatemala","murders_2015",NA
+"Guatemala","suicides_1990",NA
+"Guatemala","suicides_2015",NA
+"Guyana","gdp_1990",3.49
+"Guyana","gdp_2015",8.6
+"Guyana","log_gdp_1990",1.24990173621434
+"Guyana","log_gdp_2015",2.15176220325946
+"Guyana","sch_yrs_1990",7.08
+"Guyana","sch_yrs_2015",10.8
+"Guyana","child_mort_1990",60.3
+"Guyana","child_mort_2015",33.1
+"Guyana","fert_1990",3.07
+"Guyana","fert_2015",2.53
+"Guyana","fem_part_1990",37.3
+"Guyana","fem_part_2015",40.2
+"Guyana","murders_1990",NA
+"Guyana","murders_2015",NA
+"Guyana","suicides_1990",NA
+"Guyana","suicides_2015",NA
+"Honduras","gdp_1990",3.99
+"Honduras","gdp_2015",5.28
+"Honduras","log_gdp_1990",1.38379123090177
+"Honduras","log_gdp_2015",1.66392609771817
+"Honduras","sch_yrs_1990",4.84
+"Honduras","sch_yrs_2015",8.58
+"Honduras","child_mort_1990",58
+"Honduras","child_mort_2015",19.5
+"Honduras","fert_1990",5.14
+"Honduras","fert_2015",2.51
+"Honduras","fem_part_1990",43.1
+"Honduras","fem_part_2015",50.3
+"Honduras","murders_1990",NA
+"Honduras","murders_2015",NA
+"Honduras","suicides_1990",NA
+"Honduras","suicides_2015",NA
+"Haiti","gdp_1990",2.2
+"Haiti","gdp_2015",1.76
+"Haiti","log_gdp_1990",0.78845736036427
+"Haiti","log_gdp_2015",0.56531380905006
+"Haiti","sch_yrs_1990",3.4
+"Haiti","sch_yrs_2015",6.9
+"Haiti","child_mort_1990",144
+"Haiti","child_mort_2015",70.6
+"Haiti","fert_1990",5.43
+"Haiti","fert_2015",2.97
+"Haiti","fem_part_1990",57.4
+"Haiti","fem_part_2015",63.2
+"Haiti","murders_1990",NA
+"Haiti","murders_2015",NA
+"Haiti","suicides_1990",NA
+"Haiti","suicides_2015",NA
+"Indonesia","gdp_1990",4.53
+"Indonesia","gdp_2015",10.1
+"Indonesia","log_gdp_1990",1.51072193949494
+"Indonesia","log_gdp_2015",2.31253542384721
+"Indonesia","sch_yrs_1990",5.29
+"Indonesia","sch_yrs_2015",9.56
+"Indonesia","child_mort_1990",84.2
+"Indonesia","child_mort_2015",28
+"Indonesia","fert_1990",3.12
+"Indonesia","fert_2015",2.39
+"Indonesia","fem_part_1990",44.5
+"Indonesia","fem_part_2015",48.9
+"Indonesia","murders_1990",NA
+"Indonesia","murders_2015",NA
+"Indonesia","suicides_1990",NA
+"Indonesia","suicides_2015",NA
+"India","gdp_1990",1.81
+"India","gdp_2015",5.45
+"India","log_gdp_1990",0.593326845277734
+"India","log_gdp_2015",1.69561560867515
+"India","sch_yrs_1990",2.75
+"India","sch_yrs_2015",5.79
+"India","child_mort_1990",126
+"India","child_mort_2015",43.6
+"India","fert_1990",4.05
+"India","fert_2015",2.35
+"India","fem_part_1990",35.1
+"India","fem_part_2015",27.3
+"India","murders_1990",NA
+"India","murders_2015",NA
+"India","suicides_1990",NA
+"India","suicides_2015",NA
+"Ireland","gdp_1990",26.5
+"Ireland","gdp_2015",71.2
+"Ireland","log_gdp_1990",3.27714473299218
+"Ireland","log_gdp_2015",4.26549281841793
+"Ireland","sch_yrs_1990",10.6
+"Ireland","sch_yrs_2015",14.5
+"Ireland","child_mort_1990",9.16
+"Ireland","child_mort_2015",3.83
+"Ireland","fert_1990",2
+"Ireland","fert_2015",1.99
+"Ireland","fem_part_1990",35.8
+"Ireland","fem_part_2015",52.6
+"Ireland","murders_1990",0.667
+"Ireland","murders_2015",NA
+"Ireland","suicides_1990",9.99
+"Ireland","suicides_2015",NA
+"Iran","gdp_1990",8.65
+"Iran","gdp_2015",12.7
+"Iran","log_gdp_1990",2.15755932094379
+"Iran","log_gdp_2015",2.54160199346455
+"Iran","sch_yrs_1990",4.78
+"Iran","sch_yrs_2015",9.89
+"Iran","child_mort_1990",56
+"Iran","child_mort_2015",16
+"Iran","fert_1990",4.82
+"Iran","fert_2015",1.69
+"Iran","fem_part_1990",9.83
+"Iran","fem_part_2015",15.2
+"Iran","murders_1990",NA
+"Iran","murders_2015",NA
+"Iran","suicides_1990",NA
+"Iran","suicides_2015",NA
+"Iraq","gdp_1990",7.96
+"Iraq","gdp_2015",10.3
+"Iraq","log_gdp_1990",2.07442899985629
+"Iraq","log_gdp_2015",2.33214389523559
+"Iraq","sch_yrs_1990",3.92
+"Iraq","sch_yrs_2015",7.88
+"Iraq","child_mort_1990",53.7
+"Iraq","child_mort_2015",29.5
+"Iraq","fert_1990",5.88
+"Iraq","fert_2015",4.43
+"Iraq","fem_part_1990",8.12
+"Iraq","fem_part_2015",18.4
+"Iraq","murders_1990",NA
+"Iraq","murders_2015",NA
+"Iraq","suicides_1990",NA
+"Iraq","suicides_2015",NA
+"Iceland","gdp_1990",34.4
+"Iceland","gdp_2015",51.7
+"Iceland","log_gdp_1990",3.53805656437935
+"Iceland","log_gdp_2015",3.94545778151438
+"Iceland","sch_yrs_1990",11.1
+"Iceland","sch_yrs_2015",14.9
+"Iceland","child_mort_1990",6.43
+"Iceland","child_mort_2015",2.18
+"Iceland","fert_1990",2.16
+"Iceland","fert_2015",1.95
+"Iceland","fem_part_1990",67.6
+"Iceland","fem_part_2015",73.1
+"Iceland","murders_1990",0.468
+"Iceland","murders_2015",0.744
+"Iceland","suicides_1990",15.7
+"Iceland","suicides_2015",11.3
+"Israel","gdp_1990",24.5
+"Israel","gdp_2015",37.6
+"Israel","log_gdp_1990",3.19867311755068
+"Israel","log_gdp_2015",3.62700405039585
+"Israel","sch_yrs_1990",12.5
+"Israel","sch_yrs_2015",15.7
+"Israel","child_mort_1990",11.6
+"Israel","child_mort_2015",3.92
+"Israel","fert_1990",3
+"Israel","fert_2015",3
+"Israel","fem_part_1990",46.3
+"Israel","fem_part_2015",59
+"Israel","murders_1990",1.9
+"Israel","murders_2015",1.7
+"Israel","suicides_1990",7
+"Israel","suicides_2015",4.07
+"Italy","gdp_1990",36.8
+"Italy","gdp_2015",40.4
+"Italy","log_gdp_1990",3.60549784517489
+"Italy","log_gdp_2015",3.6988297849671
+"Italy","sch_yrs_1990",10.7
+"Italy","sch_yrs_2015",14.3
+"Italy","child_mort_1990",9.65
+"Italy","child_mort_2015",3.43
+"Italy","fert_1990",1.3
+"Italy","fert_2015",1.46
+"Italy","fem_part_1990",35.3
+"Italy","fem_part_2015",39
+"Italy","murders_1990",2.55
+"Italy","murders_2015",0.564
+"Italy","suicides_1990",5.98
+"Italy","suicides_2015",4.69
+"Jamaica","gdp_1990",8.59
+"Jamaica","gdp_2015",9.47
+"Jamaica","log_gdp_1990",2.15059873599616
+"Jamaica","log_gdp_2015",2.24812890719799
+"Jamaica","sch_yrs_1990",8.61
+"Jamaica","sch_yrs_2015",12.8
+"Jamaica","child_mort_1990",30.4
+"Jamaica","child_mort_2015",15.9
+"Jamaica","fert_1990",2.95
+"Jamaica","fert_2015",2.03
+"Jamaica","fem_part_1990",59.5
+"Jamaica","fem_part_2015",56.7
+"Jamaica","murders_1990",NA
+"Jamaica","murders_2015",NA
+"Jamaica","suicides_1990",NA
+"Jamaica","suicides_2015",NA
+"Jordan","gdp_1990",7.45
+"Jordan","gdp_2015",9.97
+"Jordan","log_gdp_1990",2.00821403239147
+"Jordan","log_gdp_2015",2.29958058397375
+"Jordan","sch_yrs_1990",7.94
+"Jordan","sch_yrs_2015",12.4
+"Jordan","child_mort_1990",36.1
+"Jordan","child_mort_2015",17.7
+"Jordan","fert_1990",5.49
+"Jordan","fert_2015",3.45
+"Jordan","fem_part_1990",10.6
+"Jordan","fem_part_2015",13.9
+"Jordan","murders_1990",NA
+"Jordan","murders_2015",NA
+"Jordan","suicides_1990",NA
+"Jordan","suicides_2015",NA
+"Japan","gdp_1990",32.1
+"Japan","gdp_2015",39.7
+"Japan","log_gdp_1990",3.46885603013597
+"Japan","log_gdp_2015",3.68135118769314
+"Japan","sch_yrs_1990",12.2
+"Japan","sch_yrs_2015",15.5
+"Japan","child_mort_1990",6.32
+"Japan","child_mort_2015",3.02
+"Japan","fert_1990",1.56
+"Japan","fert_2015",1.44
+"Japan","fem_part_1990",50.1
+"Japan","fem_part_2015",49.9
+"Japan","murders_1990",0.604
+"Japan","murders_2015",0.208
+"Japan","suicides_1990",13.4
+"Japan","suicides_2015",14.5
+"Kazakhstan","gdp_1990",13.5
+"Kazakhstan","gdp_2015",24.3
+"Kazakhstan","log_gdp_1990",2.60268968544438
+"Kazakhstan","log_gdp_2015",3.1904763503465
+"Kazakhstan","sch_yrs_1990",10.3
+"Kazakhstan","sch_yrs_2015",13.9
+"Kazakhstan","child_mort_1990",52.3
+"Kazakhstan","child_mort_2015",11.9
+"Kazakhstan","fert_1990",2.83
+"Kazakhstan","fert_2015",2.66
+"Kazakhstan","fem_part_1990",65.3
+"Kazakhstan","fem_part_2015",65.4
+"Kazakhstan","murders_1990",12.5
+"Kazakhstan","murders_2015",5.89
+"Kazakhstan","suicides_1990",21
+"Kazakhstan","suicides_2015",16.4
+"Kenya","gdp_1990",3.21
+"Kenya","gdp_2015",3.82
+"Kenya","log_gdp_1990",1.16627093714192
+"Kenya","log_gdp_2015",1.34025042261848
+"Kenya","sch_yrs_1990",5.02
+"Kenya","sch_yrs_2015",9.14
+"Kenya","child_mort_1990",107
+"Kenya","child_mort_2015",46.3
+"Kenya","fert_1990",6.07
+"Kenya","fert_2015",3.92
+"Kenya","fem_part_1990",70.3
+"Kenya","fem_part_2015",62.4
+"Kenya","murders_1990",NA
+"Kenya","murders_2015",NA
+"Kenya","suicides_1990",NA
+"Kenya","suicides_2015",NA
+"Kyrgyz Republic","gdp_1990",5.16
+"Kyrgyz Republic","gdp_2015",4.81
+"Kyrgyz Republic","log_gdp_1990",1.64093657949347
+"Kyrgyz Republic","log_gdp_2015",1.57069708411767
+"Kyrgyz Republic","sch_yrs_1990",10.4
+"Kyrgyz Republic","sch_yrs_2015",13.8
+"Kyrgyz Republic","child_mort_1990",64.8
+"Kyrgyz Republic","child_mort_2015",22.3
+"Kyrgyz Republic","fert_1990",3.89
+"Kyrgyz Republic","fert_2015",3.05
+"Kyrgyz Republic","fem_part_1990",50.8
+"Kyrgyz Republic","fem_part_2015",49.8
+"Kyrgyz Republic","murders_1990",16.8
+"Kyrgyz Republic","murders_2015",3.74
+"Kyrgyz Republic","suicides_1990",16.1
+"Kyrgyz Republic","suicides_2015",7.55
+"Kiribati","gdp_1990",2.14
+"Kiribati","gdp_2015",2.17
+"Kiribati","log_gdp_1990",0.76080582903376
+"Kiribati","log_gdp_2015",0.774727167552368
+"Kiribati","sch_yrs_1990",6.5
+"Kiribati","sch_yrs_2015",10
+"Kiribati","child_mort_1990",95.5
+"Kiribati","child_mort_2015",57.5
+"Kiribati","fert_1990",4.69
+"Kiribati","fert_2015",3.69
+"Kiribati","fem_part_1990",NA
+"Kiribati","fem_part_2015",NA
+"Kiribati","murders_1990",NA
+"Kiribati","murders_2015",NA
+"Kiribati","suicides_1990",NA
+"Kiribati","suicides_2015",NA
+"South Korea","gdp_1990",12.7
+"South Korea","gdp_2015",38.9
+"South Korea","log_gdp_1990",2.54160199346455
+"South Korea","log_gdp_2015",3.6609942506244
+"South Korea","sch_yrs_1990",10.5
+"South Korea","sch_yrs_2015",14.6
+"South Korea","child_mort_1990",15.4
+"South Korea","child_mort_2015",3.5
+"South Korea","fert_1990",1.58
+"South Korea","fert_2015",1.28
+"South Korea","fem_part_1990",47
+"South Korea","fem_part_2015",51.9
+"South Korea","murders_1990",1.51
+"South Korea","murders_2015",0.87
+"South Korea","suicides_1990",7.59
+"South Korea","suicides_2015",20.2
+"Lao","gdp_1990",1.96
+"Lao","gdp_2015",6.54
+"Lao","log_gdp_1990",0.672944473242426
+"Lao","log_gdp_2015",1.87793716546911
+"Lao","sch_yrs_1990",3.11
+"Lao","sch_yrs_2015",6.11
+"Lao","child_mort_1990",153
+"Lao","child_mort_2015",53.6
+"Lao","fert_1990",6.15
+"Lao","fert_2015",2.76
+"Lao","fem_part_1990",79.9
+"Lao","fem_part_2015",76.8
+"Lao","murders_1990",NA
+"Lao","murders_2015",NA
+"Lao","suicides_1990",NA
+"Lao","suicides_2015",NA
+"Lebanon","gdp_1990",7.55
+"Lebanon","gdp_2015",16.3
+"Lebanon","log_gdp_1990",2.02154756326093
+"Lebanon","log_gdp_2015",2.79116510781272
+"Lebanon","sch_yrs_1990",7.17
+"Lebanon","sch_yrs_2015",11.4
+"Lebanon","child_mort_1990",32.3
+"Lebanon","child_mort_2015",8.3
+"Lebanon","fert_1990",3
+"Lebanon","fert_2015",1.72
+"Lebanon","fem_part_1990",19
+"Lebanon","fem_part_2015",22.9
+"Lebanon","murders_1990",NA
+"Lebanon","murders_2015",NA
+"Lebanon","suicides_1990",NA
+"Lebanon","suicides_2015",NA
+"St. Lucia","gdp_1990",11.7
+"St. Lucia","gdp_2015",14
+"St. Lucia","log_gdp_1990",2.45958884180371
+"St. Lucia","log_gdp_2015",2.63905732961526
+"St. Lucia","sch_yrs_1990",7.88
+"St. Lucia","sch_yrs_2015",11.9
+"St. Lucia","child_mort_1990",22.3
+"St. Lucia","child_mort_2015",17.8
+"St. Lucia","fert_1990",3.4
+"St. Lucia","fert_2015",1.47
+"St. Lucia","fem_part_1990",47.3
+"St. Lucia","fem_part_2015",60.6
+"St. Lucia","murders_1990",NA
+"St. Lucia","murders_2015",NA
+"St. Lucia","suicides_1990",NA
+"St. Lucia","suicides_2015",NA
+"Sri Lanka","gdp_1990",3.88
+"Sri Lanka","gdp_2015",11.9
+"Sri Lanka","log_gdp_1990",1.35583515363518
+"Sri Lanka","log_gdp_2015",2.47653840011748
+"Sri Lanka","sch_yrs_1990",7.81
+"Sri Lanka","sch_yrs_2015",11.6
+"Sri Lanka","child_mort_1990",21.9
+"Sri Lanka","child_mort_2015",8.75
+"Sri Lanka","fert_1990",2.48
+"Sri Lanka","fert_2015",2.06
+"Sri Lanka","fem_part_1990",45.5
+"Sri Lanka","fem_part_2015",34.9
+"Sri Lanka","murders_1990",NA
+"Sri Lanka","murders_2015",NA
+"Sri Lanka","suicides_1990",NA
+"Sri Lanka","suicides_2015",NA
+"Lesotho","gdp_1990",1.28
+"Lesotho","gdp_2015",2.73
+"Lesotho","log_gdp_1990",0.246860077931526
+"Lesotho","log_gdp_2015",1.00430160919687
+"Lesotho","sch_yrs_1990",6.48
+"Lesotho","sch_yrs_2015",10.2
+"Lesotho","child_mort_1990",90.1
+"Lesotho","child_mort_2015",92.5
+"Lesotho","fert_1990",4.92
+"Lesotho","fert_2015",3.14
+"Lesotho","fem_part_1990",68.7
+"Lesotho","fem_part_2015",59.1
+"Lesotho","murders_1990",NA
+"Lesotho","murders_2015",NA
+"Lesotho","suicides_1990",NA
+"Lesotho","suicides_2015",NA
+"Luxembourg","gdp_1990",68
+"Luxembourg","gdp_2015",111
+"Luxembourg","log_gdp_1990",4.21950770517611
+"Luxembourg","log_gdp_2015",4.70953020131233
+"Luxembourg","sch_yrs_1990",10.1
+"Luxembourg","sch_yrs_2015",14.1
+"Luxembourg","child_mort_1990",8.7
+"Luxembourg","child_mort_2015",2.64
+"Luxembourg","fert_1990",1.56
+"Luxembourg","fert_2015",1.56
+"Luxembourg","fem_part_1990",34.1
+"Luxembourg","fem_part_2015",53.6
+"Luxembourg","murders_1990",2.64
+"Luxembourg","murders_2015",0.711
+"Luxembourg","suicides_1990",15.2
+"Luxembourg","suicides_2015",9.04
+"Morocco","gdp_1990",3.82
+"Morocco","gdp_2015",7.13
+"Morocco","log_gdp_1990",1.34025042261848
+"Morocco","log_gdp_2015",1.9643112344262
+"Morocco","sch_yrs_1990",2.28
+"Morocco","sch_yrs_2015",4.84
+"Morocco","child_mort_1990",79.1
+"Morocco","child_mort_2015",25.5
+"Morocco","fert_1990",4.06
+"Morocco","fert_2015",2.53
+"Morocco","fem_part_1990",24.1
+"Morocco","fem_part_2015",25
+"Morocco","murders_1990",NA
+"Morocco","murders_2015",NA
+"Morocco","suicides_1990",NA
+"Morocco","suicides_2015",NA
+"Madagascar","gdp_1990",1.85
+"Madagascar","gdp_2015",1.55
+"Madagascar","log_gdp_1990",0.615185639090233
+"Madagascar","log_gdp_2015",0.438254930931155
+"Madagascar","sch_yrs_1990",3.46
+"Madagascar","sch_yrs_2015",6.46
+"Madagascar","child_mort_1990",159
+"Madagascar","child_mort_2015",58.1
+"Madagascar","fert_1990",6.18
+"Madagascar","fert_2015",4.24
+"Madagascar","fem_part_1990",84.2
+"Madagascar","fem_part_2015",83.5
+"Madagascar","murders_1990",NA
+"Madagascar","murders_2015",NA
+"Madagascar","suicides_1990",NA
+"Madagascar","suicides_2015",NA
+"Mexico","gdp_1990",15
+"Mexico","gdp_2015",19.3
+"Mexico","log_gdp_1990",2.70805020110221
+"Mexico","log_gdp_2015",2.96010509591084
+"Mexico","sch_yrs_1990",6.68
+"Mexico","sch_yrs_2015",10.8
+"Mexico","child_mort_1990",44.8
+"Mexico","child_mort_2015",14.8
+"Mexico","fert_1990",3.47
+"Mexico","fert_2015",2.22
+"Mexico","fem_part_1990",33.5
+"Mexico","fem_part_2015",43.9
+"Mexico","murders_1990",20.4
+"Mexico","murders_2015",NA
+"Mexico","suicides_1990",2.85
+"Mexico","suicides_2015",NA
+"Marshall Islands","gdp_1990",3.39
+"Marshall Islands","gdp_2015",3.63
+"Marshall Islands","log_gdp_1990",1.22082992139236
+"Marshall Islands","log_gdp_2015",1.28923264827676
+"Marshall Islands","sch_yrs_1990",6.7
+"Marshall Islands","sch_yrs_2015",10.8
+"Marshall Islands","child_mort_1990",49
+"Marshall Islands","child_mort_2015",36
+"Marshall Islands","fert_1990",NA
+"Marshall Islands","fert_2015",NA
+"Marshall Islands","fem_part_1990",NA
+"Marshall Islands","fem_part_2015",NA
+"Marshall Islands","murders_1990",NA
+"Marshall Islands","murders_2015",NA
+"Marshall Islands","suicides_1990",NA
+"Marshall Islands","suicides_2015",NA
+"North Macedonia","gdp_1990",11.3
+"North Macedonia","gdp_2015",15
+"North Macedonia","log_gdp_1990",2.42480272571829
+"North Macedonia","log_gdp_2015",2.70805020110221
+"North Macedonia","sch_yrs_1990",8.93
+"North Macedonia","sch_yrs_2015",12.7
+"North Macedonia","child_mort_1990",36.5
+"North Macedonia","child_mort_2015",12.3
+"North Macedonia","fert_1990",2.21
+"North Macedonia","fert_2015",1.52
+"North Macedonia","fem_part_1990",43.1
+"North Macedonia","fem_part_2015",43.5
+"North Macedonia","murders_1990",NA
+"North Macedonia","murders_2015",NA
+"North Macedonia","suicides_1990",NA
+"North Macedonia","suicides_2015",NA
+"Mali","gdp_1990",1.42
+"Mali","gdp_2015",2.14
+"Mali","log_gdp_1990",0.350656871613169
+"Mali","log_gdp_2015",0.76080582903376
+"Mali","sch_yrs_1990",0.68
+"Mali","sch_yrs_2015",1.56
+"Mali","child_mort_1990",230
+"Mali","child_mort_2015",109
+"Mali","fert_1990",7.17
+"Mali","fert_2015",6.15
+"Mali","fem_part_1990",35.4
+"Mali","fem_part_2015",60.4
+"Mali","murders_1990",NA
+"Mali","murders_2015",NA
+"Mali","suicides_1990",NA
+"Mali","suicides_2015",NA
+"Malta","gdp_1990",18
+"Malta","gdp_2015",38.8
+"Malta","log_gdp_1990",2.89037175789616
+"Malta","log_gdp_2015",3.65842024662923
+"Malta","sch_yrs_1990",8.14
+"Malta","sch_yrs_2015",11.6
+"Malta","child_mort_1990",11.3
+"Malta","child_mort_2015",6.99
+"Malta","fert_1990",2.03
+"Malta","fert_2015",1.44
+"Malta","fem_part_1990",27.9
+"Malta","fem_part_2015",41.6
+"Malta","murders_1990",0.959
+"Malta","murders_2015",0.606
+"Malta","suicides_1990",2.35
+"Malta","suicides_2015",7.19
+"Myanmar","gdp_1990",0.62
+"Myanmar","gdp_2015",4.27
+"Myanmar","log_gdp_1990",-0.478035800943
+"Myanmar","log_gdp_2015",1.45161382724053
+"Myanmar","sch_yrs_1990",4.24
+"Myanmar","sch_yrs_2015",7.74
+"Myanmar","child_mort_1990",115
+"Myanmar","child_mort_2015",51.6
+"Myanmar","fert_1990",3.46
+"Myanmar","fert_2015",2.23
+"Myanmar","fem_part_1990",61.2
+"Myanmar","fem_part_2015",51.8
+"Myanmar","murders_1990",NA
+"Myanmar","murders_2015",NA
+"Myanmar","suicides_1990",NA
+"Myanmar","suicides_2015",NA
+"Mongolia","gdp_1990",4.98
+"Mongolia","gdp_2015",11
+"Mongolia","log_gdp_1990",1.60542989103656
+"Mongolia","log_gdp_2015",2.39789527279837
+"Mongolia","sch_yrs_1990",8.15
+"Mongolia","sch_yrs_2015",12.1
+"Mongolia","child_mort_1990",108
+"Mongolia","child_mort_2015",18.6
+"Mongolia","fert_1990",4.05
+"Mongolia","fert_2015",2.79
+"Mongolia","fem_part_1990",50.9
+"Mongolia","fem_part_2015",53.7
+"Mongolia","murders_1990",NA
+"Mongolia","murders_2015",NA
+"Mongolia","suicides_1990",NA
+"Mongolia","suicides_2015",NA
+"Mozambique","gdp_1990",0.471
+"Mozambique","gdp_2015",1.26
+"Mozambique","log_gdp_1990",-0.752897184965719
+"Mozambique","log_gdp_2015",0.231111720963387
+"Mozambique","sch_yrs_1990",1.49
+"Mozambique","sch_yrs_2015",2.99
+"Mozambique","child_mort_1990",241
+"Mozambique","child_mort_2015",81.8
+"Mozambique","fert_1990",6.21
+"Mozambique","fert_2015",5.31
+"Mozambique","fem_part_1990",87.2
+"Mozambique","fem_part_2015",82.8
+"Mozambique","murders_1990",NA
+"Mozambique","murders_2015",NA
+"Mozambique","suicides_1990",NA
+"Mozambique","suicides_2015",NA
+"Mauritania","gdp_1990",4.64
+"Mauritania","gdp_2015",5.13
+"Mauritania","log_gdp_1990",1.53471436623816
+"Mauritania","log_gdp_2015",1.63510565918268
+"Mauritania","sch_yrs_1990",2.25
+"Mauritania","sch_yrs_2015",4.44
+"Mauritania","child_mort_1990",117
+"Mauritania","child_mort_2015",83.5
+"Mauritania","fert_1990",6.04
+"Mauritania","fert_2015",4.74
+"Mauritania","fem_part_1990",29.9
+"Mauritania","fem_part_2015",30.9
+"Mauritania","murders_1990",NA
+"Mauritania","murders_2015",NA
+"Mauritania","suicides_1990",NA
+"Mauritania","suicides_2015",NA
+"Mauritius","gdp_1990",7.99
+"Mauritius","gdp_2015",19.9
+"Mauritius","log_gdp_1990",2.07819075977818
+"Mauritius","log_gdp_2015",2.99071973173045
+"Mauritius","sch_yrs_1990",6.11
+"Mauritius","sch_yrs_2015",10.4
+"Mauritius","child_mort_1990",23.1
+"Mauritius","child_mort_2015",14.3
+"Mauritius","fert_1990",2.29
+"Mauritius","fert_2015",1.44
+"Mauritius","fem_part_1990",38.3
+"Mauritius","fem_part_2015",46.2
+"Mauritius","murders_1990",2.55
+"Mauritius","murders_2015",2.26
+"Mauritius","suicides_1990",14.4
+"Mauritius","suicides_2015",8.08
+"Malawi","gdp_1990",0.671
+"Malawi","gdp_2015",1.03
+"Malawi","log_gdp_1990",-0.398986142010455
+"Malawi","log_gdp_2015",0.0295588022415444
+"Malawi","sch_yrs_1990",2.53
+"Malawi","sch_yrs_2015",4.98
+"Malawi","child_mort_1990",239
+"Malawi","child_mort_2015",59.2
+"Malawi","fert_1990",6.92
+"Malawi","fert_2015",4.65
+"Malawi","fem_part_1990",76.1
+"Malawi","fem_part_2015",72.4
+"Malawi","murders_1990",NA
+"Malawi","murders_2015",NA
+"Malawi","suicides_1990",NA
+"Malawi","suicides_2015",NA
+"Malaysia","gdp_1990",10.3
+"Malaysia","gdp_2015",24.8
+"Malaysia","log_gdp_1990",2.33214389523559
+"Malaysia","log_gdp_2015",3.21084365317094
+"Malaysia","sch_yrs_1990",7.29
+"Malaysia","sch_yrs_2015",11.9
+"Malaysia","child_mort_1990",16.6
+"Malaysia","child_mort_2015",8
+"Malaysia","fert_1990",3.55
+"Malaysia","fert_2015",2.06
+"Malaysia","fem_part_1990",45.5
+"Malaysia","fem_part_2015",50.3
+"Malaysia","murders_1990",NA
+"Malaysia","murders_2015",NA
+"Malaysia","suicides_1990",NA
+"Malaysia","suicides_2015",NA
+"Namibia","gdp_1990",5.85
+"Namibia","gdp_2015",10.5
+"Namibia","log_gdp_1990",1.76644166124377
+"Namibia","log_gdp_2015",2.35137525716348
+"Namibia","sch_yrs_1990",5.85
+"Namibia","sch_yrs_2015",9.79
+"Namibia","child_mort_1990",73.7
+"Namibia","child_mort_2015",44.9
+"Namibia","fert_1990",5.23
+"Namibia","fert_2015",3.47
+"Namibia","fem_part_1990",48.8
+"Namibia","fem_part_2015",57.7
+"Namibia","murders_1990",NA
+"Namibia","murders_2015",NA
+"Namibia","suicides_1990",NA
+"Namibia","suicides_2015",NA
+"Niger","gdp_1990",1.12
+"Niger","gdp_2015",1.13
+"Niger","log_gdp_1990",0.113328685307003
+"Niger","log_gdp_2015",0.122217632724249
+"Niger","sch_yrs_1990",0.63
+"Niger","sch_yrs_2015",1.41
+"Niger","child_mort_1990",329
+"Niger","child_mort_2015",94.3
+"Niger","fert_1990",7.77
+"Niger","fert_2015",7.29
+"Niger","fem_part_1990",68.1
+"Niger","fem_part_2015",67.5
+"Niger","murders_1990",NA
+"Niger","murders_2015",NA
+"Niger","suicides_1990",NA
+"Niger","suicides_2015",NA
+"Nigeria","gdp_1990",3.26
+"Nigeria","gdp_2015",5.51
+"Nigeria","log_gdp_1990",1.18172719537862
+"Nigeria","log_gdp_2015",1.70656462316482
+"Nigeria","sch_yrs_1990",3.55
+"Nigeria","sch_yrs_2015",6.77
+"Nigeria","child_mort_1990",211
+"Nigeria","child_mort_2015",125
+"Nigeria","fert_1990",6.49
+"Nigeria","fert_2015",5.59
+"Nigeria","fem_part_1990",47.6
+"Nigeria","fem_part_2015",50.4
+"Nigeria","murders_1990",NA
+"Nigeria","murders_2015",NA
+"Nigeria","suicides_1990",NA
+"Nigeria","suicides_2015",NA
+"Nicaragua","gdp_1990",3.45
+"Nicaragua","gdp_2015",5.63
+"Nicaragua","log_gdp_1990",1.23837423104327
+"Nicaragua","log_gdp_2015",1.7281094421516
+"Nicaragua","sch_yrs_1990",5.4
+"Nicaragua","sch_yrs_2015",9.04
+"Nicaragua","child_mort_1990",66.4
+"Nicaragua","child_mort_2015",18.8
+"Nicaragua","fert_1990",4.6
+"Nicaragua","fert_2015",2.23
+"Nicaragua","fem_part_1990",36.5
+"Nicaragua","fem_part_2015",49.5
+"Nicaragua","murders_1990",NA
+"Nicaragua","murders_2015",NA
+"Nicaragua","suicides_1990",NA
+"Nicaragua","suicides_2015",NA
+"Netherlands","gdp_1990",36.6
+"Netherlands","gdp_2015",53.2
+"Netherlands","log_gdp_1990",3.60004824040732
+"Netherlands","log_gdp_2015",3.9740583963476
+"Netherlands","sch_yrs_1990",10.9
+"Netherlands","sch_yrs_2015",14.7
+"Netherlands","child_mort_1990",8.32
+"Netherlands","child_mort_2015",4.03
+"Netherlands","fert_1990",1.62
+"Netherlands","fert_2015",1.75
+"Netherlands","fem_part_1990",43
+"Netherlands","fem_part_2015",58.2
+"Netherlands","murders_1990",0.887
+"Netherlands","murders_2015",0.603
+"Netherlands","suicides_1990",8.41
+"Netherlands","suicides_2015",8.91
+"Norway","gdp_1990",41.4
+"Norway","gdp_2015",61.9
+"Norway","log_gdp_1990",3.72328088083127
+"Norway","log_gdp_2015",4.12552017969055
+"Norway","sch_yrs_1990",11.8
+"Norway","sch_yrs_2015",15.4
+"Norway","child_mort_1990",8.66
+"Norway","child_mort_2015",2.72
+"Norway","fert_1990",1.93
+"Norway","fert_2015",1.84
+"Norway","fem_part_1990",55.2
+"Norway","fem_part_2015",61.3
+"Norway","murders_1990",1.16
+"Norway","murders_2015",0.389
+"Norway","suicides_1990",14
+"Norway","suicides_2015",9.78
+"Nepal","gdp_1990",1.41
+"Nepal","gdp_2015",2.91
+"Nepal","log_gdp_1990",0.343589704390077
+"Nepal","log_gdp_2015",1.0681530811834
+"Nepal","sch_yrs_1990",1.44
+"Nepal","sch_yrs_2015",3.6
+"Nepal","child_mort_1990",140
+"Nepal","child_mort_2015",36.4
+"Nepal","fert_1990",5.17
+"Nepal","fert_2015",2.16
+"Nepal","fem_part_1990",80.5
+"Nepal","fem_part_2015",82.3
+"Nepal","murders_1990",NA
+"Nepal","murders_2015",NA
+"Nepal","suicides_1990",NA
+"Nepal","suicides_2015",NA
+"New Zealand","gdp_1990",27.6
+"New Zealand","gdp_2015",40.5
+"New Zealand","log_gdp_1990",3.3178157727231
+"New Zealand","log_gdp_2015",3.70130197411249
+"New Zealand","sch_yrs_1990",11.6
+"New Zealand","sch_yrs_2015",15
+"New Zealand","child_mort_1990",11.2
+"New Zealand","child_mort_2015",5.97
+"New Zealand","fert_1990",2.4
+"New Zealand","fert_2015",2.01
+"New Zealand","fem_part_1990",53.3
+"New Zealand","fem_part_2015",62.8
+"New Zealand","murders_1990",2.27
+"New Zealand","murders_2015",NA
+"New Zealand","suicides_1990",13.1
+"New Zealand","suicides_2015",NA
+"Oman","gdp_1990",27
+"Oman","gdp_2015",30.2
+"Oman","log_gdp_1990",3.29583686600433
+"Oman","log_gdp_2015",3.40784192438082
+"Oman","sch_yrs_1990",4.56
+"Oman","sch_yrs_2015",8.19
+"Oman","child_mort_1990",38.9
+"Oman","child_mort_2015",11.2
+"Oman","fert_1990",7.17
+"Oman","fert_2015",2.74
+"Oman","fem_part_1990",20.1
+"Oman","fem_part_2015",30.4
+"Oman","murders_1990",NA
+"Oman","murders_2015",NA
+"Oman","suicides_1990",NA
+"Oman","suicides_2015",NA
+"Pakistan","gdp_1990",2.92
+"Pakistan","gdp_2015",4.28
+"Pakistan","log_gdp_1990",1.07158361628019
+"Pakistan","log_gdp_2015",1.45395300959371
+"Pakistan","sch_yrs_1990",1.78
+"Pakistan","sch_yrs_2015",4.26
+"Pakistan","child_mort_1990",139
+"Pakistan","child_mort_2015",76
+"Pakistan","fert_1990",6.02
+"Pakistan","fert_2015",3.55
+"Pakistan","fem_part_1990",14
+"Pakistan","fem_part_2015",23.9
+"Pakistan","murders_1990",NA
+"Pakistan","murders_2015",NA
+"Pakistan","suicides_1990",NA
+"Pakistan","suicides_2015",NA
+"Panama","gdp_1990",10.7
+"Panama","gdp_2015",28.4
+"Panama","log_gdp_1990",2.37024374146786
+"Panama","log_gdp_2015",3.34638914516716
+"Panama","sch_yrs_1990",8.72
+"Panama","sch_yrs_2015",12.5
+"Panama","child_mort_1990",30.8
+"Panama","child_mort_2015",16.9
+"Panama","fert_1990",3.06
+"Panama","fert_2015",2.54
+"Panama","fem_part_1990",38.2
+"Panama","fem_part_2015",51.8
+"Panama","murders_1990",NA
+"Panama","murders_2015",NA
+"Panama","suicides_1990",NA
+"Panama","suicides_2015",NA
+"Peru","gdp_1990",5.25
+"Peru","gdp_2015",12.1
+"Peru","log_gdp_1990",1.65822807660353
+"Peru","log_gdp_2015",2.4932054526027
+"Peru","sch_yrs_1990",7.56
+"Peru","sch_yrs_2015",11.6
+"Peru","child_mort_1990",80.5
+"Peru","child_mort_2015",16.1
+"Peru","fert_1990",3.83
+"Peru","fert_2015",2.43
+"Peru","fem_part_1990",43.1
+"Peru","fem_part_2015",68.1
+"Peru","murders_1990",NA
+"Peru","murders_2015",NA
+"Peru","suicides_1990",NA
+"Peru","suicides_2015",NA
+"Philippines","gdp_1990",4.23
+"Philippines","gdp_2015",7.3
+"Philippines","log_gdp_1990",1.44220199305819
+"Philippines","log_gdp_2015",1.98787434815435
+"Philippines","sch_yrs_1990",8.42
+"Philippines","sch_yrs_2015",11.8
+"Philippines","child_mort_1990",56.7
+"Philippines","child_mort_2015",30.1
+"Philippines","fert_1990",4.32
+"Philippines","fert_2015",2.96
+"Philippines","fem_part_1990",46.6
+"Philippines","fem_part_2015",49.4
+"Philippines","murders_1990",NA
+"Philippines","murders_2015",NA
+"Philippines","suicides_1990",NA
+"Philippines","suicides_2015",NA
+"Papua New Guinea","gdp_1990",2.44
+"Papua New Guinea","gdp_2015",4.2
+"Papua New Guinea","log_gdp_1990",0.89199803930511
+"Papua New Guinea","log_gdp_2015",1.43508452528932
+"Papua New Guinea","sch_yrs_1990",3.15
+"Papua New Guinea","sch_yrs_2015",6.04
+"Papua New Guinea","child_mort_1990",87.1
+"Papua New Guinea","child_mort_2015",51.7
+"Papua New Guinea","fert_1990",4.8
+"Papua New Guinea","fert_2015",3.71
+"Papua New Guinea","fem_part_1990",71
+"Papua New Guinea","fem_part_2015",69.1
+"Papua New Guinea","murders_1990",NA
+"Papua New Guinea","murders_2015",NA
+"Papua New Guinea","suicides_1990",NA
+"Papua New Guinea","suicides_2015",NA
+"Poland","gdp_1990",11.3
+"Poland","gdp_2015",27.9
+"Poland","log_gdp_1990",2.42480272571829
+"Poland","log_gdp_2015",3.32862668882732
+"Poland","sch_yrs_1990",11.5
+"Poland","sch_yrs_2015",14.8
+"Poland","child_mort_1990",17.4
+"Poland","child_mort_2015",4.86
+"Poland","fert_1990",2.08
+"Poland","fert_2015",1.31
+"Poland","fem_part_1990",53.9
+"Poland","fem_part_2015",49
+"Poland","murders_1990",2.84
+"Poland","murders_2015",0.588
+"Poland","suicides_1990",12.7
+"Poland","suicides_2015",11.9
+"Portugal","gdp_1990",23.6
+"Portugal","gdp_2015",31.2
+"Portugal","log_gdp_1990",3.16124671203156
+"Portugal","log_gdp_2015",3.44041809481544
+"Portugal","sch_yrs_1990",7.32
+"Portugal","sch_yrs_2015",11.5
+"Portugal","child_mort_1990",14.7
+"Portugal","child_mort_2015",3.66
+"Portugal","fert_1990",1.52
+"Portugal","fert_2015",1.25
+"Portugal","fem_part_1990",48.4
+"Portugal","fem_part_2015",53.8
+"Portugal","murders_1990",1.63
+"Portugal","murders_2015",NA
+"Portugal","suicides_1990",7.36
+"Portugal","suicides_2015",NA
+"Paraguay","gdp_1990",8.47
+"Paraguay","gdp_2015",11.8
+"Paraguay","log_gdp_1990",2.13653050866396
+"Paraguay","log_gdp_2015",2.46809953147162
+"Paraguay","sch_yrs_1990",6.42
+"Paraguay","sch_yrs_2015",10.2
+"Paraguay","child_mort_1990",45.4
+"Paraguay","child_mort_2015",22.2
+"Paraguay","fert_1990",4.55
+"Paraguay","fert_2015",2.51
+"Paraguay","fem_part_1990",51.8
+"Paraguay","fem_part_2015",55.9
+"Paraguay","murders_1990",NA
+"Paraguay","murders_2015",NA
+"Paraguay","suicides_1990",NA
+"Paraguay","suicides_2015",NA
+"Romania","gdp_1990",13.3
+"Romania","gdp_2015",23.9
+"Romania","log_gdp_1990",2.58776403522771
+"Romania","log_gdp_2015",3.17387845893747
+"Romania","sch_yrs_1990",10.4
+"Romania","sch_yrs_2015",13.8
+"Romania","child_mort_1990",31.1
+"Romania","child_mort_2015",9.21
+"Romania","fert_1990",1.87
+"Romania","fert_2015",1.51
+"Romania","fem_part_1990",62.1
+"Romania","fem_part_2015",45.2
+"Romania","murders_1990",5.14
+"Romania","murders_2015",1.15
+"Romania","suicides_1990",8.39
+"Romania","suicides_2015",8.87
+"Russia","gdp_1990",21.5
+"Russia","gdp_2015",25.6
+"Russia","log_gdp_1990",3.06805293513362
+"Russia","log_gdp_2015",3.24259235148552
+"Russia","sch_yrs_1990",11.3
+"Russia","sch_yrs_2015",14.7
+"Russia","child_mort_1990",21.6
+"Russia","child_mort_2015",8.53
+"Russia","fert_1990",1.89
+"Russia","fert_2015",1.74
+"Russia","fem_part_1990",59.3
+"Russia","fem_part_2015",56.8
+"Russia","murders_1990",13.8
+"Russia","murders_2015",NA
+"Russia","suicides_1990",24.6
+"Russia","suicides_2015",NA
+"Rwanda","gdp_1990",0.937
+"Rwanda","gdp_2015",1.89
+"Rwanda","log_gdp_1990",-0.0650719967437148
+"Rwanda","log_gdp_2015",0.636576829071551
+"Rwanda","sch_yrs_1990",2.66
+"Rwanda","sch_yrs_2015",5.48
+"Rwanda","child_mort_1990",154
+"Rwanda","child_mort_2015",41.3
+"Rwanda","fert_1990",7.18
+"Rwanda","fert_2015",3.97
+"Rwanda","fem_part_1990",86.8
+"Rwanda","fem_part_2015",86.1
+"Rwanda","murders_1990",NA
+"Rwanda","murders_2015",NA
+"Rwanda","suicides_1990",NA
+"Rwanda","suicides_2015",NA
+"Saudi Arabia","gdp_1990",41.4
+"Saudi Arabia","gdp_2015",48.9
+"Saudi Arabia","log_gdp_1990",3.72328088083127
+"Saudi Arabia","log_gdp_2015",3.88977739648083
+"Saudi Arabia","sch_yrs_1990",5.18
+"Saudi Arabia","sch_yrs_2015",9.61
+"Saudi Arabia","child_mort_1990",44.7
+"Saudi Arabia","child_mort_2015",8.54
+"Saudi Arabia","fert_1990",5.91
+"Saudi Arabia","fert_2015",2.58
+"Saudi Arabia","fem_part_1990",14.2
+"Saudi Arabia","fem_part_2015",22.1
+"Saudi Arabia","murders_1990",NA
+"Saudi Arabia","murders_2015",NA
+"Saudi Arabia","suicides_1990",NA
+"Saudi Arabia","suicides_2015",NA
+"Sudan","gdp_1990",1.73
+"Sudan","gdp_2015",4.19
+"Sudan","log_gdp_1990",0.548121408509688
+"Sudan","log_gdp_2015",1.43270073393405
+"Sudan","sch_yrs_1990",2.8
+"Sudan","sch_yrs_2015",5.67
+"Sudan","child_mort_1990",132
+"Sudan","child_mort_2015",66.3
+"Sudan","fert_1990",6.15
+"Sudan","fert_2015",4.6
+"Sudan","fem_part_1990",23.4
+"Sudan","fem_part_2015",23.6
+"Sudan","murders_1990",NA
+"Sudan","murders_2015",NA
+"Sudan","suicides_1990",NA
+"Sudan","suicides_2015",NA
+"Senegal","gdp_1990",2.3
+"Senegal","gdp_2015",2.97
+"Senegal","log_gdp_1990",0.832909122935104
+"Senegal","log_gdp_2015",1.08856195281461
+"Senegal","sch_yrs_1990",1.44
+"Senegal","sch_yrs_2015",3.11
+"Senegal","child_mort_1990",139
+"Senegal","child_mort_2015",50.1
+"Senegal","fert_1990",6.53
+"Senegal","fert_2015",4.84
+"Senegal","fem_part_1990",33.4
+"Senegal","fem_part_2015",45
+"Senegal","murders_1990",NA
+"Senegal","murders_2015",NA
+"Senegal","suicides_1990",NA
+"Senegal","suicides_2015",NA
+"Singapore","gdp_1990",37.3
+"Singapore","gdp_2015",89.4
+"Singapore","log_gdp_1990",3.61899332664977
+"Singapore","log_gdp_2015",4.49312068217947
+"Singapore","sch_yrs_1990",8.72
+"Singapore","sch_yrs_2015",13.8
+"Singapore","child_mort_1990",7.66
+"Singapore","child_mort_2015",2.72
+"Singapore","fert_1990",1.83
+"Singapore","fert_2015",1.24
+"Singapore","fem_part_1990",47.6
+"Singapore","fem_part_2015",60.8
+"Singapore","murders_1990",1.4
+"Singapore","murders_2015",0.361
+"Singapore","suicides_1990",13.4
+"Singapore","suicides_2015",7.09
+"Solomon Islands","gdp_1990",2.07
+"Solomon Islands","gdp_2015",2.3
+"Solomon Islands","log_gdp_1990",0.727548607277278
+"Solomon Islands","log_gdp_2015",0.832909122935104
+"Solomon Islands","sch_yrs_1990",3.73
+"Solomon Islands","sch_yrs_2015",7.85
+"Solomon Islands","child_mort_1990",38.5
+"Solomon Islands","child_mort_2015",22
+"Solomon Islands","fert_1990",5.85
+"Solomon Islands","fert_2015",3.91
+"Solomon Islands","fem_part_1990",62.6
+"Solomon Islands","fem_part_2015",62.6
+"Solomon Islands","murders_1990",NA
+"Solomon Islands","murders_2015",NA
+"Solomon Islands","suicides_1990",NA
+"Solomon Islands","suicides_2015",NA
+"Sierra Leone","gdp_1990",1.46
+"Sierra Leone","gdp_2015",1.55
+"Sierra Leone","log_gdp_1990",0.378436435720245
+"Sierra Leone","log_gdp_2015",0.438254930931155
+"Sierra Leone","sch_yrs_1990",1.12
+"Sierra Leone","sch_yrs_2015",2.58
+"Sierra Leone","child_mort_1990",263
+"Sierra Leone","child_mort_2015",122
+"Sierra Leone","fert_1990",6.72
+"Sierra Leone","fert_2015",4.56
+"Sierra Leone","fem_part_1990",63.9
+"Sierra Leone","fem_part_2015",57.2
+"Sierra Leone","murders_1990",NA
+"Sierra Leone","murders_2015",NA
+"Sierra Leone","suicides_1990",NA
+"Sierra Leone","suicides_2015",NA
+"El Salvador","gdp_1990",5.26
+"El Salvador","gdp_2015",8.14
+"El Salvador","log_gdp_1990",1.66013102674962
+"El Salvador","log_gdp_2015",2.09679018001445
+"El Salvador","sch_yrs_1990",5.36
+"El Salvador","sch_yrs_2015",9.21
+"El Salvador","child_mort_1990",59.8
+"El Salvador","child_mort_2015",15.3
+"El Salvador","fert_1990",3.96
+"El Salvador","fert_2015",2.1
+"El Salvador","fem_part_1990",39.7
+"El Salvador","fem_part_2015",47.1
+"El Salvador","murders_1990",NA
+"El Salvador","murders_2015",NA
+"El Salvador","suicides_1990",NA
+"El Salvador","suicides_2015",NA
+"Suriname","gdp_1990",12.5
+"Suriname","gdp_2015",17.3
+"Suriname","log_gdp_1990",2.52572864430826
+"Suriname","log_gdp_2015",2.85070650150373
+"Suriname","sch_yrs_1990",6.15
+"Suriname","sch_yrs_2015",10.1
+"Suriname","child_mort_1990",47.9
+"Suriname","child_mort_2015",20.9
+"Suriname","fert_1990",3.03
+"Suriname","fert_2015",2.4
+"Suriname","fem_part_1990",33.4
+"Suriname","fem_part_2015",42.2
+"Suriname","murders_1990",4.82
+"Suriname","murders_2015",NA
+"Suriname","suicides_1990",6.93
+"Suriname","suicides_2015",NA
+"Slovenia","gdp_1990",22.1
+"Slovenia","gdp_2015",33.9
+"Slovenia","log_gdp_1990",3.09557760852371
+"Slovenia","log_gdp_2015",3.5234150143864
+"Slovenia","sch_yrs_1990",10.2
+"Slovenia","sch_yrs_2015",14.2
+"Slovenia","child_mort_1990",10.4
+"Slovenia","child_mort_2015",2.48
+"Slovenia","fert_1990",1.48
+"Slovenia","fert_2015",1.61
+"Slovenia","fem_part_1990",52.5
+"Slovenia","fem_part_2015",52
+"Slovenia","murders_1990",1.98
+"Slovenia","murders_2015",0.56
+"Slovenia","suicides_1990",24.4
+"Slovenia","suicides_2015",14.3
+"Sweden","gdp_1990",34.7
+"Sweden","gdp_2015",51.7
+"Sweden","log_gdp_1990",3.54673968695281
+"Sweden","log_gdp_2015",3.94545778151438
+"Sweden","sch_yrs_1990",11.7
+"Sweden","sch_yrs_2015",15.1
+"Sweden","child_mort_1990",6.96
+"Sweden","child_mort_2015",2.87
+"Sweden","fert_1990",2.14
+"Sweden","fert_2015",1.91
+"Sweden","fem_part_1990",63.1
+"Sweden","fem_part_2015",60.6
+"Sweden","murders_1990",1.23
+"Sweden","murders_2015",1.08
+"Sweden","suicides_1990",14.3
+"Sweden","suicides_2015",10.1
+"Eswatini","gdp_1990",5.14
+"Eswatini","gdp_2015",8.38
+"Eswatini","log_gdp_1990",1.63705307946707
+"Eswatini","log_gdp_2015",2.12584791449399
+"Eswatini","sch_yrs_1990",5.94
+"Eswatini","sch_yrs_2015",10
+"Eswatini","child_mort_1990",70.9
+"Eswatini","child_mort_2015",62.9
+"Eswatini","fert_1990",5.62
+"Eswatini","fert_2015",3.14
+"Eswatini","fem_part_1990",37.6
+"Eswatini","fem_part_2015",42.1
+"Eswatini","murders_1990",NA
+"Eswatini","murders_2015",NA
+"Eswatini","suicides_1990",NA
+"Eswatini","suicides_2015",NA
+"Seychelles","gdp_1990",14.6
+"Seychelles","gdp_2015",25.6
+"Seychelles","log_gdp_1990",2.68102152871429
+"Seychelles","log_gdp_2015",3.24259235148552
+"Seychelles","sch_yrs_1990",7.49
+"Seychelles","sch_yrs_2015",11.6
+"Seychelles","child_mort_1990",16.6
+"Seychelles","child_mort_2015",14.7
+"Seychelles","fert_1990",2.74
+"Seychelles","fert_2015",2.33
+"Seychelles","fem_part_1990",NA
+"Seychelles","fem_part_2015",NA
+"Seychelles","murders_1990",NA
+"Seychelles","murders_2015",NA
+"Seychelles","suicides_1990",NA
+"Seychelles","suicides_2015",NA
+"Chad","gdp_1990",1
+"Chad","gdp_2015",1.86
+"Chad","log_gdp_1990",0
+"Chad","log_gdp_2015",0.62057648772511
+"Chad","sch_yrs_1990",0.72
+"Chad","sch_yrs_2015",1.63
+"Chad","child_mort_1990",212
+"Chad","child_mort_2015",130
+"Chad","fert_1990",7.31
+"Chad","fert_2015",6.05
+"Chad","fem_part_1990",64.9
+"Chad","fem_part_2015",64.8
+"Chad","murders_1990",NA
+"Chad","murders_2015",NA
+"Chad","suicides_1990",NA
+"Chad","suicides_2015",NA
+"Togo","gdp_1990",1.35
+"Togo","gdp_2015",1.45
+"Togo","log_gdp_1990",0.300104592450338
+"Togo","log_gdp_2015",0.371563556432483
+"Togo","sch_yrs_1990",1.98
+"Togo","sch_yrs_2015",4.19
+"Togo","child_mort_1990",145
+"Togo","child_mort_2015",76.8
+"Togo","fert_1990",6.32
+"Togo","fert_2015",4.52
+"Togo","fem_part_1990",80.8
+"Togo","fem_part_2015",76.1
+"Togo","murders_1990",NA
+"Togo","murders_2015",NA
+"Togo","suicides_1990",NA
+"Togo","suicides_2015",NA
+"Thailand","gdp_1990",7.11
+"Thailand","gdp_2015",16.3
+"Thailand","log_gdp_1990",1.96150224381515
+"Thailand","log_gdp_2015",2.79116510781272
+"Thailand","sch_yrs_1990",6.23
+"Thailand","sch_yrs_2015",10.1
+"Thailand","child_mort_1990",36.9
+"Thailand","child_mort_2015",10.5
+"Thailand","fert_1990",2.11
+"Thailand","fert_2015",1.5
+"Thailand","fem_part_1990",67.2
+"Thailand","fem_part_2015",61
+"Thailand","murders_1990",NA
+"Thailand","murders_2015",3.15
+"Thailand","suicides_1990",NA
+"Thailand","suicides_2015",5.65
+"Tajikistan","gdp_1990",3.87
+"Tajikistan","gdp_2015",2.82
+"Tajikistan","log_gdp_1990",1.35325450704169
+"Tajikistan","log_gdp_2015",1.03673688495002
+"Tajikistan","sch_yrs_1990",8.96
+"Tajikistan","sch_yrs_2015",11.8
+"Tajikistan","child_mort_1990",102
+"Tajikistan","child_mort_2015",37.9
+"Tajikistan","fert_1990",5.23
+"Tajikistan","fert_2015",3.4
+"Tajikistan","fem_part_1990",45.4
+"Tajikistan","fem_part_2015",45.7
+"Tajikistan","murders_1990",3.15
+"Tajikistan","murders_2015",NA
+"Tajikistan","suicides_1990",6.46
+"Tajikistan","suicides_2015",NA
+"Turkmenistan","gdp_1990",7.21
+"Turkmenistan","gdp_2015",13
+"Turkmenistan","log_gdp_1990",1.97546895129686
+"Turkmenistan","log_gdp_2015",2.56494935746154
+"Turkmenistan","sch_yrs_1990",10.1
+"Turkmenistan","sch_yrs_2015",14
+"Turkmenistan","child_mort_1990",84.6
+"Turkmenistan","child_mort_2015",50.7
+"Turkmenistan","fert_1990",4.34
+"Turkmenistan","fert_2015",2.93
+"Turkmenistan","fem_part_1990",49.9
+"Turkmenistan","fem_part_2015",53.5
+"Turkmenistan","murders_1990",8.38
+"Turkmenistan","murders_2015",NA
+"Turkmenistan","suicides_1990",10.6
+"Turkmenistan","suicides_2015",NA
+"Tonga","gdp_1990",3.94
+"Tonga","gdp_2015",6.03
+"Tonga","log_gdp_1990",1.37118072330984
+"Tonga","log_gdp_2015",1.79674701073909
+"Tonga","sch_yrs_1990",8.85
+"Tonga","sch_yrs_2015",12.2
+"Tonga","child_mort_1990",22.2
+"Tonga","child_mort_2015",16.8
+"Tonga","fert_1990",4.64
+"Tonga","fert_2015",3.68
+"Tonga","fem_part_1990",35.9
+"Tonga","fem_part_2015",45.2
+"Tonga","murders_1990",NA
+"Tonga","murders_2015",NA
+"Tonga","suicides_1990",NA
+"Tonga","suicides_2015",NA
+"Trinidad and Tobago","gdp_1990",10.1
+"Trinidad and Tobago","gdp_2015",29.2
+"Trinidad and Tobago","log_gdp_1990",2.31253542384721
+"Trinidad and Tobago","log_gdp_2015",3.37416870927424
+"Trinidad and Tobago","sch_yrs_1990",9.35
+"Trinidad and Tobago","sch_yrs_2015",13.3
+"Trinidad and Tobago","child_mort_1990",30.4
+"Trinidad and Tobago","child_mort_2015",20.2
+"Trinidad and Tobago","fert_1990",2.45
+"Trinidad and Tobago","fert_2015",1.77
+"Trinidad and Tobago","fem_part_1990",38.6
+"Trinidad and Tobago","fem_part_2015",51.7
+"Trinidad and Tobago","murders_1990",6.86
+"Trinidad and Tobago","murders_2015",NA
+"Trinidad and Tobago","suicides_1990",14.8
+"Trinidad and Tobago","suicides_2015",NA
+"Tunisia","gdp_1990",5.43
+"Tunisia","gdp_2015",10.5
+"Tunisia","log_gdp_1990",1.69193913394584
+"Tunisia","log_gdp_2015",2.35137525716348
+"Tunisia","sch_yrs_1990",4.04
+"Tunisia","sch_yrs_2015",9.1
+"Tunisia","child_mort_1990",55.5
+"Tunisia","child_mort_2015",17.2
+"Tunisia","fert_1990",3.48
+"Tunisia","fert_2015",2.22
+"Tunisia","fem_part_1990",22.5
+"Tunisia","fem_part_2015",24.6
+"Tunisia","murders_1990",NA
+"Tunisia","murders_2015",NA
+"Tunisia","suicides_1990",NA
+"Tunisia","suicides_2015",NA
+"Turkey","gdp_1990",12.7
+"Turkey","gdp_2015",26
+"Turkey","log_gdp_1990",2.54160199346455
+"Turkey","log_gdp_2015",3.25809653802148
+"Turkey","sch_yrs_1990",4.94
+"Turkey","sch_yrs_2015",8.76
+"Turkey","child_mort_1990",73.9
+"Turkey","child_mort_2015",12.6
+"Turkey","fert_1990",3.11
+"Turkey","fert_2015",2.07
+"Turkey","fem_part_1990",34
+"Turkey","fem_part_2015",31.5
+"Turkey","murders_1990",NA
+"Turkey","murders_2015",1.35
+"Turkey","suicides_1990",NA
+"Turkey","suicides_2015",1.91
+"Tanzania","gdp_1990",1.39
+"Tanzania","gdp_2015",2.35
+"Tanzania","log_gdp_1990",0.3293037471426
+"Tanzania","log_gdp_2015",0.854415328156068
+"Tanzania","sch_yrs_1990",4.02
+"Tanzania","sch_yrs_2015",7.06
+"Tanzania","child_mort_1990",166
+"Tanzania","child_mort_2015",59.1
+"Tanzania","fert_1990",6.21
+"Tanzania","fert_2015",5.08
+"Tanzania","fem_part_1990",82.1
+"Tanzania","fem_part_2015",79.5
+"Tanzania","murders_1990",NA
+"Tanzania","murders_2015",NA
+"Tanzania","suicides_1990",NA
+"Tanzania","suicides_2015",NA
+"Uganda","gdp_1990",0.907
+"Uganda","gdp_2015",2.05
+"Uganda","log_gdp_1990",-0.0976128288670004
+"Uganda","log_gdp_2015",0.717839793150317
+"Uganda","sch_yrs_1990",3.2
+"Uganda","sch_yrs_2015",6.16
+"Uganda","child_mort_1990",185
+"Uganda","child_mort_2015",54.8
+"Uganda","fert_1990",7.09
+"Uganda","fert_2015",5.68
+"Uganda","fem_part_1990",62.5
+"Uganda","fem_part_2015",66.4
+"Uganda","murders_1990",NA
+"Uganda","murders_2015",NA
+"Uganda","suicides_1990",NA
+"Uganda","suicides_2015",NA
+"Ukraine","gdp_1990",15.8
+"Ukraine","gdp_2015",11.2
+"Ukraine","log_gdp_1990",2.76000994003292
+"Ukraine","log_gdp_2015",2.41591377830105
+"Ukraine","sch_yrs_1990",10.6
+"Ukraine","sch_yrs_2015",14.7
+"Ukraine","child_mort_1990",19.4
+"Ukraine","child_mort_2015",9.5
+"Ukraine","fert_1990",1.81
+"Ukraine","fert_2015",1.53
+"Ukraine","fem_part_1990",54.7
+"Ukraine","fem_part_2015",47.3
+"Ukraine","murders_1990",7.72
+"Ukraine","murders_2015",NA
+"Ukraine","suicides_1990",18.4
+"Ukraine","suicides_2015",NA
+"Uruguay","gdp_1990",10.2
+"Uruguay","gdp_2015",20.6
+"Uruguay","log_gdp_1990",2.32238772029023
+"Uruguay","log_gdp_2015",3.02529107579554
+"Uruguay","sch_yrs_1990",8.72
+"Uruguay","sch_yrs_2015",12.1
+"Uruguay","child_mort_1990",22.9
+"Uruguay","child_mort_2015",8.85
+"Uruguay","fert_1990",2.52
+"Uruguay","fert_2015",2.01
+"Uruguay","fem_part_1990",45.6
+"Uruguay","fem_part_2015",55.7
+"Uruguay","murders_1990",4.29
+"Uruguay","murders_2015",NA
+"Uruguay","suicides_1990",9.52
+"Uruguay","suicides_2015",NA
+"United States","gdp_1990",40.5
+"United States","gdp_2015",58.5
+"United States","log_gdp_1990",3.70130197411249
+"United States","log_gdp_2015",4.06902675423781
+"United States","sch_yrs_1990",13.3
+"United States","sch_yrs_2015",15.1
+"United States","child_mort_1990",11.2
+"United States","child_mort_2015",6.8
+"United States","fert_1990",2.07
+"United States","fert_2015",1.93
+"United States","fem_part_1990",56.2
+"United States","fem_part_2015",55.8
+"United States","murders_1990",9.74
+"United States","murders_2015",NA
+"United States","suicides_1990",11.4
+"United States","suicides_2015",NA
+"Uzbekistan","gdp_1990",3.42
+"Uzbekistan","gdp_2015",6.09
+"Uzbekistan","log_gdp_1990",1.22964055107451
+"Uzbekistan","log_gdp_2015",1.80664808172181
+"Uzbekistan","sch_yrs_1990",9.49
+"Uzbekistan","sch_yrs_2015",13
+"Uzbekistan","child_mort_1990",72.5
+"Uzbekistan","child_mort_2015",25.9
+"Uzbekistan","fert_1990",4.21
+"Uzbekistan","fert_2015",2.31
+"Uzbekistan","fem_part_1990",50
+"Uzbekistan","fem_part_2015",53.7
+"Uzbekistan","murders_1990",7.93
+"Uzbekistan","murders_2015",NA
+"Uzbekistan","suicides_1990",9.44
+"Uzbekistan","suicides_2015",NA
+"St. Vincent and the Grenadines","gdp_1990",6.38
+"St. Vincent and the Grenadines","gdp_2015",12
+"St. Vincent and the Grenadines","log_gdp_1990",1.8531680973567
+"St. Vincent and the Grenadines","log_gdp_2015",2.484906649788
+"St. Vincent and the Grenadines","sch_yrs_1990",7.03
+"St. Vincent and the Grenadines","sch_yrs_2015",11.2
+"St. Vincent and the Grenadines","child_mort_1990",23.8
+"St. Vincent and the Grenadines","child_mort_2015",18
+"St. Vincent and the Grenadines","fert_1990",2.96
+"St. Vincent and the Grenadines","fert_2015",1.95
+"St. Vincent and the Grenadines","fem_part_1990",44.1
+"St. Vincent and the Grenadines","fem_part_2015",58.3
+"St. Vincent and the Grenadines","murders_1990",NA
+"St. Vincent and the Grenadines","murders_2015",NA
+"St. Vincent and the Grenadines","suicides_1990",NA
+"St. Vincent and the Grenadines","suicides_2015",NA
+"Vietnam","gdp_1990",1.67
+"Vietnam","gdp_2015",6.44
+"Vietnam","log_gdp_1990",0.512823626428664
+"Vietnam","log_gdp_2015",1.86252854011626
+"Vietnam","sch_yrs_1990",5.96
+"Vietnam","sch_yrs_2015",9.65
+"Vietnam","child_mort_1990",51.4
+"Vietnam","child_mort_2015",21.8
+"Vietnam","fert_1990",3.55
+"Vietnam","fert_2015",1.96
+"Vietnam","fem_part_1990",73.2
+"Vietnam","fem_part_2015",73.4
+"Vietnam","murders_1990",NA
+"Vietnam","murders_2015",NA
+"Vietnam","suicides_1990",NA
+"Vietnam","suicides_2015",NA
+"Vanuatu","gdp_1990",2.81
+"Vanuatu","gdp_2015",3.04
+"Vanuatu","log_gdp_1990",1.03318448334565
+"Vanuatu","log_gdp_2015",1.11185751541813
+"Vanuatu","sch_yrs_1990",5.2
+"Vanuatu","sch_yrs_2015",8.94
+"Vanuatu","child_mort_1990",35.7
+"Vanuatu","child_mort_2015",28.6
+"Vanuatu","fert_1990",4.93
+"Vanuatu","fert_2015",3.31
+"Vanuatu","fem_part_1990",61.4
+"Vanuatu","fem_part_2015",61.6
+"Vanuatu","murders_1990",NA
+"Vanuatu","murders_2015",NA
+"Vanuatu","suicides_1990",NA
+"Vanuatu","suicides_2015",NA
+"Samoa","gdp_1990",4.07
+"Samoa","gdp_2015",6.01
+"Samoa","log_gdp_1990",1.4036429994545
+"Samoa","log_gdp_2015",1.79342474854712
+"Samoa","sch_yrs_1990",8.93
+"Samoa","sch_yrs_2015",13.2
+"Samoa","child_mort_1990",30.1
+"Samoa","child_mort_2015",17.2
+"Samoa","fert_1990",5.12
+"Samoa","fert_2015",4.03
+"Samoa","fem_part_1990",25
+"Samoa","fem_part_2015",23.9
+"Samoa","murders_1990",NA
+"Samoa","murders_2015",NA
+"Samoa","suicides_1990",NA
+"Samoa","suicides_2015",NA
+"South Africa","gdp_1990",10.3
+"South Africa","gdp_2015",12.8
+"South Africa","log_gdp_1990",2.33214389523559
+"South Africa","log_gdp_2015",2.54944517092557
+"South Africa","sch_yrs_1990",7.62
+"South Africa","sch_yrs_2015",11.5
+"South Africa","child_mort_1990",59.2
+"South Africa","child_mort_2015",37.7
+"South Africa","fert_1990",3.65
+"South Africa","fert_2015",2.49
+"South Africa","fem_part_1990",41.6
+"South Africa","fem_part_2015",47.8
+"South Africa","murders_1990",NA
+"South Africa","murders_2015",NA
+"South Africa","suicides_1990",NA
+"South Africa","suicides_2015",NA
+"Zambia","gdp_1990",2.19
+"Zambia","gdp_2015",3.44
+"Zambia","log_gdp_1990",0.783901543828409
+"Zambia","log_gdp_2015",1.23547147138531
+"Zambia","sch_yrs_1990",4.45
+"Zambia","sch_yrs_2015",7.75
+"Zambia","child_mort_1990",186
+"Zambia","child_mort_2015",64.6
+"Zambia","fert_1990",6.44
+"Zambia","fert_2015",5.04
+"Zambia","fem_part_1990",73.8
+"Zambia","fem_part_2015",70.1
+"Zambia","murders_1990",NA
+"Zambia","murders_2015",NA
+"Zambia","suicides_1990",NA
+"Zambia","suicides_2015",NA
+"Zimbabwe","gdp_1990",3.32
+"Zimbabwe","gdp_2015",2.96
+"Zimbabwe","log_gdp_1990",1.1999647829284
+"Zimbabwe","log_gdp_2015",1.08518926833597
+"Zimbabwe","sch_yrs_1990",6.16
+"Zimbabwe","sch_yrs_2015",10.2
+"Zimbabwe","child_mort_1990",80.5
+"Zimbabwe","child_mort_2015",54.3
+"Zimbabwe","fert_1990",5.18
+"Zimbabwe","fert_2015",3.84
+"Zimbabwe","fem_part_1990",67.8
+"Zimbabwe","fem_part_2015",78.1
+"Zimbabwe","murders_1990",NA
+"Zimbabwe","murders_2015",NA
+"Zimbabwe","suicides_1990",NA
+"Zimbabwe","suicides_2015",NA
+"Afghanistan","gdp_1990",NA
+"Afghanistan","gdp_2015",2.21
+"Afghanistan","log_gdp_1990",NA
+"Afghanistan","log_gdp_2015",0.792992515529661
+"Afghanistan","sch_yrs_1990",NA
+"Afghanistan","sch_yrs_2015",0.98
+"Afghanistan","child_mort_1990",179
+"Afghanistan","child_mort_2015",70.4
+"Afghanistan","fert_1990",7.47
+"Afghanistan","fert_2015",4.8
+"Afghanistan","fem_part_1990",14.8
+"Afghanistan","fem_part_2015",18.7
+"Afghanistan","murders_1990",NA
+"Afghanistan","murders_2015",NA
+"Afghanistan","suicides_1990",NA
+"Afghanistan","suicides_2015",NA
+"Bosnia and Herzegovina","gdp_1990",NA
+"Bosnia and Herzegovina","gdp_2015",12.8
+"Bosnia and Herzegovina","log_gdp_1990",NA
+"Bosnia and Herzegovina","log_gdp_2015",2.54944517092557
+"Bosnia and Herzegovina","sch_yrs_1990",NA
+"Bosnia and Herzegovina","sch_yrs_2015",11.3
+"Bosnia and Herzegovina","child_mort_1990",18.1
+"Bosnia and Herzegovina","child_mort_2015",6.14
+"Bosnia and Herzegovina","fert_1990",1.77
+"Bosnia and Herzegovina","fert_2015",1.35
+"Bosnia and Herzegovina","fem_part_1990",41.2
+"Bosnia and Herzegovina","fem_part_2015",35.7
+"Bosnia and Herzegovina","murders_1990",0.0186
+"Bosnia and Herzegovina","murders_2015",NA
+"Bosnia and Herzegovina","suicides_1990",10.2
+"Bosnia and Herzegovina","suicides_2015",NA
+"Djibouti","gdp_1990",NA
+"Djibouti","gdp_2015",4.49
+"Djibouti","log_gdp_1990",NA
+"Djibouti","log_gdp_2015",1.50185270175416
+"Djibouti","sch_yrs_1990",NA
+"Djibouti","sch_yrs_2015",4.05
+"Djibouti","child_mort_1990",118
+"Djibouti","child_mort_2015",65.3
+"Djibouti","fert_1990",6.09
+"Djibouti","fert_2015",2.91
+"Djibouti","fem_part_1990",46.2
+"Djibouti","fem_part_2015",49.1
+"Djibouti","murders_1990",NA
+"Djibouti","murders_2015",NA
+"Djibouti","suicides_1990",NA
+"Djibouti","suicides_2015",NA
+"Estonia","gdp_1990",NA
+"Estonia","gdp_2015",31.2
+"Estonia","log_gdp_1990",NA
+"Estonia","log_gdp_2015",3.44041809481544
+"Estonia","sch_yrs_1990",NA
+"Estonia","sch_yrs_2015",14.5
+"Estonia","child_mort_1990",17.6
+"Estonia","child_mort_2015",3.18
+"Estonia","fert_1990",1.94
+"Estonia","fert_2015",1.62
+"Estonia","fem_part_1990",54.9
+"Estonia","fem_part_2015",56
+"Estonia","murders_1990",10.9
+"Estonia","murders_2015",2.74
+"Estonia","suicides_1990",25
+"Estonia","suicides_2015",12.4
+"Croatia","gdp_1990",NA
+"Croatia","gdp_2015",24.4
+"Croatia","log_gdp_1990",NA
+"Croatia","log_gdp_2015",3.19458313229916
+"Croatia","sch_yrs_1990",NA
+"Croatia","sch_yrs_2015",12.6
+"Croatia","child_mort_1990",12.8
+"Croatia","child_mort_2015",4.88
+"Croatia","fert_1990",1.67
+"Croatia","fert_2015",1.47
+"Croatia","fem_part_1990",47.3
+"Croatia","fem_part_2015",47
+"Croatia","murders_1990",2.5
+"Croatia","murders_2015",0.646
+"Croatia","suicides_1990",19.8
+"Croatia","suicides_2015",12.2
+"Hungary","gdp_1990",NA
+"Hungary","gdp_2015",27.5
+"Hungary","log_gdp_1990",NA
+"Hungary","log_gdp_2015",3.31418600467253
+"Hungary","sch_yrs_1990",NA
+"Hungary","sch_yrs_2015",13.9
+"Hungary","child_mort_1990",17.3
+"Hungary","child_mort_2015",5.14
+"Hungary","fert_1990",1.81
+"Hungary","fert_2015",1.36
+"Hungary","fem_part_1990",47
+"Hungary","fem_part_2015",47.3
+"Hungary","murders_1990",2.9
+"Hungary","murders_2015",1.02
+"Hungary","suicides_1990",33.5
+"Hungary","suicides_2015",13.7
+"Cambodia","gdp_1990",NA
+"Cambodia","gdp_2015",3.54
+"Cambodia","log_gdp_1990",NA
+"Cambodia","log_gdp_2015",1.26412672714568
+"Cambodia","sch_yrs_1990",NA
+"Cambodia","sch_yrs_2015",5.69
+"Cambodia","child_mort_1990",116
+"Cambodia","child_mort_2015",32
+"Cambodia","fert_1990",5.6
+"Cambodia","fert_2015",2.59
+"Cambodia","fem_part_1990",77
+"Cambodia","fem_part_2015",80.8
+"Cambodia","murders_1990",NA
+"Cambodia","murders_2015",NA
+"Cambodia","suicides_1990",NA
+"Cambodia","suicides_2015",NA
+"Kuwait","gdp_1990",NA
+"Kuwait","gdp_2015",54.8
+"Kuwait","log_gdp_1990",NA
+"Kuwait","log_gdp_2015",4.00369019395397
+"Kuwait","sch_yrs_1990",NA
+"Kuwait","sch_yrs_2015",12.5
+"Kuwait","child_mort_1990",17.5
+"Kuwait","child_mort_2015",8.56
+"Kuwait","fert_1990",2.97
+"Kuwait","fert_2015",1.99
+"Kuwait","fem_part_1990",39.1
+"Kuwait","fem_part_2015",48.9
+"Kuwait","murders_1990",NA
+"Kuwait","murders_2015",NA
+"Kuwait","suicides_1990",NA
+"Kuwait","suicides_2015",NA
+"Liberia","gdp_1990",NA
+"Liberia","gdp_2015",1.58
+"Liberia","log_gdp_1990",NA
+"Liberia","log_gdp_2015",0.457424847038875
+"Liberia","sch_yrs_1990",NA
+"Liberia","sch_yrs_2015",4.37
+"Liberia","child_mort_1990",262
+"Liberia","child_mort_2015",78.9
+"Liberia","fert_1990",6.5
+"Liberia","fert_2015",4.65
+"Liberia","fem_part_1990",52.8
+"Liberia","fem_part_2015",54
+"Liberia","murders_1990",NA
+"Liberia","murders_2015",NA
+"Liberia","suicides_1990",NA
+"Liberia","suicides_2015",NA
+"Libya","gdp_1990",NA
+"Libya","gdp_2015",11
+"Libya","log_gdp_1990",NA
+"Libya","log_gdp_2015",2.39789527279837
+"Libya","sch_yrs_1990",NA
+"Libya","sch_yrs_2015",6.27
+"Libya","child_mort_1990",41.6
+"Libya","child_mort_2015",13.3
+"Libya","fert_1990",4.97
+"Libya","fert_2015",2.31
+"Libya","fem_part_1990",20
+"Libya","fem_part_2015",25.8
+"Libya","murders_1990",NA
+"Libya","murders_2015",NA
+"Libya","suicides_1990",NA
+"Libya","suicides_2015",NA
+"Lithuania","gdp_1990",NA
+"Lithuania","gdp_2015",30.8
+"Lithuania","log_gdp_1990",NA
+"Lithuania","log_gdp_2015",3.42751468997953
+"Lithuania","sch_yrs_1990",NA
+"Lithuania","sch_yrs_2015",14.2
+"Lithuania","child_mort_1990",15
+"Lithuania","child_mort_2015",4.9
+"Lithuania","fert_1990",1.96
+"Lithuania","fert_2015",1.64
+"Lithuania","fem_part_1990",54.6
+"Lithuania","fem_part_2015",54.5
+"Lithuania","murders_1990",7.43
+"Lithuania","murders_2015",3.66
+"Lithuania","suicides_1990",24.3
+"Lithuania","suicides_2015",25.2
+"Latvia","gdp_1990",NA
+"Latvia","gdp_2015",26.5
+"Latvia","log_gdp_1990",NA
+"Latvia","log_gdp_2015",3.27714473299218
+"Latvia","sch_yrs_1990",NA
+"Latvia","sch_yrs_2015",14.4
+"Latvia","child_mort_1990",17
+"Latvia","child_mort_2015",4.97
+"Latvia","fert_1990",1.94
+"Latvia","fert_2015",1.53
+"Latvia","fem_part_1990",53.4
+"Latvia","fem_part_2015",54.3
+"Latvia","murders_1990",8.8
+"Latvia","murders_2015",4.26
+"Latvia","suicides_1990",23.4
+"Latvia","suicides_2015",15.5
+"Moldova","gdp_1990",NA
+"Moldova","gdp_2015",10.4
+"Moldova","log_gdp_1990",NA
+"Moldova","log_gdp_2015",2.34180580614733
+"Moldova","sch_yrs_1990",NA
+"Moldova","sch_yrs_2015",13.8
+"Moldova","child_mort_1990",33.3
+"Moldova","child_mort_2015",16.3
+"Moldova","fert_1990",2.41
+"Moldova","fert_2015",1.25
+"Moldova","fem_part_1990",47.3
+"Moldova","fem_part_2015",41.3
+"Moldova","murders_1990",9.31
+"Moldova","murders_2015",4.02
+"Moldova","suicides_1990",15.1
+"Moldova","suicides_2015",13.3
+"Maldives","gdp_1990",NA
+"Maldives","gdp_2015",17.3
+"Maldives","log_gdp_1990",NA
+"Maldives","log_gdp_2015",2.85070650150373
+"Maldives","sch_yrs_1990",NA
+"Maldives","sch_yrs_2015",7.6
+"Maldives","child_mort_1990",85.8
+"Maldives","child_mort_2015",9.98
+"Maldives","fert_1990",5.99
+"Maldives","fert_2015",2.13
+"Maldives","fem_part_1990",20.2
+"Maldives","fem_part_2015",44.5
+"Maldives","murders_1990",NA
+"Maldives","murders_2015",NA
+"Maldives","suicides_1990",NA
+"Maldives","suicides_2015",NA
+"Montenegro","gdp_1990",NA
+"Montenegro","gdp_2015",18.2
+"Montenegro","log_gdp_1990",NA
+"Montenegro","log_gdp_2015",2.90142159408275
+"Montenegro","sch_yrs_1990",NA
+"Montenegro","sch_yrs_2015",13.1
+"Montenegro","child_mort_1990",16.5
+"Montenegro","child_mort_2015",3.46
+"Montenegro","fert_1990",2.08
+"Montenegro","fert_2015",1.68
+"Montenegro","fem_part_1990",44.2
+"Montenegro","fem_part_2015",42.4
+"Montenegro","murders_1990",NA
+"Montenegro","murders_2015",NA
+"Montenegro","suicides_1990",NA
+"Montenegro","suicides_2015",NA
+"Palestine","gdp_1990",NA
+"Palestine","gdp_2015",5.56
+"Palestine","log_gdp_1990",NA
+"Palestine","log_gdp_2015",1.71559810826249
+"Palestine","sch_yrs_1990",NA
+"Palestine","sch_yrs_2015",11.1
+"Palestine","child_mort_1990",44.4
+"Palestine","child_mort_2015",21.7
+"Palestine","fert_1990",6.72
+"Palestine","fert_2015",4.08
+"Palestine","fem_part_1990",10.2
+"Palestine","fem_part_2015",19
+"Palestine","murders_1990",NA
+"Palestine","murders_2015",NA
+"Palestine","suicides_1990",NA
+"Palestine","suicides_2015",NA
+"Qatar","gdp_1990",NA
+"Qatar","gdp_2015",97.3
+"Qatar","log_gdp_1990",NA
+"Qatar","log_gdp_2015",4.57779898919196
+"Qatar","sch_yrs_1990",NA
+"Qatar","sch_yrs_2015",10.8
+"Qatar","child_mort_1990",20.8
+"Qatar","child_mort_2015",7.83
+"Qatar","fert_1990",4.01
+"Qatar","fert_2015",1.93
+"Qatar","fem_part_1990",40.1
+"Qatar","fem_part_2015",58.9
+"Qatar","murders_1990",NA
+"Qatar","murders_2015",NA
+"Qatar","suicides_1990",NA
+"Qatar","suicides_2015",NA
+"Serbia","gdp_1990",NA
+"Serbia","gdp_2015",15.5
+"Serbia","log_gdp_1990",NA
+"Serbia","log_gdp_2015",2.7408400239252
+"Serbia","sch_yrs_1990",NA
+"Serbia","sch_yrs_2015",13
+"Serbia","child_mort_1990",27.9
+"Serbia","child_mort_2015",6.28
+"Serbia","fert_1990",2.1
+"Serbia","fert_2015",1.6
+"Serbia","fem_part_1990",48
+"Serbia","fem_part_2015",44.1
+"Serbia","murders_1990",NA
+"Serbia","murders_2015",1.17
+"Serbia","suicides_1990",NA
+"Serbia","suicides_2015",10.2
+"Sao Tome and Principe","gdp_1990",NA
+"Sao Tome and Principe","gdp_2015",3.76
+"Sao Tome and Principe","log_gdp_1990",NA
+"Sao Tome and Principe","log_gdp_2015",1.3244189574018
+"Sao Tome and Principe","sch_yrs_1990",NA
+"Sao Tome and Principe","sch_yrs_2015",6.35
+"Sao Tome and Principe","child_mort_1990",108
+"Sao Tome and Principe","child_mort_2015",35.1
+"Sao Tome and Principe","fert_1990",5.82
+"Sao Tome and Principe","fert_2015",4.52
+"Sao Tome and Principe","fem_part_1990",36.1
+"Sao Tome and Principe","fem_part_2015",41.2
+"Sao Tome and Principe","murders_1990",NA
+"Sao Tome and Principe","murders_2015",NA
+"Sao Tome and Principe","suicides_1990",NA
+"Sao Tome and Principe","suicides_2015",NA
+"Slovak Republic","gdp_1990",NA
+"Slovak Republic","gdp_2015",29.5
+"Slovak Republic","log_gdp_1990",NA
+"Slovak Republic","log_gdp_2015",3.38439026334577
+"Slovak Republic","sch_yrs_1990",NA
+"Slovak Republic","sch_yrs_2015",14
+"Slovak Republic","child_mort_1990",14.7
+"Slovak Republic","child_mort_2015",6.06
+"Slovak Republic","fert_1990",2.04
+"Slovak Republic","fert_2015",1.43
+"Slovak Republic","fem_part_1990",59.8
+"Slovak Republic","fem_part_2015",52
+"Slovak Republic","murders_1990",NA
+"Slovak Republic","murders_2015",NA
+"Slovak Republic","suicides_1990",NA
+"Slovak Republic","suicides_2015",NA
+"Timor-Leste","gdp_1990",NA
+"Timor-Leste","gdp_2015",3.3
+"Timor-Leste","log_gdp_1990",NA
+"Timor-Leste","log_gdp_2015",1.19392246847243
+"Timor-Leste","sch_yrs_1990",NA
+"Timor-Leste","sch_yrs_2015",6.92
+"Timor-Leste","child_mort_1990",174
+"Timor-Leste","child_mort_2015",51
+"Timor-Leste","fert_1990",5.34
+"Timor-Leste","fert_2015",5.62
+"Timor-Leste","fem_part_1990",44.1
+"Timor-Leste","fem_part_2015",25.2
+"Timor-Leste","murders_1990",NA
+"Timor-Leste","murders_2015",NA
+"Timor-Leste","suicides_1990",NA
+"Timor-Leste","suicides_2015",NA
