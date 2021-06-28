@@ -1,0 +1,488 @@
+---
+title: "GDP School Hours Comparison"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+``` {r packages, message = FALSE, warning = FALSE}
+library(tidyverse)
+library(GGally)
+library(skimr)
+library(moderndive)
+library(olsrr)
+```
+
+This section is the data wrangling that I did with the raw data as each column was contained in a different file.
+
+I haven't uploaded all the raw files to GitHub, just the final version, so running this code won't work, but let me know if you'd like to see all the raw files.
+
+``` {r wrangling1}
+
+#  Pull each file and select the data for the year 2015
+GDP <- data.frame(country = alternative_gdp_per_capita_ppp_wb$country,
+                   gdp = alternative_gdp_per_capita_ppp_wb$"2015")
+# select the mean years of 192 countries' men spending in schools in 2015, here we divided them into 6 groups according to the generation, starting from 15 years old, every 10 years seen as a group
+men15_24 <- mean_years_in_school_men_15_to_24_years %>%
+  select("country", "2015")
+men25_34 <- mean_years_in_school_men_25_to_34_years %>%
+  select("country", "2015")
+men35_44 <- mean_years_in_school_men_35_to_44_years %>%
+  select("country", "2015")
+men45_54 <- mean_years_in_school_men_45_to_54_years %>%
+  select("country", "2015")
+men55_64 <- mean_years_in_school_men_55_to_64_years %>%
+  select("country", "2015")
+men65_plus <- mean_years_in_school_men_65_plus_years %>%
+  select("country", "2015")
+women15_24 <- mean_years_in_school_women_15_to_24_years %>%
+  select("country", "2015")
+women25_34 <- mean_years_in_school_women_25_to_34_years %>%
+  select("country", "2015")
+women35_44 <- mean_years_in_school_women_35_to_44_years %>%
+  select("country", "2015")
+women45_54 <- mean_years_in_school_women_45_to_54_years %>%
+  select("country", "2015")
+women55_64 <- mean_years_in_school_women_55_to_64_years %>%
+  select("country", "2015")
+women65_plus <- mean_years_in_school_women_65_plus_years %>%
+  select("country", "2015")
+
+# Combine all the files and convert the GDP figure into a consistent numerical format
+
+data <- GDP %>%
+  mutate(k = str_detect(gdp, "k")) %>%
+  mutate(gdp = as.numeric(str_remove(gdp, "k"))) %>%
+  mutate(gdp = ifelse(k, gdp, gdp/1000)) %>%
+  select(-k) %>%
+  inner_join(women15_24, by = "country") %>%
+  rename(women15_24 = "2015") %>%
+  inner_join(women25_34, by = "country") %>%
+  rename(women25_34 = "2015") %>%
+  inner_join(women35_44, by = "country") %>%
+  rename(women35_44 = "2015") %>%
+  inner_join(women45_54, by = "country") %>%
+  rename(women45_54 = "2015") %>%
+  inner_join(women55_64, by = "country") %>%
+  rename(women55_64 = "2015") %>%
+  inner_join(women65_plus, by = "country") %>%
+  rename(women65_plus = "2015") %>%
+  inner_join(men15_24, by = "country") %>%
+  rename(men15_24 = "2015") %>%
+  inner_join(men25_34, by = "country") %>%
+  rename(men25_34 = "2015") %>%
+  inner_join(men35_44, by = "country") %>%
+  rename(men35_44 = "2015") %>%
+  inner_join(men45_54, by = "country") %>%
+  rename(men45_54 = "2015") %>%
+  inner_join(men55_64, by = "country") %>%
+  rename(men55_64 = "2015") %>%
+  inner_join(men65_plus, by = "country") %>%
+  rename(men65_plus = "2015")
+
+# Write data to csv file
+
+write.csv(data, "GDP_school_years_2015.csv", row.names = FALSE)
+
+##This is the part where the data is first broken down into different files and then aggregated for each file to get the specific data.
+
+```
+
+
+``` {r wrangling2}
+
+#  Pull each file and select the data for the year 1990
+GDP <- data.frame(country = alternative_gdp_per_capita_ppp_wb$country,
+                   gdp = alternative_gdp_per_capita_ppp_wb$"1990")
+men15_24 <- mean_years_in_school_men_15_to_24_years %>%
+  select("country", "1990")
+men25_34 <- mean_years_in_school_men_25_to_34_years %>%
+  select("country", "1990")
+men35_44 <- mean_years_in_school_men_35_to_44_years %>%
+  select("country", "1990")
+men45_54 <- mean_years_in_school_men_45_to_54_years %>%
+  select("country", "1990")
+men55_64 <- mean_years_in_school_men_55_to_64_years %>%
+  select("country", "1990")
+men65_plus <- mean_years_in_school_men_65_plus_years %>%
+  select("country", "1990")
+women15_24 <- mean_years_in_school_women_15_to_24_years %>%
+  select("country", "1990")
+women25_34 <- mean_years_in_school_women_25_to_34_years %>%
+  select("country", "1990")
+women35_44 <- mean_years_in_school_women_35_to_44_years %>%
+  select("country", "1990")
+women45_54 <- mean_years_in_school_women_45_to_54_years %>%
+  select("country", "1990")
+women55_64 <- mean_years_in_school_women_55_to_64_years %>%
+  select("country", "1990")
+women65_plus <- mean_years_in_school_women_65_plus_years %>%
+  select("country", "1990")
+
+# Combine all the files and convert the GDP figure into a consistent numerical format
+
+data <- GDP %>%
+  mutate(k = str_detect(gdp, "k")) %>%
+  mutate(gdp = as.numeric(str_remove(gdp, "k"))) %>%
+  mutate(gdp = ifelse(k, gdp, gdp/1000)) %>%
+  select(-k) %>%
+  inner_join(women15_24, by = "country") %>%
+  rename(women15_24 = "1990") %>%
+  inner_join(women25_34, by = "country") %>%
+  rename(women25_34 = "1990") %>%
+  inner_join(women35_44, by = "country") %>%
+  rename(women35_44 = "1990") %>%
+  inner_join(women45_54, by = "country") %>%
+  rename(women45_54 = "1990") %>%
+  inner_join(women55_64, by = "country") %>%
+  rename(women55_64 = "1990") %>%
+  inner_join(women65_plus, by = "country") %>%
+  rename(women65_plus = "1990") %>%
+  inner_join(men15_24, by = "country") %>%
+  rename(men15_24 = "1990") %>%
+  inner_join(men25_34, by = "country") %>%
+  rename(men25_34 = "1990") %>%
+  inner_join(men35_44, by = "country") %>%
+  rename(men35_44 = "1990") %>%
+  inner_join(men45_54, by = "country") %>%
+  rename(men45_54 = "1990") %>%
+  inner_join(men55_64, by = "country") %>%
+  rename(men55_64 = "1990") %>%
+  inner_join(men65_plus, by = "country") %>%
+  rename(men65_plus = "1990")
+
+# Write data to csv file
+
+write.csv(data, "GDP_school_years_1990.csv", row.names = FALSE)
+
+##Filter and merge the individual files into a single .csv file
+
+```
+
+
+
+```{r importData}
+school2015 <- read.csv("GDP_school_years_2015.csv")
+school1990 <- read.csv("GDP_school_years_1990.csv")
+```
+
+``` {r exploration, message = FALSE, warning = FALSE}
+
+ggpairs(school2015[,-1])         #Country variable removed
+ggpairs(school1990[,-1])  
+
+# The GDP data is very right skewed, so applying a log transformation
+
+school2015 <- school2015 %>%
+  mutate(logGDP = log(gdp))
+school1990 <- school1990 %>%
+  mutate(logGDP = log(gdp))
+ggpairs(school2015[,-c(1:2)])
+skim(school2015)                 #get useful summary statistics
+ggpairs(school1990[,-c(1:2)])
+skim(school1990)
+
+# Calculate correlations with logGDP
+
+cor2015 <- data.frame(cor(school2015[,3:14],school2015$logGDP))
+names(cor2015) <- "Correlation"
+school1990 <- na.omit(school1990)
+cor1990 <- data.frame(cor(school1990[,3:14],school1990$logGDP))
+names(cor1990) <- "Correlation"
+
+```
+
+Bar chart showing correlations from 1990 data set of each age group with log GDP and scatterplot of highest correlating group
+
+# We are dealing with two different types of variables. For the diagonal , these are density plots of men and women in different age groups (numerical variables). Under diagonal here we have scatter plots, when we look at the first column, they are GDP versus different generational group for both men and women. Also,From the graph we can know the correlation between each age range and GDP for males and females and the correlation between each variable， which are corresponding to the slope of the scatter plots.
+
+# In 2015, we given correlation coefficients between 0.5 to 0.65, which suggests a moderate  positive relationship between GDP and the number of years children spend in school. For the younger people (age under 45), the correlation relationship is much stronger than the older people; and there is little difference between the gender.
+
+# In 1990,  the correlation coefficients (0.50 to 0.59) are smaller than that in 2015. At that time, it was obvious that older women (age above 45) spent less time in school. The richer the country was, the longer time the men in that country could stay at school. Also, there is little difference between different generational men groups.
+
+# After given the log transformation, we pay attention to the last column of the plot. 
+
+# Here we could draw the same conclusion that, in 2015, logGDP still has the largest correlation coefficient of 0.7976 with the average number of years of schooling for women aged 25 to 34. And the relationship between GDP and the number of years children spend in school had little difference between the gender. But, for younger generation, the correlation is much stronger.
+
+# From the numerical result of R console, it was a common sense that for both men and women, younger generation spent more years in school.
+
+# In 1990,The same thing was younger people had more time in school, the different situation was  people spent less time in school than people in 2015. For women, they had less opportunity to go to school than men. 
+
+#The data show that in 1990 logGDP had the highest correlation coefficient of 0.7876 with the average number of years of schooling of women aged 25 to 34.
+
+
+
+
+``` {r plot1990}
+school1990 %>%
+  na.omit() %>% ##Remove missing values
+  ggplot(aes(women25_34, logGDP)) + geom_point() + geom_smooth(method = "lm", se = FALSE) +
+  labs(x = "Years in school - women aged 25-34")  ##Scatterplot of women aged 25 to 34 against logGDP
+cor1990 %>%
+  rownames_to_column("Group") %>%
+  ggplot(aes(Group, Correlation)) + geom_col() + theme(axis.text.x = element_text(angle = -45)) +
+  labs(y = "Correlation with log GDP")
+```
+#The first graph shows that a country's GDP level is positively correlated with the number of years of schooling of women aged 25 to 34.But at the same time there are some outliers, for example the countries with the highest GDP in the graph have only a moderate number of years of schooling for women aged 25-34.
+
+#The second graph shows the correlation between GDP and the number of years of schooling of the population, which can be seen to rise and then fall as the age of the population increases. The maximum point of correlation occurs between the ages of 25 and 34 for both males and females, while the minimum point occurs after the age of 65.
+
+#Barplots here were used to visualize the distributions of categorical variables. By comparing  different generation groups, we could directly draw the conclusion mentioned above. For both men and women, people aged 25 to 34 had largest correlation coefficient.
+
+
+
+
+And repeated for 2015
+
+``` {r plot2015}
+school2015 %>%
+  na.omit() %>%
+  ggplot(aes(women25_34, logGDP)) + geom_point() + geom_smooth(method = "lm", se = FALSE) +
+  labs(x = "Years in school - women aged 25-34")
+cor2015 %>%
+  rownames_to_column("Group") %>%
+  ggplot(aes(Group, Correlation)) + geom_col() + theme(axis.text.x = element_text(angle = -45)) +
+  labs(y = "Correlation with log GDP")
+```
+
+#Unlike the last two pictures, these two pictures are from 2015. Again, the GDP and years of schooling for women aged 25 to 34 are shown separately, as well as the correlation coefficients between logGDP and years of schooling for each age group and gender of the population.
+
+Linear model fitted for highest correlating group and coefficient back transformed into per capita GDP increase per year of extra schooling for both 2015 and 1990
+
+``` {r lm}
+mod2015f <- lm(logGDP ~ women25_34, data = school2015)  ##Linear regression of logGDP and women aged 25-34 years
+summary(mod2015f)                                       ##Get regression results
+get_regression_table(mod2015f)
+get_regression_summaries(mod2015f)
+exp(get_regression_table(mod2015f)$estimate[2])
+
+mod1990f <- lm(logGDP ~ women25_34, data = school1990)
+summary(mod1990f)
+get_regression_table(mod1990f)
+get_regression_summaries(mod1990f)
+exp(get_regression_table(mod1990f)$estimate[2])
+```
+#
+$${\mbox{Y}} = \widehat{\alpha} +
+\widehat{\beta}_{\mbox{X1}}$$
+
+##where Y denotes logGDP and X1 denotes years of schooling for women aged 25 to 34.
+
+##For the 2015 data, alpha has a value of 0.0035, while beta has a value of 0.2348, while the R-squared is 0.6363, with a p-value of less than 2.2e-16.The R-square indicates that years of schooling explains 63.63% of logGDP, while a p-value of less than 2.2e-16 indicates that the significance test is passed.
+
+####For the 1990 data, alpha has a value of 0.0482, while beta has a value of 0.0.2768, while the R-squared is 0.6203, with a p-value of less than 2.2e-16.The R-square indicates that years of schooling explains 62.03% of logGDP, while a p-value of less than 2.2e-16 indicates that the significance test is passed.
+
+Check model assumptions
+
+``` {r assumptions}
+get_regression_points(mod2015f) %>%
+  ggplot(aes(logGDP_hat, residual)) + geom_point() + geom_hline(yintercept = 0)
+get_regression_points(mod2015f) %>%
+  ggplot(aes(women25_34, residual)) + geom_point() + geom_hline(yintercept = 0)
+get_regression_points(mod2015f) %>%
+  ggplot(aes(sample = residual)) + stat_qq()
+```
+# Observing the residuals vs fitted values, it is clear that the residual do appear randomly scatter around zeroAccessing model fit, and The QQ plot shows a fitted regression line through the dots. 
+
+#The three plots each show that the mean of the error is zero, the variables satisfy a linear relationship, and the assumption of normality is correct.
+
+Recreate the models but for men
+
+``` {r lm1}
+mod2015m <- lm(logGDP ~ men25_34, data = school2015)
+summary(mod2015m)
+get_regression_table(mod2015m)
+get_regression_summaries(mod2015m)
+exp(get_regression_table(mod2015m)$estimate[2])
+
+mod1990m <- lm(logGDP ~ men25_34, data = school1990)
+summary(mod1990m)
+get_regression_table(mod1990m)
+get_regression_summaries(mod1990m)
+exp(get_regression_table(mod1990m)$estimate[2])
+```
+$${\mbox{Y}} = \widehat{\alpha} +
+\widehat{\beta}_{\mbox{X2}}$$
+
+## where Y denotes logGDP and X2 denotes years of schooling for men aged 25 to 34.
+
+## For the 2015 data, alpha has a value of -0.8954, while beta has a value of 0.3125, while the R-squared is 0.6227, with a p-value of less than 2.2e-16.The R-square indicates that years of schooling explains 62.27% of logGDP, while a p-value of less than 2.2e-16 indicates that the significance test is passed.
+
+## For the 1990 data, alpha has a value of -0.5912, while beta has a value of 0.3349, while the R-squared is 0.7386, with a p-value of less than 2.2e-16.The R-square indicates that years of schooling explains 73.86% of logGDP, while a p-value of less than 2.2e-16 indicates that the significance test is passed.
+
+## Because of the log transformation, here we need to use exp() function to get the real result.
+
+Check model assumptions
+
+``` {r assumptions}
+get_regression_points(mod2015m) %>%
+  ggplot(aes(logGDP_hat, residual)) + geom_point() + geom_hline(yintercept = 0)
+get_regression_points(mod2015m) %>%
+  ggplot(aes(men25_34, residual)) + geom_point() + geom_hline(yintercept = 0)
+get_regression_points(mod2015m) %>%
+  ggplot(aes(sample = residual)) + stat_qq()
+```
+##These three graphs also show that the model is consistent with the assumptions
+
+#conclusion
+#As we known, schooling tends to be largely financed with public resources across the globe. Through the investigation, there is a moderate  positive relationship between GDP and the number of years children spend in school, both in 1990 and in 2015. That is the longer time children spent in school, the larger the GDP was, which also suggested the richer the country was. No matter wehn, younger peole tend to spend more time in school. But in 1990, women significantly had less time in school than men.
+
+Prepare data on child mortality, fertility rate and female participation in the workforce for 1990 and 2015
+
+``` {r otherData}
+# import child mortality data
+
+child_mort <- child_mortality_0_5_year_olds_dying_per_1000_born %>%
+  select("country", "1990", "2015") %>%
+  rename(child_mort_1990 = "1990", child_mort_2015 = "2015")
+
+# import fertility data
+
+fert <- children_per_woman_total_fertility %>%
+  select("country","1990", "2015") %>%
+  rename(fert_1990 = "1990", fert_2015 ="2015")
+
+# import data on female participation in the workforce
+
+fem_part <- females_aged_15plus_labour_force_participation_rate_percent %>%
+  select("country", "1990", "2015") %>%
+  rename(fem_part_1990 = "1990", fem_part_2015 = "2015")
+
+# import data on murders
+
+murders <- murder_per_100000_people %>%
+  select("country", "1990", "2015") %>%
+  rename(murders_1990 = "1990", murders_2015 = "2015")
+
+# import data on suicides
+
+suicides <- suicide_per_100000_people %>%
+  select("country", "1990", "2015") %>%
+  rename(suicides_1990 = "1990", suicides_2015 = "2015")
+
+# take most highly correlated column from the school years 2015 data set
+
+school_fem_2015 <- school2015 %>%
+  select("country", "gdp" ,"women25_34") %>%
+  rename(gdp_2015 = gdp, sch_yrs_2015 = women25_34)
+
+# combine into one file with the same column from the school years 1990 data set
+
+gdp <- school1990 %>%
+  select("country", "gdp", "women25_34") %>%
+  rename(gdp_1990 = gdp, sch_yrs_1990 = women25_34) %>%
+  inner_join(school_fem_2015, by = "country") %>%
+  mutate(log_gdp_1990 = log(gdp_1990), log_gdp_2015 = log(gdp_2015)) %>%
+  inner_join(child_mort, by ="country") %>%
+  inner_join(fert, by = "country") %>%
+  inner_join(fem_part, by = "country") %>%
+  inner_join(murders, by = "country") %>%
+  inner_join(suicides, by = "country") %>%
+  select(country, gdp_1990, gdp_2015, log_gdp_1990, log_gdp_2015, everything())
+
+# save to data file
+
+write.csv(gdp, "GDP_1990_2015.csv", row.names = FALSE)
+
+##This part of the code also regroups the scattered data into a .csv file
+```
+
+
+
+
+``` {r importGDPfemData}
+gdp <- read.csv("GDP_1990_2015.csv")
+```
+
+Explore new data sets
+
+``` {r exploration, message = FALSE, warning = FALSE}
+
+gdp %>%
+  skim()
+# just look at countries without missing values
+gdp %>%
+  na.omit() %>%
+  skim()
+  
+gdp %>%
+  select(-country, -gdp_1990, -gdp_2015) %>%
+  ggpairs()
+
+```
+### As we mentioned above, the interpretation of the matrix is as follows:	The variable names are displayed on the outer edges of the matrix. The boxes along the diagonals display the density plot for each variable. The boxes in the lower left corner display the scatterplot between each variable. The boxes in the upper right corner display the Pearson correlation coefficient between each variable. Here we should pay attention to the first two rows. In 2015, there is a strong positive relationship between School years and GDP, a strong negative relationship between child mortality and GDP, the same as fertility data and GDP, a vary weak negative relationship between female participation in the workforce and GDP,a weak negative relationship between data on murders and GDP,a very weak positive relationship between suicides and GDP.
+## In 1990, there is a strong positive relationship between School years and GDP, a strong negative relationship between child mortality and GDP, the same as fertility data and GDP, a weak negative relationship between female participation in the workforce and GDP,a weak negative relationship between data on murders and GDP,a weak positive relationship between suicides and GDP.
+## From these, we could draw the conclusion that the GDP may have great impact on the school years, child mortality, and fertility of the women.
+
+Fit new linear models
+
+``` {r lm2}
+
+mod_1990_2 <- lm(log_gdp_1990 ~ sch_yrs_1990 + child_mort_1990 + fert_1990 + fem_part_1990 + murders_1990 + suicides_1990, data = gdp)
+summary(mod_1990_2)
+
+mod_2015_2 <- lm(log_gdp_2015 ~ sch_yrs_2015 + child_mort_2015 + fert_2015 + fem_part_2015 + murders_2015 + suicides_2015, data = gdp)
+summary(mod_2015_2)
+
+# implement forward stepwise regression based on significance level and AIC
+
+ols_step_forward_p(mod_1990_2, penter = 0.05)
+ols_step_forward_p(mod_2015_2, penter = 0.05)
+ols_step_forward_aic(mod_1990_2)
+ols_step_forward_aic(mod_2015_2)
+
+
+# rebuild models based on significant indicators
+
+mod_1990_3 <- lm(log_gdp_1990 ~ child_mort_1990 + sch_yrs_1990, data = gdp)
+summary(mod_1990_3)
+
+mod_2015_3 <- lm(log_gdp_2015 ~ child_mort_2015 + sch_yrs_2015, data = gdp)
+summary(mod_2015_3)
+
+```
+
+#For the 1990 data, three variables did not pass the significance test according to the regression results, namely female participation in the workforce, data on murders and data on suicides.So we started with a stepwise linear regression
+
+#Only child mortality and school years were retained depending on whether the p-value was significant.And the stepwise regression based on the magnitude of the AIC retains the four variables murders, child mortality, school years and fertility.
+
+#The same steps were carried out for the 2015 data and only the child mortality passed the significance test.The child mortality and school years variables were retained in a stepwise regression using p-value magnitude as the criterion.In contrast, only the murders and child mortality variables were retained in the regression with AIC as the criterion
+
+
+Check model assumptions for 2015
+
+``` {r assumptions2015}
+get_regression_points(mod_2015_3) %>%
+  ggplot(aes(log_gdp_2015_hat, residual)) + geom_point() + geom_hline(yintercept = 0)
+get_regression_points(mod_2015_3) %>%
+  ggplot(aes(sch_yrs_2015, residual)) + geom_point() + geom_hline(yintercept = 0)
+get_regression_points(mod_2015_3) %>%
+  ggplot(aes(child_mort_2015, residual)) + geom_point() + geom_hline(yintercept = 0)
+get_regression_points(mod_2015_3) %>%
+  ggplot(aes(sample = residual)) + stat_qq()
+```
+
+Check model assumptions for 1990
+
+``` {r assumptions1990}
+get_regression_points(mod_1990_3) %>%
+  ggplot(aes(log_gdp_1990_hat, residual)) + geom_point() + geom_hline(yintercept = 0)
+get_regression_points(mod_1990_3) %>%
+  ggplot(aes(sch_yrs_1990, residual)) + geom_point() + geom_hline(yintercept = 0)
+get_regression_points(mod_1990_3) %>%
+  ggplot(aes(child_mort_1990, residual)) + geom_point() + geom_hline(yintercept = 0)
+get_regression_points(mod_1990_3) %>%
+  ggplot(aes(sample = residual)) + stat_qq()
+```
+#The graphs show that the model assumptions hold.
+
+#conclusion
+
+#In summary, it can be found that in the analysis using P-values and AIC as indicators, there is a significant relationship between the time children spend in school and child mortality and national wealth. The longer children spend in school and the lower the child mortality rate, the greater the wealth of a country.
+
+#For the variable of time children spend in school, according to the regression results, all else being equal, each year increase in the amount of time children spend in school increases logGDP by 0.088259.
+
+#For child mortality, each decrease of 1 increases logGDP by 0.01878
+
