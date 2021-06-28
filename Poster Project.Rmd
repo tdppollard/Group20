@@ -316,6 +316,21 @@ ggpairs(school1990[,-c(1:2)])
 skim(school1990) # get useful summary statistics
 
 ```
+Plot boxplots of years in education for different generations
+
+``` {r boxplots}
+
+data %>%
+  filter(file == "school", variable != "gdp") %>%
+  ggplot(aes(variable, value)) +
+  geom_boxplot(fill = c(rep("orange",6),rep("limegreen",6),rep("orange",6),rep("limegreen",6))) +
+  theme(axis.text.x = element_text(angle = -45)) +
+  facet_wrap(~year) +
+  labs(x = "Group", y = "Years in school")
+
+
+```
+
 
 Calculate the correlations separately for plotting
 
