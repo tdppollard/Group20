@@ -19,12 +19,13 @@ library(olsrr)
 library(psych)
 library(psychometric)
 library(tidyverse)
+library(gridExtra)
 ```
 
 This section is the data wrangling that I did with the raw data as each column was contained in a different file.
 
 I haven't uploaded all the raw files to GitHub, just the final version, so running this code won't work, but let me know if you'd like to see all the raw files.
-#
+
 ``` {r wrangling1}
 
 #  Pull each file and select the data for the year 2015
@@ -322,11 +323,14 @@ Plot boxplots of years in education for different generations
 
 data %>%
   filter(file == "school", variable != "gdp") %>%
-  ggplot(aes(variable, value)) +
-  geom_boxplot(fill = c(rep("orange",6),rep("limegreen",6),rep("orange",6),rep("limegreen",6))) +
+  mutate(Gender = ifelse(str_detect(variable, "women"), "Women", "Men")) %>%
+  mutate(ageGroup = str_remove_all(variable, "[women]")) %>%
+  ggplot(aes(ageGroup, value, fill = Gender)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c("orange","limegreen")) +
   theme(axis.text.x = element_text(angle = -45)) +
-  facet_wrap(~year) +
-  labs(x = "Group", y = "Years in school")
+  facet_wrap(~year, ncol = 2) +
+  labs(x = "Age group", y = "Years in school", title = "Fig 1. Years spent in school by generation and gender: 1990 and 2015")
 
 
 ```
@@ -405,7 +409,7 @@ And repeated for 2015
 school2015 %>%
   na.omit() %>%
   ggplot(aes(women25_34, logGDP)) + geom_point() + geom_smooth(method = "lm", se = FALSE, colour = "limegreen") +
-  labs(x = "Years in school - women aged 25-34", title = "2015 data")
+  labs(x = "Years in school - women aged 25-34", title = "Data from 2015",y="log GDP")
 
 # Bar chart of correlations of each generation's years in school with log GDP
 cor2015 %>%
@@ -419,6 +423,33 @@ cor2015 %>%
 These two figures are from 2015. Again, the log GDP and years of schooling for women aged 25 to 34 are shown as a scattergraph, as well as the correlation coefficients between log GDP and years of schooling for each age group and gender of the population in a bar plot.
 
 The results are broadly the same as 1990, although it appears that more data is now concentrated on the right hand side of the graph, indicating that the number of years spent in school has increased for some economies.
+
+``` {r}
+# Print all four graphs as one
+
+p1<-school1990 %>%
+  na.omit() %>% # Remove missing values
+  ggplot(aes(women25_34, logGDP)) + geom_point() + geom_smooth(method = "lm", se = FALSE, colour = "limegreen") + labs(x = "Years in school - women aged 25-34", title = "Data from 1990",y="log GDP")
+
+p2<-school1990 %>%
+  na.omit() %>% # Remove missing values
+  ggplot(aes(men25_34, logGDP)) + geom_point() + geom_smooth(method = "lm", se = FALSE, colour = "limegreen") +
+  labs(x = "Years in school - men aged 25-34", title = "Data from 1990",y="log GDP")
+
+
+p3<-school2015 %>%
+  na.omit() %>%
+  ggplot(aes(women25_34, logGDP)) + geom_point() + geom_smooth(method = "lm", se = FALSE, colour = "limegreen") +
+  labs(x = "Years in school - women aged 25-34", title = "Data from 2015",y="log GDP")
+
+p4<-school2015 %>%
+  na.omit() %>%
+  ggplot(aes(men25_34, logGDP)) + geom_point() + geom_smooth(method = "lm", se = FALSE, colour = "limegreen") +
+  labs(x = "Years in school - men aged 25-34", title = "Data from 2015",y="log GDP")
+
+grid.arrange(p1,p2,p3,p4,nrow=2)
+
+```
 
 We now test the largest and smallest differences in correlation between generations for pairwise significance
 
@@ -518,7 +549,7 @@ where y denotes logGDP and X2 denotes years of schooling for men aged 25 to 34.
 
 For the 2015 data, alpha hat has a value of -0.8954, while beta hat has a value of 0.3125, while the R-squared is 0.6227, with a p-value of less than 2.2e-16.The R-square indicates that years of schooling explains 62.27% of logGDP, while a p-value of less than 2.2e-16 indicates that the significance test is passed.
 
-For the 1990 data, alpha hat has a value of -0.5912, while beta hat has a value of 0.3349, while the R-squared is 0.6124, with a p-value of less than 2.2e-16.The R-square indicates that years of schooling explains 61.24% of logGDP, while a p-value of less than 2.2e-16 indicates that the significance test is passed.
+For the 1990 data, alpha hat has a value of -0.5912, while beta hat has a value of 0.3349, while the R-squared is 0.7386, with a p-value of less than 2.2e-16.The R-square indicates that years of schooling explains 73.86% of logGDP, while a p-value of less than 2.2e-16 indicates that the significance test is passed.
 
 Because of the log transformation, here we need to use exp() function to get the real result.
 
@@ -535,6 +566,41 @@ get_regression_points(mod2015m) %>%
 ```
 
 These three graphs also show that the model is also consistent with the assumptions, although the QQ plot is not quite as straight as for the female model.
+
+Coefficients table for poster:
+
+``` {r}
+
+ModelCoeffs <- data.frame(Year = c(2015, 2015, 1990, 1990),
+                          Gender = c("Women", "Men", "Women", "Men"),
+                          Coefficient = c(get_regression_table(mod2015f)$estimate[2],
+                              get_regression_table(mod2015m)$estimate[2],
+                              get_regression_table(mod1990f)$estimate[2],
+                              get_regression_table(mod1990m)$estimate[2]),
+                          Lower_CI = c(get_regression_table(mod2015f)$lower_ci[2],
+                              get_regression_table(mod2015m)$lower_ci[2],
+                              get_regression_table(mod1990f)$lower_ci[2],
+                              get_regression_table(mod1990m)$lower_ci[2]),
+                          Upper_CI = c(get_regression_table(mod2015f)$upper_ci[2],
+                              get_regression_table(mod2015m)$upper_ci[2],
+                              get_regression_table(mod1990f)$upper_ci[2],
+                              get_regression_table(mod1990m)$upper_ci[2]))
+
+ModelCoeffs
+  
+
+```
+
+#The coefficients table by gender for 1990 and 2015
+
+Year          | Gender        | Coefficient    | Lower CI     | Upper CI    |
+:------------:|:-------------:|:--------------:|:-------------|:------------:
+2015          | Women         | 0.235         | 0.208         | 0.261
+2015          | Men           | 0.312         | 0.276         | 0.349
+1990          | Women         | 0.277         | 0.242         | 0.311
+1990          | Men           | 0.335         | 0.293         | 0.377
+
+Table: MOdel Coefficients by gender for 1990 and 2015
 
 Conclusion
 
@@ -568,6 +634,18 @@ gdp %>%
   ggpairs()
 
 ```
+
+Table for poster:
+
+Variable          | log GDP 1990  | log GDP 2015   | 
+:----------------:|:-------------:|:--------------:
+School Years      |  0.788        |  0.798         |
+Child Mortality   | -0.791        | -0.784         |
+Fertility         | -0.751        | -0.785         |
+Female Work Part  | -0.375        | -0.207         | 
+
+Table: Correlations of social factors with log GDP
+
 
 As we mentioned above, the interpretation of the matrix is as follows:	The variable names are displayed on the outer edges of the matrix. The boxes along the diagonals display the density plot for each variable. The boxes in the lower left corner display the scatterplot between each variable. The boxes in the upper right corner display the Pearson correlation coefficient between each variable. Here we should pay attention to the first two rows. In 2015, there is a strong positive relationship between School years and log GDP, a strong negative relationship between child mortality and log GDP, the same as fertility data and log GDP, a vary weak negative relationship between female participation in the workforce and log GDP, a weak negative relationship between data on murders and log GDP,a very weak positive relationship between suicides and log GDP.
 
@@ -654,16 +732,13 @@ get_regression_table(mod_2015_3)
 
 The graphs show that the model assumptions hold.
 
-conclusion about questions of interest
+conclusion
 
 In summary, it can be found that in the analysis using P-values, there is a significant relationship between the time children spend in school and child mortality and national wealth. The longer children spend in school and the lower the child mortality rate, the greater the wealth of a country.
 
+For the variable of time children spend in school, according to the regression results, all else being equal, each year increase in the amount of time children spend in school increases logGDP by 0.088259.
 
-For the first question, according to the regression results, time children spend in school has a significant effect on the wealth of the country. Other things being equal, each one-year increase in time children spend in school increases logGDP by 0.88259.And for every 1 reduction in child mortality increases logGDP by 0.01895 inin 1990 and 0.1238 in 2015
-
-For the second question,Child mortality, school years and female participation in the workforce were most significantly related to national wealth in 1990.But in 2015 only Child mortality had a significant relationship with national wealth.Female participation is no longer significant or even negatively correlated with national wealth in 2015, while fertility is significantly correlated with national wealth, perhaps indicating a gradual deterioration in women's participation in the workforce and the need for greater protection of women's work right.
-
-
+For child mortality, each decrease of 1 increases logGDP by 0.01878
 
 
 
