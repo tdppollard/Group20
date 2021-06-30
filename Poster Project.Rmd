@@ -19,7 +19,6 @@ library(olsrr)
 library(psych)
 library(psychometric)
 library(tidyverse)
-library(gridExtra)
 ```
 
 This section is the data wrangling that I did with the raw data as each column was contained in a different file.
@@ -406,7 +405,7 @@ And repeated for 2015
 school2015 %>%
   na.omit() %>%
   ggplot(aes(women25_34, logGDP)) + geom_point() + geom_smooth(method = "lm", se = FALSE, colour = "limegreen") +
-  labs(x = "Years in school - women aged 25-34", title = "Data from 2015",y="log GDP")
+  labs(x = "Years in school - women aged 25-34", title = "2015 data")
 
 # Bar chart of correlations of each generation's years in school with log GDP
 cor2015 %>%
@@ -420,33 +419,6 @@ cor2015 %>%
 These two figures are from 2015. Again, the log GDP and years of schooling for women aged 25 to 34 are shown as a scattergraph, as well as the correlation coefficients between log GDP and years of schooling for each age group and gender of the population in a bar plot.
 
 The results are broadly the same as 1990, although it appears that more data is now concentrated on the right hand side of the graph, indicating that the number of years spent in school has increased for some economies.
-
-``` {r}
-# Print all four graphs as one
-
-p1<-school1990 %>%
-  na.omit() %>% # Remove missing values
-  ggplot(aes(women25_34, logGDP)) + geom_point() + geom_smooth(method = "lm", se = FALSE, colour = "limegreen") + labs(x = "Years in school - women aged 25-34", title = "Data from 1990",y="log GDP")
-
-p2<-school1990 %>%
-  na.omit() %>% # Remove missing values
-  ggplot(aes(men25_34, logGDP)) + geom_point() + geom_smooth(method = "lm", se = FALSE, colour = "limegreen") +
-  labs(x = "Years in school - men aged 25-34", title = "Data from 1990",y="log GDP")
-
-
-p3<-school2015 %>%
-  na.omit() %>%
-  ggplot(aes(women25_34, logGDP)) + geom_point() + geom_smooth(method = "lm", se = FALSE, colour = "limegreen") +
-  labs(x = "Years in school - women aged 25-34", title = "Data from 2015",y="log GDP")
-
-p4<-school2015 %>%
-  na.omit() %>%
-  ggplot(aes(men25_34, logGDP)) + geom_point() + geom_smooth(method = "lm", se = FALSE, colour = "limegreen") +
-  labs(x = "Years in school - men aged 25-34", title = "Data from 2015",y="log GDP")
-
-grid.arrange(p1,p2,p3,p4,nrow=2)
-
-```
 
 We now test the largest and smallest differences in correlation between generations for pairwise significance
 
