@@ -24,7 +24,7 @@ library(tidyverse)
 This section is the data wrangling that I did with the raw data as each column was contained in a different file.
 
 I haven't uploaded all the raw files to GitHub, just the final version, so running this code won't work, but let me know if you'd like to see all the raw files.
-
+#
 ``` {r wrangling1}
 
 #  Pull each file and select the data for the year 2015
@@ -654,13 +654,16 @@ get_regression_table(mod_2015_3)
 
 The graphs show that the model assumptions hold.
 
-conclusion
+conclusion about questions of interest
 
 In summary, it can be found that in the analysis using P-values, there is a significant relationship between the time children spend in school and child mortality and national wealth. The longer children spend in school and the lower the child mortality rate, the greater the wealth of a country.
 
-For the variable of time children spend in school, according to the regression results, all else being equal, each year increase in the amount of time children spend in school increases logGDP by 0.088259.
 
-For child mortality, each decrease of 1 increases logGDP by 0.01878
+For the first question, according to the regression results, time children spend in school has a significant effect on the wealth of the country. Other things being equal, each one-year increase in time children spend in school increases logGDP by 0.88259.And for every 1 reduction in child mortality increases logGDP by 0.01878
+
+For the second question,Child mortality, school years and female participation in the workforce were most significantly related to national wealth in 1990.But in 2015 only Child mortality had a significant relationship with national wealth.Female participation is no longer significant or even negatively correlated with national wealth in 2015, while fertility is significantly correlated with national wealth, perhaps indicating a gradual deterioration in women's participation in the workforce and the need for greater protection of women's work right.
+
+
 
 
 
