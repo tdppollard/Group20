@@ -518,7 +518,7 @@ where y denotes logGDP and X2 denotes years of schooling for men aged 25 to 34.
 
 For the 2015 data, alpha hat has a value of -0.8954, while beta hat has a value of 0.3125, while the R-squared is 0.6227, with a p-value of less than 2.2e-16.The R-square indicates that years of schooling explains 62.27% of logGDP, while a p-value of less than 2.2e-16 indicates that the significance test is passed.
 
-For the 1990 data, alpha hat has a value of -0.5912, while beta hat has a value of 0.3349, while the R-squared is 0.7386, with a p-value of less than 2.2e-16.The R-square indicates that years of schooling explains 73.86% of logGDP, while a p-value of less than 2.2e-16 indicates that the significance test is passed.
+For the 1990 data, alpha hat has a value of -0.5912, while beta hat has a value of 0.3349, while the R-squared is 0.6124, with a p-value of less than 2.2e-16.The R-square indicates that years of schooling explains 61.24% of logGDP, while a p-value of less than 2.2e-16 indicates that the significance test is passed.
 
 Because of the log transformation, here we need to use exp() function to get the real result.
 
@@ -659,7 +659,7 @@ conclusion about questions of interest
 In summary, it can be found that in the analysis using P-values, there is a significant relationship between the time children spend in school and child mortality and national wealth. The longer children spend in school and the lower the child mortality rate, the greater the wealth of a country.
 
 
-For the first question, according to the regression results, time children spend in school has a significant effect on the wealth of the country. Other things being equal, each one-year increase in time children spend in school increases logGDP by 0.88259.And for every 1 reduction in child mortality increases logGDP by 0.01878
+For the first question, according to the regression results, time children spend in school has a significant effect on the wealth of the country. Other things being equal, each one-year increase in time children spend in school increases logGDP by 0.88259.And for every 1 reduction in child mortality increases logGDP by 0.01895 inin 1990 and 0.1238 in 2015
 
 For the second question,Child mortality, school years and female participation in the workforce were most significantly related to national wealth in 1990.But in 2015 only Child mortality had a significant relationship with national wealth.Female participation is no longer significant or even negatively correlated with national wealth in 2015, while fertility is significantly correlated with national wealth, perhaps indicating a gradual deterioration in women's participation in the workforce and the need for greater protection of women's work right.
 
